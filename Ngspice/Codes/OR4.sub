@@ -1,0 +1,7 @@
+.include OR.sub
+.include OR3.sub
+
+.subckt OR4 A B C D Out vdd gnd
+    X1 A B C E vdd gnd OR3
+    X2 E D Out vdd gnd OR
+.ends OR4

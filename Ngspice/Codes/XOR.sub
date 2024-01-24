@@ -1,0 +1,8 @@
+.include NAND.sub
+
+.subckt XOR A B Out vdd gnd
+    X1 A B C vdd gnd NAND
+    X2 A C D vdd gnd NAND
+    X3 B C E vdd gnd NAND
+    X4 D E Out vdd gnd NAND
+.ends XOR

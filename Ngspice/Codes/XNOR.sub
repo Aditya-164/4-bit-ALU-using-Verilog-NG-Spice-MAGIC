@@ -1,0 +1,7 @@
+.include XOR.sub
+.include NOT.sub
+
+.subckt XNOR A B Out vdd gnd
+    X1 A B C vdd gnd XOR
+    X2 C Out vdd gnd NOT
+.ends XNOR
