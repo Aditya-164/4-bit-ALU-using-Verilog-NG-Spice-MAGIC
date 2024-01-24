@@ -1,0 +1,11 @@
+.include XOR.sub
+.include AND.sub
+.include OR.sub
+
+.subckt fulladder A B C S Car vdd gnd
+    X1 B A a1 vdd gnd XOR
+    X2 B A a2 vdd gnd AND
+    X3 a1 C S vdd gnd XOR
+    X4 a1 C a3 vdd gnd AND
+    X5 a3 a2 Car vdd gnd OR
+.ends fulladder

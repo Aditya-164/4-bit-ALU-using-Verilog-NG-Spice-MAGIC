@@ -1,0 +1,34 @@
+.include XNOR.sub
+.include NOT.sub
+.include AND.sub
+.include AND3.sub
+.include AND4.sub
+.include AND5.sub
+.include OR4.sub
+
+.subckt comparator A0 A1 A2 A3 B0 B1 B2 B3 equal greater lesser vdd gnd
+    X1 A0 B0 G0 vdd gnd XNOR
+    X2 A1 B1 G1 vdd gnd XNOR
+    X3 A2 B2 G2 vdd gnd XNOR
+    X4 A3 B3 G3 vdd gnd XNOR
+    X5 G0 G1 G2 G3 equal vdd gnd AND4
+    X6 A0 C0 vdd gnd NOT
+    X7 A1 C1 vdd gnd NOT
+    X8 A2 C2 vdd gnd NOT
+    X9 A3 C3 vdd gnd NOT
+    X10 B0 D0 vdd gnd NOT
+    X11 B1 D1 vdd gnd NOT
+    X12 B2 D2 vdd gnd NOT
+    X13 B3 D3 vdd gnd NOT
+    X14 A3 D3 H3 vdd gnd AND
+    X15 G3 A2 D2 H2 vdd gnd AND3
+    X16 G3 G2 A1 D1 H1 vdd gnd AND4
+    X17 G3 G2 G1 A0 D0 H0 vdd gnd AND5
+    X18 C3 B3 L0 vdd gnd AND
+    X19 G3 C2 B2 L1 vdd gnd AND3
+    X20 G3 G2 C1 B1 L2 vdd gnd AND4
+    X21 G3 G2 G1 C0 B0 L3 vdd gnd AND5
+    X22 H0 H1 H2 H3 greater vdd gnd OR4
+    X23 L0 L1 L2 L3 lesser vdd gnd OR4
+
+.ends comparator

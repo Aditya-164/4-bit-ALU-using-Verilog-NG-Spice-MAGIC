@@ -1,0 +1,6 @@
+.include NAND.sub
+
+.subckt AND A B Out vdd gnd
+    X1 A B C vdd gnd NAND
+    X2 C C Out vdd gnd NAND
+.ends AND

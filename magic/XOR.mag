@@ -1,0 +1,79 @@
+magic
+tech scmos
+timestamp 1701356350
+<< metal1 >>
+rect -136 24 -33 28
+rect -125 -18 -121 24
+rect -37 1 -33 2
+rect -125 -22 -90 -18
+rect -75 -21 -69 -18
+rect -75 -62 -72 -21
+rect -47 -23 -39 -18
+rect -44 -44 -39 -23
+rect -23 -44 -18 28
+rect 3 23 90 27
+rect 86 -17 90 23
+rect 86 -21 100 -17
+rect 114 -25 118 -17
+rect 139 -22 152 -18
+rect 83 -29 118 -25
+rect -44 -46 39 -44
+rect -44 -49 41 -46
+rect 53 -54 56 -45
+rect 83 -46 87 -29
+rect 77 -50 87 -46
+rect 99 -43 103 -40
+rect 18 -57 56 -54
+rect 18 -62 21 -57
+rect -83 -65 21 -62
+rect 37 -83 41 -72
+<< m2contact >>
+rect -42 52 -37 57
+rect -92 10 -87 15
+rect -37 -4 -32 1
+rect -91 -50 -86 -44
+rect 74 -17 79 -12
+rect 98 11 103 16
+rect 99 -48 104 -43
+rect 37 -88 42 -83
+<< metal2 >>
+rect -50 62 79 66
+rect -50 56 -46 62
+rect -86 52 -42 56
+rect -86 23 -82 52
+rect -91 19 -82 23
+rect 75 35 79 62
+rect 75 31 102 35
+rect -91 15 -87 19
+rect -91 -84 -87 -50
+rect -37 -84 -33 -4
+rect 75 -12 79 31
+rect 98 17 102 31
+rect 98 16 103 17
+rect 104 -48 116 -44
+rect -91 -88 37 -84
+rect 112 -84 116 -48
+rect 42 -88 116 -84
+use NAND  NAND_0
+timestamp 1701353143
+transform 1 0 -37 0 1 37
+box -1 -36 44 19
+use NAND  NAND_1
+timestamp 1701353143
+transform 1 0 99 0 1 -8
+box -1 -36 44 19
+use NAND  NAND_2
+timestamp 1701353143
+transform 1 0 -91 0 1 -9
+box -1 -36 44 19
+use NAND  NAND_3
+timestamp 1701353143
+transform 1 0 37 0 1 -36
+box -1 -36 44 19
+<< labels >>
+rlabel metal1 -134 25 -130 27 3 A
+rlabel metal1 -81 -64 -77 -62 1 B
+rlabel metal2 -83 -87 -78 -85 1 gnd
+rlabel metal1 147 -21 150 -19 7 out
+rlabel metal2 -73 53 -67 55 1 vdd
+<< end >>

@@ -1,0 +1,127 @@
+magic
+tech scmos
+timestamp 1701836177
+<< metal1 >>
+rect 1 37 4 52
+rect 180 48 218 51
+rect -108 17 2 19
+rect 180 18 183 48
+rect 232 43 235 50
+rect 323 44 419 47
+rect -108 15 3 17
+rect 22 15 183 18
+rect 196 40 235 43
+rect -44 -42 -40 15
+rect 8 -11 11 3
+rect 74 -24 77 15
+rect -44 -46 114 -42
+rect 14 -77 17 -65
+rect 110 -78 114 -46
+rect -106 -97 3 -95
+rect 196 -96 199 40
+rect -106 -99 4 -97
+rect 23 -99 199 -96
+rect -36 -303 -33 -99
+rect 10 -122 13 -111
+rect 160 -113 173 -108
+rect 168 -147 173 -113
+rect 196 -131 199 -99
+rect 209 -127 218 -124
+rect 233 -131 236 -125
+rect 324 -131 423 -128
+rect 196 -134 236 -131
+rect -36 -306 221 -303
+rect -35 -476 -32 -306
+rect 236 -311 239 -303
+rect 328 -310 422 -307
+rect 97 -314 239 -311
+rect 97 -316 100 -314
+rect 79 -319 100 -316
+rect -35 -479 225 -476
+rect 239 -484 242 -476
+rect 330 -483 403 -480
+rect 160 -487 242 -484
+rect 160 -492 163 -487
+rect 147 -495 163 -492
+<< m2contact >>
+rect 1 52 6 57
+rect 7 -16 12 -11
+rect 74 -29 79 -24
+rect 13 -65 18 -60
+rect 110 -83 115 -78
+rect 155 -113 160 -108
+rect 9 -127 14 -122
+rect 204 -127 209 -122
+rect 168 -152 173 -147
+rect 74 -319 79 -314
+rect 142 -496 147 -491
+<< metal2 >>
+rect 1 129 372 134
+rect 1 57 6 129
+rect -14 -16 7 -11
+rect -14 -131 -9 -16
+rect 42 -60 47 129
+rect 265 101 270 129
+rect 230 -10 235 26
+rect 155 -15 235 -10
+rect 18 -65 47 -60
+rect 9 -131 14 -127
+rect -14 -136 14 -131
+rect -2 -529 3 -136
+rect 74 -314 79 -29
+rect 110 -122 115 -83
+rect 155 -108 160 -15
+rect 367 -33 372 129
+rect 261 -38 372 -33
+rect 261 -74 266 -38
+rect 110 -127 204 -122
+rect 142 -491 147 -127
+rect 168 -172 173 -152
+rect 244 -172 249 -152
+rect 168 -177 249 -172
+rect 194 -345 199 -177
+rect 367 -216 372 -38
+rect 271 -221 372 -216
+rect 271 -253 276 -221
+rect 231 -345 236 -330
+rect 194 -350 236 -345
+rect 194 -529 199 -350
+rect 367 -396 372 -221
+rect 269 -401 372 -396
+rect 269 -424 274 -401
+rect 236 -529 241 -501
+rect -2 -534 241 -529
+use AND  AND_3
+timestamp 1701359634
+transform 1 0 223 0 1 -502
+box -2 -4 111 81
+use AND  AND_2
+timestamp 1701359634
+transform 1 0 220 0 1 -329
+box -2 -4 111 81
+use AND  AND_1
+timestamp 1701359634
+transform 1 0 217 0 1 -150
+box -2 -4 111 81
+use AND  AND_0
+timestamp 1701359634
+transform 1 0 216 0 1 25
+box -2 -4 111 81
+use not  not_1
+timestamp 1698047077
+transform 1 0 10 0 1 -94
+box -9 -20 16 20
+use not  not_0
+timestamp 1698047077
+transform 1 0 9 0 1 20
+box -9 -20 16 20
+<< labels >>
+rlabel metal1 -102 16 -101 17 1 s0
+rlabel metal1 -96 -98 -95 -97 1 s1
+rlabel metal1 413 45 414 46 1 en0
+rlabel metal1 415 -130 416 -129 1 en1
+rlabel metal1 417 -309 418 -308 1 en2
+rlabel metal1 399 -482 400 -481 1 en3
+rlabel metal2 128 -533 129 -532 1 gnd
+rlabel metal2 190 131 192 131 5 vdd
+<< end >>

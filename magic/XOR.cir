@@ -1,0 +1,116 @@
+* SPICE3 file created from XOR.ext - technology: scmos
+
+.include TSMC_180nm.txt
+
+
+.param SUPPLY = 1.8
+.param LAMBDA = 0.18u
+
+.param wn1 = {10*LAMBDA}
+.param wn2 = {10*LAMBDA}
+.param ln1 = {2*LAMBDA}
+.param ln2 = {2*LAMBDA}
+
+.param wp1 = wn1
+.param wp2 = wn1
+.param lp1 = {LAMBDA}
+.param lp2 = {LAMBDA}
+
+.global gnd
+
+.option scale=0.09u
+
+Vdd vdd gnd 'SUPPLY'
+
+V_in_a A gnd PULSE(0 1.8 0ns 100ps 100ps 20ns 40ns)
+V_in_b B gnd PULSE(0 1.8 0ns 100ps 100ps 50ns 70ns)
+
+M1000 NAND_1/A NAND_3/A vdd NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=192 ps=160
+M1001 NAND_1/A NAND_3/A NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1002 NAND_1/A A vdd NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1003 NAND_0/a_13_n30# A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=240 ps=136
+M1004 out NAND_1/B vdd NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1005 out NAND_1/B NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1006 out NAND_1/A vdd NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1007 NAND_1/a_13_n30# NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1008 NAND_3/A B vdd NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1009 NAND_3/A B NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1010 NAND_3/A A vdd NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1011 NAND_2/a_13_n30# A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1012 NAND_1/B B vdd NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1013 NAND_1/B B NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1014 NAND_1/B NAND_3/A vdd NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1015 NAND_3/a_13_n30# NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 NAND_3/A NAND_1/A 0.09fF
+C1 vdd NAND_1/w_n1_n1# 0.09fF
+C2 NAND_3/A NAND_2/w_n1_n1# 0.07fF
+C3 gnd NAND_3/A 0.10fF
+C4 vdd NAND_1/A 0.35fF
+C5 vdd NAND_2/w_n1_n1# 0.09fF
+C6 NAND_2/w_n1_n1# B 0.06fF
+C7 gnd B 0.12fF
+C8 NAND_1/w_n1_n1# NAND_1/A 0.06fF
+C9 NAND_1/B NAND_3/w_n1_n1# 0.07fF
+C10 NAND_2/a_13_n30# B 0.02fF
+C11 NAND_1/B out 0.09fF
+C12 A NAND_0/w_n1_n1# 0.06fF
+C13 NAND_3/A A 0.03fF
+C14 NAND_1/B vdd 0.21fF
+C15 NAND_1/B B 0.09fF
+C16 vdd A 0.09fF
+C17 NAND_1/B NAND_1/w_n1_n1# 0.06fF
+C18 NAND_3/A NAND_3/w_n1_n1# 0.06fF
+C19 NAND_3/A NAND_0/w_n1_n1# 0.06fF
+C20 NAND_0/a_13_n30# NAND_3/A 0.02fF
+C21 NAND_1/B NAND_1/A 0.32fF
+C22 NAND_3/w_n1_n1# vdd 0.09fF
+C23 vdd NAND_0/w_n1_n1# 0.10fF
+C24 gnd NAND_1/B 0.04fF
+C25 NAND_3/A vdd 0.21fF
+C26 NAND_3/w_n1_n1# B 0.06fF
+C27 NAND_2/w_n1_n1# A 0.06fF
+C28 vdd out 0.21fF
+C29 NAND_3/A B 0.37fF
+C30 NAND_1/w_n1_n1# out 0.07fF
+C31 NAND_1/A NAND_0/w_n1_n1# 0.07fF
+C32 NAND_3/w_n1_n1# Gnd 0.69fF
+C33 NAND_3/A Gnd 0.85fF
+C34 B Gnd 0.98fF
+C35 A Gnd 1.08fF
+C36 NAND_2/w_n1_n1# Gnd 0.69fF
+C37 out Gnd 0.16fF
+C38 NAND_1/B Gnd 0.59fF
+C39 NAND_1/A Gnd 0.50fF
+C40 NAND_1/w_n1_n1# Gnd 0.69fF
+C41 gnd Gnd 1.66fF
+C42 NAND_0/w_n1_n1# Gnd 0.69fF
+
+
+.tran 1n 800n
+
+
+.control
+run
+set color0 = rgb:f/f/e
+set color1 = black
+plot v(A) v(B)+2 v(Out)+4
+
+.end
+.endc
+

@@ -1,0 +1,111 @@
+magic
+tech scmos
+timestamp 1701469746
+<< nwell >>
+rect -27 2 56 21
+<< ntransistor >>
+rect -16 -36 -14 -31
+rect 4 -36 6 -31
+rect 23 -36 25 -31
+rect 42 -36 44 -31
+<< ptransistor >>
+rect -16 10 -14 15
+rect 4 10 6 15
+rect 23 10 25 15
+rect 42 10 44 15
+<< ndiffusion >>
+rect -20 -36 -16 -31
+rect -14 -36 4 -31
+rect 6 -36 23 -31
+rect 25 -36 42 -31
+rect 44 -36 46 -31
+rect 50 -36 52 -31
+<< pdiffusion >>
+rect -17 10 -16 15
+rect -14 10 -12 15
+rect 2 10 4 15
+rect 6 10 7 15
+rect 21 10 23 15
+rect 25 10 26 15
+rect 40 10 42 15
+rect 44 10 45 15
+<< ndcontact >>
+rect -24 -36 -20 -31
+rect 46 -36 50 -31
+<< pdcontact >>
+rect -21 10 -17 15
+rect -12 10 -8 15
+rect -2 10 2 15
+rect 7 10 11 15
+rect 17 10 21 15
+rect 26 10 30 15
+rect 36 10 40 15
+rect 45 10 49 15
+<< polysilicon >>
+rect -16 15 -14 18
+rect 4 15 6 18
+rect 23 15 25 18
+rect 42 15 44 18
+rect -16 -11 -14 10
+rect -18 -15 -14 -11
+rect 4 -12 6 10
+rect 23 -12 25 10
+rect 42 -12 44 10
+rect -16 -31 -14 -15
+rect 2 -16 6 -12
+rect 19 -16 25 -12
+rect 38 -16 44 -12
+rect 4 -31 6 -16
+rect 23 -31 25 -16
+rect 42 -31 44 -16
+rect -16 -39 -14 -36
+rect 4 -40 6 -36
+rect 23 -39 25 -36
+rect 42 -39 44 -36
+<< polycontact >>
+rect -22 -15 -18 -11
+rect -2 -16 2 -12
+rect 15 -16 19 -12
+rect 34 -16 38 -12
+<< metal1 >>
+rect 18 32 99 35
+rect 18 29 21 32
+rect -27 21 56 29
+rect -21 15 -18 21
+rect -2 15 1 21
+rect 17 15 20 21
+rect 36 15 39 21
+rect 96 10 99 32
+rect -11 -1 -8 10
+rect 8 -1 11 10
+rect 27 -1 30 10
+rect 46 -1 49 10
+rect -11 -4 49 -1
+rect -26 -15 -22 -11
+rect -6 -16 -2 -12
+rect 11 -16 15 -12
+rect 30 -16 34 -12
+rect 46 -14 49 -4
+rect 93 -10 98 -8
+rect 93 -12 99 -10
+rect 118 -12 129 -9
+rect 93 -14 96 -12
+rect 46 -17 96 -14
+rect 46 -31 49 -17
+rect -24 -42 -20 -36
+rect 46 -38 49 -36
+rect 102 -42 106 -27
+rect -24 -46 106 -42
+use not  not_0
+timestamp 1698047077
+transform 1 0 105 0 1 -7
+box -9 -20 16 20
+<< labels >>
+rlabel metal1 -16 -45 -12 -43 1 gnd
+rlabel metal1 26 33 32 34 5 vdd
+rlabel metal1 -25 -14 -24 -12 3 A
+rlabel metal1 -5 -15 -3 -13 1 B
+rlabel metal1 11 -15 13 -13 1 C
+rlabel metal1 31 -15 32 -13 1 D
+rlabel metal1 127 -11 128 -10 7 out
+<< end >>

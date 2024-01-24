@@ -1,0 +1,6 @@
+.include AND.sub
+
+.subckt AND3 A B C Out vdd gnd
+    X1 A B D vdd gnd AND
+    X2 C D Out vdd gnd AND
+.ends AND3

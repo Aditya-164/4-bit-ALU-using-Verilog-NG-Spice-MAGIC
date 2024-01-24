@@ -1,0 +1,81 @@
+timestamp 1701836177
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 9
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+use not not_0 1 0 9 0 1 20
+use not not_1 1 0 10 0 1 -94
+use AND AND_0 1 0 216 0 1 25
+use AND AND_1 1 0 217 0 1 -150
+use AND AND_2 1 0 220 0 1 -329
+use AND AND_3 1 0 223 0 1 -502
+node "en3" 2 221.486 330 -483 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 219 152 0 0 0 0 0 0 0 0 0 0
+node "en2" 3 283.472 328 -310 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 282 194 0 0 0 0 0 0 0 0 0 0
+node "en1" 3 298.23 324 -131 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 297 204 0 0 0 0 0 0 0 0 0 0
+node "s1" 26 2996.78 -106 -99 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3111 2010 0 0 0 0 0 0 0 0 0 0
+node "gnd" 28 17769 7 -16 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 410 214 7930 3192 0 0 0 0 0 0 0 0
+node "en0" 3 289.375 323 44 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 288 198 0 0 0 0 0 0 0 0 0 0
+node "m1_23_n99#" 12 1292.95 23 -99 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1308 878 0 0 0 0 0 0 0 0 0 0
+node "s0" 19 7110.72 -108 15 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1865 1016 2560 1034 0 0 0 0 0 0 0 0
+node "m1_22_15#" 17 4565.47 22 15 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1373 922 1475 600 0 0 0 0 0 0 0 0
+node "vdd" 27 18128.8 1 37 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 131 94 8100 3250 0 0 0 0 0 0 0 0
+cap "m1_22_15#" "vdd" 85.1355
+cap "s0" "gnd" 290.142
+cap "en2" "vdd" 85.1355
+cap "s1" "s0" 706.365
+cap "m1_23_n99#" "s0" 355.842
+cap "s0" "m1_22_15#" 181.85
+cap "s1" "gnd" 437.256
+cap "m1_23_n99#" "gnd" 170.271
+cap "m1_22_15#" "gnd" 85.1355
+cap "en1" "vdd" 85.1355
+cap "s0" "vdd" 96.714
+cap "s1" "m1_22_15#" 1107.84
+cap "m1_23_n99#" "m1_22_15#" 266.583
+cap "en0" "vdd" 85.1355
+cap "AND_3/A" "AND_3/B" 121.192
+cap "AND_3/B" "AND_3/gnd" 41.238
+subcap "en3" -150.537
+cap "AND_2/B" "AND_2/A" 129.44
+cap "AND_2/B" "AND_2/gnd" 41.238
+subcap "en2" -179.999
+cap "AND_1/B" "AND_1/gnd" 16.4952
+subcap "en1" -315.639
+subcap "m1_23_n99#" -1204.24
+cap "AND_1/B" "AND_1/NAND_0/gnd" 16.4952
+cap "AND_1/B" "AND_1/A" 145.935
+subcap "en1" -227.281
+subcap "m1_22_15#" -4476.75
+subcap "vdd" -18047.5
+cap "AND_0/A" "AND_0/B" 121.192
+cap "AND_0/B" "AND_0/gnd" 41.238
+subcap "en0" -218.426
+merge "AND_0/A" "not_0/out" -53.4564 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -30 -38 0 0 0 0 0 0 0 0 0 0
+merge "not_0/out" "AND_2/B"
+merge "AND_2/B" "m1_22_15#"
+merge "AND_1/out" "en1" -18.3519 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1 -18 0 0 0 0 0 0 0 0 0 0
+merge "AND_0/gnd" "not_0/gnd" -828.79 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -18 -24 -260 -154 0 0 0 0 0 0 0 0
+merge "not_0/gnd" "not_1/gnd"
+merge "not_1/gnd" "AND_1/gnd"
+merge "AND_1/gnd" "AND_2/gnd"
+merge "AND_2/gnd" "AND_3/gnd"
+merge "AND_3/gnd" "gnd"
+merge "not_0/in" "AND_1/A" -42.9231 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3 -36 0 0 0 0 0 0 0 0 0 0
+merge "AND_1/A" "AND_3/B"
+merge "AND_3/B" "s0"
+merge "not_1/in" "AND_2/A" -409.003 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -451 -266 0 0 0 0 0 0 0 0 0 0
+merge "AND_2/A" "AND_3/A"
+merge "AND_3/A" "s1"
+merge "AND_0/vdd" "not_0/VDD" -1299.59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -18 -24 -450 -230 0 0 0 0 0 0 0 0
+merge "not_0/VDD" "AND_1/vdd"
+merge "AND_1/vdd" "not_1/VDD"
+merge "not_1/VDD" "AND_2/vdd"
+merge "AND_2/vdd" "AND_3/vdd"
+merge "AND_3/vdd" "vdd"
+merge "AND_0/out" "en0" -22.1427 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13 -18 0 0 0 0 0 0 0 0 0 0
+merge "AND_2/out" "en2" -19.191 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -10 -16 0 0 0 0 0 0 0 0 0 0
+merge "AND_3/out" "en3" -22.1427 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13 -18 0 0 0 0 0 0 0 0 0 0
+merge "AND_0/B" "not_1/out" -50.5047 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -21 -32 0 0 0 0 0 0 0 0 0 0
+merge "not_1/out" "AND_1/B"
+merge "AND_1/B" "m1_23_n99#"

@@ -1,0 +1,59 @@
+.include TSMC_180nm.txt
+
+.param SUPPLY = 1.8
+.param LAMBDA = 0.18u
+
+.param wn1 = {10*LAMBDA}
+.param wn2 = {10*LAMBDA}
+.param ln1 = {2*LAMBDA}
+.param ln2 = {2*LAMBDA}
+
+.param wp1 = wn1
+.param wp2 = wn1
+.param lp1 = {LAMBDA}
+.param lp2 = {LAMBDA}
+
+.global gnd
+
+
+.option scale=0.09u
+
+
+Vdd vdd gnd 'SUPPLY'
+
+V_in_a0 A0 gnd PULSE(0 1.8 0ns 100ps 100ps 20ns 40ns)
+V_in_a1 A1 gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 60ns)
+V_in_a2 A2 gnd PULSE(0 1.8 0ns 100ps 100ps 60ns 80ns)
+V_in_a3 A3 gnd PULSE(0 1.8 0ns 100ps 100ps 80ns 100ns)
+V_in_b0 B0 gnd PULSE(0 1.8 0ns 100ps 100ps 100ns 120ns)
+V_in_b1 B1 gnd PULSE(0 1.8 0ns 100ps 100ps 120ns 140ns)
+V_in_b2 B2 gnd PULSE(0 1.8 0ns 100ps 100ps 140ns 160ns)
+V_in_b3 B3 gnd PULSE(0 1.8 0ns 100ps 100ps 160ns 180ns)
+
+V_in_s0 s0 gnd dc 0
+V_in_s1 s1 gnd dc 0
+
+
+
+.tran 1n 800n
+
+
+.control
+run
+set color0 = rgb:f/f/e
+set color1 = black
+
+//plot v(A0) v(A1)+2 v(A2)+4 v(A3)+6 v(B0)+8 v(B1)+10 v(B2)+12 v(B3)+14 v(Out0)+16 v(Out1)+18 v(Out2)+20 v(Out3)+22 v(Out4)+24 
+
+//plot v(s0) v(s1)+2 v(en0)+4 v(en1)+6 v(en2)+8 v(en3)+10
+
+//plot v(A0) v(A1)+2 v(A2)+4 v(A3)+6 v(B0)+8 v(B1)+10 v(B2)+12 v(B3)+14 v(en0)+16 v(en1)+18 v(en2)+20 v(en3)+22 
+//plot v(A0) v(ad1)+2 v(ad2)+4 v(ad3)+6 v(ad4)+8 v(ad5)+10 v(ad6)+12 v(ad7)+14  
+//plot v(comp0) v(comp1)+2 v(comp2)+4 v(comp3)+6 v(comp4)+8 v(comp5)+10 v(comp6)+12 v(comp7)+14  
+//plot v(foa0) v(foa1)+2 v(foa2)+4 v(foa3)+6 v(foa4)+8 v(foa5)+10 v(foa6)+12 v(foa7)+14 
+
+plot v(ea1) v(ea2)+2 v(ea3)+4 v(ea4)+6
+
+//hardcopy image.ps v(A) v(B)+2 v(C)+4 v(S)+6 v(Car)+8
+.end
+.endc  

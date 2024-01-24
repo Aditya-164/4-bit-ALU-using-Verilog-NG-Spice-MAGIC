@@ -1,0 +1,38 @@
+magic
+tech scmos
+timestamp 1701359634
+<< metal1 >>
+rect -2 23 5 26
+rect 16 23 23 26
+rect 41 23 70 26
+rect 41 22 82 23
+rect 66 19 82 22
+rect 106 19 111 22
+rect 1 1 5 4
+<< m2contact >>
+rect 0 55 5 60
+rect 82 44 87 49
+rect 1 -4 6 1
+rect 81 -1 86 4
+<< metal2 >>
+rect 0 76 87 81
+rect 0 60 5 76
+rect 82 49 87 76
+rect 68 1 81 4
+rect 6 -1 81 1
+rect 6 -4 73 -1
+use not  not_0
+timestamp 1698047077
+transform 1 0 90 0 1 24
+box -9 -20 16 20
+use NAND  NAND_0
+timestamp 1701353143
+transform 1 0 1 0 1 36
+box -1 -36 44 19
+<< labels >>
+rlabel metal2 22 -2 26 -1 1 gnd
+rlabel metal2 13 78 19 80 5 vdd
+rlabel metal1 17 24 18 25 1 B
+rlabel metal1 -1 24 1 25 3 A
+rlabel metal1 107 20 109 21 7 out
+<< end >>

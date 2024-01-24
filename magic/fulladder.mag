@@ -1,0 +1,112 @@
+magic
+tech scmos
+timestamp 1701362989
+<< metal1 >>
+rect 510 231 520 235
+rect 510 225 588 231
+rect -21 112 4 116
+rect -21 -75 -17 112
+rect 469 70 473 81
+rect 284 66 473 70
+rect 34 23 56 26
+rect 510 -35 520 225
+rect 871 181 882 185
+rect 565 136 640 142
+rect 565 91 571 136
+rect 510 -38 690 -35
+rect -96 -82 -15 -75
+rect -48 -155 -45 -106
+rect -167 -165 -41 -155
+rect -48 -232 -45 -165
+rect -21 -223 -17 -82
+rect 510 -87 520 -38
+rect 705 -42 708 -35
+rect 662 -45 708 -42
+rect 798 -43 825 -39
+rect 662 -49 665 -45
+rect 654 -52 665 -49
+rect 22 -97 520 -87
+rect 821 -105 825 -43
+rect 821 -109 955 -105
+rect 952 -110 955 -109
+rect 967 -109 975 -105
+rect 967 -112 970 -109
+rect 963 -115 970 -112
+rect 1083 -115 1109 -112
+rect 963 -116 966 -115
+rect 906 -119 966 -116
+rect -21 -227 81 -223
+rect 99 -232 102 -224
+rect 906 -228 909 -119
+rect 191 -231 909 -228
+rect -48 -235 102 -232
+<< m2contact >>
+rect 469 81 474 86
+rect 29 21 34 26
+rect 565 85 571 91
+rect -48 -106 -43 -101
+rect 649 -52 654 -47
+<< metal2 >>
+rect 89 277 601 282
+rect 89 213 94 277
+rect -129 208 95 213
+rect -129 -131 -124 208
+rect 89 152 94 208
+rect 444 164 451 277
+rect 596 259 601 277
+rect 596 254 642 259
+rect 444 157 593 164
+rect 469 86 565 91
+rect 29 18 34 21
+rect -48 13 34 18
+rect -48 -101 -43 13
+rect -129 -136 90 -131
+rect 85 -174 90 -136
+rect 122 -276 130 -250
+rect 221 -276 225 4
+rect 546 -44 551 86
+rect 586 84 593 157
+rect 834 115 1098 119
+rect 691 84 964 85
+rect 586 78 964 84
+rect 586 77 698 78
+rect 691 17 698 77
+rect 546 -47 654 -44
+rect 546 -49 649 -47
+rect 729 -245 734 -60
+rect 957 -61 964 78
+rect 958 -245 966 -159
+rect 1094 -163 1098 115
+rect 1047 -167 1098 -163
+rect 370 -253 966 -245
+rect 370 -276 378 -253
+rect 122 -284 378 -276
+use AND  AND_1
+timestamp 1701359634
+transform 1 0 83 0 1 -250
+box -2 -4 111 81
+use OR  OR_0
+timestamp 1701360716
+transform 1 0 954 0 1 -146
+box -3 -21 132 92
+use AND  AND_0
+timestamp 1701359634
+transform 1 0 689 0 1 -61
+box -2 -4 111 81
+use XOR  XOR_1
+timestamp 1701356350
+transform 1 0 723 0 1 203
+box -136 -88 152 66
+use XOR  XOR_0
+timestamp 1701356350
+transform 1 0 136 0 1 88
+box -136 -88 152 66
+<< labels >>
+rlabel metal1 -93 -81 -86 -78 1 A
+rlabel metal1 -164 -163 -154 -159 1 B
+rlabel metal1 25 -93 35 -89 1 C
+rlabel metal2 124 278 128 280 5 vdd
+rlabel metal2 272 -282 278 -279 1 gnd
+rlabel metal1 879 182 881 184 1 S
+rlabel metal1 1107 -114 1108 -113 7 Car
+<< end >>

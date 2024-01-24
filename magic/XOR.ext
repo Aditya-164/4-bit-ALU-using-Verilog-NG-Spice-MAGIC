@@ -1,0 +1,59 @@
+timestamp 1701356350
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 9
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+use NAND NAND_3 1 0 37 0 1 -36
+use NAND NAND_2 1 0 -91 0 1 -9
+use NAND NAND_1 1 0 99 0 1 -8
+use NAND NAND_0 1 0 -37 0 1 37
+node "out" 0 50.4948 139 -22 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 52 34 0 0 0 0 0 0 0 0 0 0
+node "m1_77_n50#" 1 236.748 77 -50 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 280 148 0 0 0 0 0 0 0 0 0 0
+node "m1_3_23#" 3 468.748 3 23 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 564 290 0 0 0 0 0 0 0 0 0 0
+node "m1_n47_n23#" 3 675.287 -47 -23 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 926 382 0 0 0 0 0 0 0 0 0 0
+node "B" 5 605.207 -83 -65 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 609 412 0 0 0 0 0 0 0 0 0 0
+node "gnd" 9 4340.26 -91 -50 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 165 112 1561 786 0 0 0 0 0 0 0 0
+node "A" 4 596.184 -136 24 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 720 368 0 0 0 0 0 0 0 0 0 0
+node "vdd" 8 3997.29 -92 10 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 100 80 1433 722 0 0 0 0 0 0 0 0
+cap "m1_3_23#" "vdd" 114.891
+cap "B" "m1_n47_n23#" 189.695
+cap "m1_3_23#" "m1_77_n50#" 144.333
+cap "gnd" "m1_n47_n23#" 96.714
+cap "B" "gnd" 74.1564
+cap "vdd" "A" 85.4352
+subcap "m1_n47_n23#" -427.68
+subcap "B" -112.974
+subcap "gnd" -2790.43
+subcap "vdd" -3880.36
+cap "NAND_2/a_13_n30#" "NAND_2/B" 16.7025
+cap "NAND_3/A" "NAND_3/B" 96.4494
+cap "NAND_3/gnd" "NAND_3/B" 41.238
+cap "NAND_0/a_13_n30#" "NAND_3/A" 21.1575
+cap "NAND_1/gnd" "NAND_3/out" 41.238
+cap "NAND_3/vdd" "NAND_1/A" 23.5646
+cap "NAND_1/A" "NAND_3/out" 172.303
+subcap "vdd" -2814.14
+cap "NAND_0/w_n1_n1#" "NAND_2/vdd" 5.22
+subcap "m1_3_23#" -325.324
+cap "NAND_0/B" "NAND_0/A" 27.492
+merge "NAND_0/out" "NAND_1/A" -48.6636 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24 -41 0 0 0 0 0 0 0 0 0 0
+merge "NAND_1/A" "m1_3_23#"
+merge "NAND_1/B" "NAND_3/out" -35.6376 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16 -24 0 0 0 0 0 0 0 0 0 0
+merge "NAND_3/out" "m1_77_n50#"
+merge "NAND_1/gnd" "NAND_3/gnd" -72.5496 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24 -44 0 0 0 0 0 0 0 0 0 0
+merge "NAND_3/gnd" "NAND_0/gnd"
+merge "NAND_0/gnd" "NAND_2/gnd"
+merge "NAND_2/gnd" "gnd"
+merge "NAND_0/A" "NAND_2/A" -29.8428 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12 -26 0 0 0 0 0 0 0 0 0 0
+merge "NAND_2/A" "A"
+merge "NAND_0/vdd" "NAND_1/vdd" -728.292 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4 -40 -156 -107 0 0 0 0 0 0 0 0
+merge "NAND_1/vdd" "NAND_3/vdd"
+merge "NAND_3/vdd" "NAND_2/vdd"
+merge "NAND_2/vdd" "vdd"
+merge "NAND_3/B" "NAND_2/B" -35.4402 0 0 0 0 0 0 0 0 0 0 0 0 0 0 23 -22 0 0 0 0 0 0 0 0 0 0
+merge "NAND_2/B" "B"
+merge "NAND_0/B" "NAND_3/A" -51.1365 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -10 -30 0 0 0 0 0 0 0 0 0 0
+merge "NAND_3/A" "NAND_2/out"
+merge "NAND_2/out" "m1_n47_n23#"
+merge "NAND_1/out" "out" -21.0864 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16 -16 0 0 0 0 0 0 0 0 0 0

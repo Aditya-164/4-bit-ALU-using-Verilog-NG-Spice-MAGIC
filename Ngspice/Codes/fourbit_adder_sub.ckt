@@ -1,0 +1,56 @@
+.include TSMC_180nm.txt
+.include fourbit_adder_sub.sub
+
+.param SUPPLY = 1.8
+.param LAMBDA = 0.18u
+
+.param wn1 = {10*LAMBDA}
+.param wn2 = {10*LAMBDA}
+.param ln1 = {2*LAMBDA}
+.param ln2 = {2*LAMBDA}
+
+.param wp1 = wn1
+.param wp2 = wn1
+.param lp1 = {LAMBDA}
+.param lp2 = {LAMBDA}
+
+.global gnd
+
+Vdd vdd gnd 'SUPPLY'
+
+V_in_a0 A0 gnd PULSE(0 1.8 0ns 100ps 100ps 20ns 40ns)
+V_in_a1 A1 gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 60ns)
+V_in_a2 A2 gnd PULSE(0 1.8 0ns 100ps 100ps 60ns 80ns)
+V_in_a3 A3 gnd PULSE(0 1.8 0ns 100ps 100ps 80ns 100ns)
+V_in_b0 B0 gnd PULSE(0 1.8 0ns 100ps 100ps 100ns 120ns)
+V_in_b1 B1 gnd PULSE(0 1.8 0ns 100ps 100ps 120ns 140ns)
+V_in_b2 B2 gnd PULSE(0 1.8 0ns 100ps 100ps 140ns 160ns)
+V_in_b3 B3 gnd PULSE(0 1.8 0ns 100ps 100ps 160ns 180ns)
+V_in_c Cin gnd dc 0
+
+X1 A0 A1 A2 A3 B0 B1 B2 B3 Cin S0 S1 S2 S3 Cout vdd gnd fourbit_adder_sub
+
+* X1 node_a node_b node_c node_x gnd NAND
+* X2 node_a node_c node_d node_x gnd NAND
+* X3 node_b node_c node_e node_x gnd NAND
+* X4 node_e node_d node_out node_x gnd NAND
+
+
+C0 S0 gnd 100f
+C1 S1 gnd 100f
+C2 S2 gnd 100f
+C3 S3 gnd 100f
+C4 Cout gnd 100f
+
+.tran 1n 800n
+
+
+.control
+run
+set color0 = rgb:f/f/e
+set color1 = white
+plot v(A0) v(A1)+2 v(A2)+4 v(A3)+6 v(B0)+8 v(B1)+10 v(B2)+12 v(B3)+14 v(Cin)+16
+plot v(S0) v(S1)+2 v(S2)+4 v(S3)+6 v(Cout)+8
+//hardcopy image.ps v(A) v(B)+2 v(C)+4 v(S)+6 v(Car)+8
+.end
+.endc

@@ -1,0 +1,660 @@
+timestamp 1701851167
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 9
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+use OR OR_0 1 0 854 0 1 571
+use XOR XOR_3 1 0 2015 0 1 235
+use XOR XOR_2 1 0 2012 0 1 525
+use decoder decoder_0 1 0 108 0 1 534
+use enable enable_0 1 0 1613 0 1 1423
+use enable enable_1 1 0 1660 0 1 -528
+use enable enable_2 1 0 1717 0 1 -3245
+use XOR XOR_0 1 0 2014 0 1 967
+use XOR XOR_1 1 0 2015 0 1 764
+use four_bit_adder four_bit_adder_0 1 0 2673 0 1 4636
+use AND AND_3 1 0 2268 0 1 -4011
+use AND AND_2 1 0 2266 0 1 -3745
+use AND AND_1 1 0 2269 0 1 -3525
+use AND AND_0 1 0 2264 0 1 -3275
+use comparator comparator_0 1 0 2509 0 1 -293
+use AND AND_4 1 0 5183 0 1 -365
+use OR3 OR3_1 1 0 7485 0 1 863
+use OR3 OR3_0 1 0 6617 0 1 5055
+use OR3 OR3_2 1 0 9941 0 1 -694
+use OR OR_1 1 0 11364 0 1 -2044
+node "m2_1730_n4160#" 35 24500.1 1730 -4160 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10950 4390 0 0 0 0 0 0 0 0
+node "m2_1674_n1713#" 17 9638.02 1674 -1713 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3472 1744 0 0 0 0 0 0 0 0
+node "m2_1630_n1200#" 1 511.789 1630 -1200 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 205 92 0 0 0 0 0 0 0 0
+node "ea4" 0 162.14 3789 -870 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 36 30 0 0 0 0 0 0 0 0
+node "ea3" 0 174.427 3769 -866 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 48 32 0 0 0 0 0 0 0 0
+node "m2_2247_495#" 0 597.053 2247 495 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 352 104 0 0 0 0 0 0 0 0
+node "m2_1783_1530#" 33 22682.3 1783 1530 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10280 4122 0 0 0 0 0 0 0 0
+node "m1_1863_n4106#" 14 1605.83 1863 -4106 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1626 1090 0 0 0 0 0 0 0 0 0 0
+node "m1_1855_n3986#" 11 1230.97 1855 -3986 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1245 836 0 0 0 0 0 0 0 0 0 0
+node "Out3" 3 283.472 11493 -2013 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 282 194 0 0 0 0 0 0 0 0 0 0
+node "m1_2376_n3992#" 293 32460 2376 -3992 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 32985 21996 0 0 0 0 0 0 0 0 0 0
+node "m1_1851_n3855#" 15 1679.63 1851 -3855 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1701 1140 0 0 0 0 0 0 0 0 0 0
+node "m1_1842_n3735#" 12 1295.9 1842 -3735 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1311 880 0 0 0 0 0 0 0 0 0 0
+node "Out2" 5 516.656 10105 -757 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 519 352 0 0 0 0 0 0 0 0 0 0
+node "m1_2373_n3726#" 279 31332.4 2373 -3726 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 32080 21156 0 0 0 0 0 0 0 0 0 0
+node "m1_1838_n3607#" 15 1644.21 1838 -3607 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1665 1116 0 0 0 0 0 0 0 0 0 0
+node "m1_1844_n3477#" 12 1337.23 1844 -3477 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1353 908 0 0 0 0 0 0 0 0 0 0
+node "m1_1836_n3340#" 14 1585.17 1836 -3340 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1605 1076 0 0 0 0 0 0 0 0 0 0
+node "m1_1838_n3222#" 12 1354.94 1838 -3222 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1371 920 0 0 0 0 0 0 0 0 0 0
+node "Out1" 4 478.284 7649 800 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 480 326 0 0 0 0 0 0 0 0 0 0
+node "outout3" 252 27907.4 2377 -3506 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 28362 18910 0 0 0 0 0 0 0 0 0 0
+node "gnd" 221 348895 6591 3973 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 69145 27668 145862 53334 0 0 0 0 0 0 0 0
+node "ea2" 0 26.6739 3705 -839 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21 20 0 0 0 0 0 0 0 0 0 0
+node "ea1" 0 32.5773 3701 -827 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 27 24 0 0 0 0 0 0 0 0 0 0
+node "f7" 21 3311.09 1810 -1389 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2183 1462 510 214 0 0 0 0 0 0 0 0
+node "f6" 19 3800.37 1797 -1269 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2027 1280 850 360 0 0 0 0 0 0 0 0
+node "f3" 30 3376.85 1787 -890 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3426 2290 0 0 0 0 0 0 0 0 0 0
+node "f2" 23 2538.57 1786 -760 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2574 1722 0 0 0 0 0 0 0 0 0 0
+node "f5" 24 6634.24 1795 -1138 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2520 1514 1955 802 0 0 0 0 0 0 0 0
+node "f1" 17 1841.97 1779 -623 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1866 1250 0 0 0 0 0 0 0 0 0 0
+node "m1_4976_n663#" 29 11735.7 4976 -663 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1860 752 3201 1916 0 0 0 0 0 0 0 0
+node "m1_4040_n472#" 111 49114.8 4040 -472 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8526 5158 21846 7306 0 0 0 0 0 0 0 0
+node "eequal" 29 16400.6 3918 -825 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2082 924 6645 2678 0 0 0 0 0 0 0 0
+node "outout2" 76 41954.2 5291 -346 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3653 1888 17505 7022 0 0 0 0 0 0 0 0
+node "f4" 28 12697 1785 -1018 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1241 834 5155 2072 0 0 0 0 0 0 0 0
+node "m1_4995_n237#" 18 12832.8 4995 -237 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1656 564 6174 2082 0 0 0 0 0 0 0 0
+node "f0" 26 2910.48 1781 -505 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2952 1974 0 0 0 0 0 0 0 0 0 0
+node "m1_1762_562#" 15 1682.58 1762 562 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1704 1142 0 0 0 0 0 0 0 0 0 0
+node "m1_1751_682#" 11 1192.6 1751 682 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1206 810 0 0 0 0 0 0 0 0 0 0
+node "m1_2163_213#" 23 3697.14 2163 213 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4516 2266 0 0 0 0 0 0 0 0 0 0
+node "Out4" 2 251.003 3959 900 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 249 172 0 0 0 0 0 0 0 0 0 0
+node "m1_3742_1196#" 177 88745.1 3742 1196 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 18494 9126 39096 13056 0 0 0 0 0 0 0 0
+node "m1_1747_813#" 8 903.329 1747 813 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 912 614 0 0 0 0 0 0 0 0 0 0
+node "m1_1738_933#" 6 687.855 1738 933 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 693 468 0 0 0 0 0 0 0 0 0 0
+node "m1_2160_503#" 41 6690.26 2160 503 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8180 4098 0 0 0 0 0 0 0 0 0 0
+node "m1_1740_1061#" 21 5169.73 1740 1061 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3863 1880 1141 392 0 0 0 0 0 0 0 0
+node "m1_3736_2426#" 152 63019.8 3736 2426 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22012 10838 27552 7900 0 0 0 0 0 0 0 0
+node "m1_1738_1191#" 49 7440.82 1738 1191 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5256 3484 1040 426 0 0 0 0 0 0 0 0
+node "m1_2163_742#" 61 10052.6 2163 742 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12296 6156 0 0 0 0 0 0 0 0 0 0
+node "A1" 105 28531 1369 -4111 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 28156 11400 3770 1538 0 0 0 0 0 0 0 0
+node "A2" 107 30073.9 1318 -4129 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 28242 11436 4505 1832 0 0 0 0 0 0 0 0
+node "A3" 110 31616.5 1271 -4151 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 28380 11500 5220 2118 0 0 0 0 0 0 0 0
+node "B0" 112 32939.7 1224 -4121 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 28193 11414 5950 2410 0 0 0 0 0 0 0 0
+node "B1" 114 34395.3 1176 -4124 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 28241 11442 6655 2692 0 0 0 0 0 0 0 0
+node "B2" 115 35548.6 1133 -4111 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 28074 11348 7310 2954 0 0 0 0 0 0 0 0
+node "m1_377_n240#" 82 85902.8 377 -240 v1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 50879 10226 50805 10260 0 0 0 0 0 0 0 0
+node "en3" 110 17048.7 507 51 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11594 7652 2750 1110 0 0 0 0 0 0 0 0
+node "en2" 107 64109.2 526 224 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2124 1374 28010 11214 0 0 0 0 0 0 0 0
+node "B3" 118 36047.8 1093 -4106 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 28415 11582 7455 3012 0 0 0 0 0 0 0 0
+node "S1" 2 334.776 -91 435 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 400 208 0 0 0 0 0 0 0 0 0 0
+node "S0" 2 331.508 -88 549 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 396 206 0 0 0 0 0 0 0 0 0 0
+node "A0" 101 25171.4 1421 -4116 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 29310 11804 1830 762 0 0 0 0 0 0 0 0
+node "m1_1732_1328#" 81 11668.4 1732 1328 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8691 5770 1400 570 0 0 0 0 0 0 0 0
+node "outout1" 122 31977.1 3746 3736 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21422 10718 8841 2540 0 0 0 0 0 0 0 0
+node "m1_2161_945#" 70 46567.3 2161 945 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 994 464 20470 8198 0 0 0 0 0 0 0 0
+node "en0" 10 1071.58 523 578 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1083 728 0 0 0 0 0 0 0 0 0 0
+node "m1_983_602#" 20 5555.54 983 602 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8445 2882 0 0 0 0 0 0 0 0 0 0
+node "en1" 175 56402.3 527 403 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 39088 16222 12605 5082 0 0 0 0 0 0 0 0
+node "m1_1734_1446#" 120 13327 1734 1446 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13539 9032 0 0 0 0 0 0 0 0 0 0
+node "Out0" 4 445.815 6778 4992 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 447 304 0 0 0 0 0 0 0 0 0 0
+node "m1_2372_n3256#" 173 48093.1 2372 -3256 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 72716 25072 0 0 0 0 0 0 0 0 0 0
+node "m1_4126_n1367#" 146 93193.9 4126 -1367 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2854 1518 40585 16244 0 0 0 0 0 0 0 0
+node "vdd" 2 303418 6677 5083 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 339 200 135405 54172 0 0 0 0 0 0 0 0
+node "m1_3816_5101#" 57 9260.49 3816 5101 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11330 5670 0 0 0 0 0 0 0 0 0 0
+cap "m1_1738_1191#" "m2_1783_1530#" 85.1355
+cap "outout3" "m1_4040_n472#" 96.1146
+cap "m1_1751_682#" "m2_1783_1530#" 85.1355
+cap "m1_1747_813#" "m2_1783_1530#" 85.1355
+cap "A1" "B2" 324.877
+cap "m1_1851_n3855#" "m1_377_n240#" 194.927
+cap "m1_1836_n3340#" "m1_377_n240#" 194.927
+cap "m1_2163_742#" "gnd" 130.55
+cap "B1" "B0" 324.877
+cap "B3" "A1" 324.877
+cap "f5" "f2" 85.1355
+cap "m1_2161_945#" "m1_1738_1191#" 85.1355
+cap "B0" "A2" 324.877
+cap "en2" "B0" 108.293
+cap "B2" "m1_377_n240#" 390.262
+cap "en3" "B0" 108.293
+cap "A3" "B2" 324.877
+cap "A0" "B2" 324.877
+cap "B3" "m1_377_n240#" 390.262
+cap "m1_3742_1196#" "m1_2376_n3992#" 148.457
+cap "m2_1730_n4160#" "m1_2376_n3992#" 85.1355
+cap "outout1" "m1_2372_n3256#" 167.983
+cap "B3" "A3" 324.877
+cap "A0" "B3" 324.877
+cap "m1_1842_n3735#" "m1_1851_n3855#" 226.809
+cap "outout2" "m1_4126_n1367#" 108.293
+cap "m1_2372_n3256#" "m1_4040_n472#" 155.506
+cap "outout2" "m1_4040_n472#" 205.007
+cap "S0" "m1_377_n240#" 96.714
+cap "A1" "m1_377_n240#" 390.262
+cap "gnd" "en1" 181.85
+cap "A3" "A1" 324.877
+cap "A0" "A1" 324.877
+cap "gnd" "B1" 251.32
+cap "gnd" "A2" 251.32
+cap "gnd" "en2" 85.1355
+cap "gnd" "en3" 170.271
+cap "m1_377_n240#" "m1_1838_n3607#" 194.927
+cap "m1_3742_1196#" "outout3" 96.1146
+cap "eequal" "m1_4040_n472#" 85.1355
+cap "A3" "m1_377_n240#" 390.262
+cap "m1_1855_n3986#" "m1_1863_n4106#" 1591.1
+cap "m2_1730_n4160#" "outout3" 85.1355
+cap "eequal" "m1_4976_n663#" 108.293
+cap "A0" "m1_377_n240#" 390.262
+cap "A0" "A3" 324.877
+cap "f3" "f4" 85.1355
+cap "en1" "en0" 415.039
+cap "m1_1740_1061#" "m1_2160_503#" 107.993
+cap "m1_4126_n1367#" "m1_3736_2426#" 96.714
+cap "m1_1842_n3735#" "m1_377_n240#" 194.927
+cap "Out2" "vdd" 85.1355
+cap "Out1" "vdd" 85.1355
+cap "vdd" "en1" 216.585
+cap "vdd" "Out0" 85.1355
+cap "B1" "B2" 324.877
+cap "en2" "B2" 108.293
+cap "B2" "A2" 324.877
+cap "B1" "B3" 324.877
+cap "en3" "B2" 108.293
+cap "B3" "A2" 324.877
+cap "en2" "B3" 108.293
+cap "m1_3742_1196#" "m1_2372_n3256#" 155.506
+cap "m1_3742_1196#" "outout2" 119.871
+cap "gnd" "B0" 251.32
+cap "en3" "B3" 108.293
+cap "S1" "m1_377_n240#" 96.714
+cap "m1_1836_n3340#" "m1_1838_n3222#" 313.409
+cap "m1_2163_742#" "m1_1740_1061#" 143.34
+cap "B1" "A1" 324.877
+cap "en1" "m1_1734_1446#" 170.271
+cap "en2" "A1" 108.293
+cap "A1" "A2" 324.877
+cap "en3" "A1" 108.293
+cap "m1_3742_1196#" "en2" 193.428
+cap "B1" "m1_377_n240#" 390.262
+cap "f3" "f6" 85.1355
+cap "f1" "f4" 85.1355
+cap "B1" "A3" 324.877
+cap "en2" "m1_377_n240#" 166.185
+cap "B1" "A0" 324.877
+cap "m1_377_n240#" "A2" 390.262
+cap "en2" "A3" 108.293
+cap "A3" "A2" 324.877
+cap "A0" "en2" 108.293
+cap "A0" "A2" 324.877
+cap "en3" "m1_377_n240#" 334.957
+cap "en3" "A3" 108.293
+cap "en3" "A0" 108.293
+cap "m1_4126_n1367#" "outout1" 96.714
+cap "en1" "m1_1732_1328#" 85.1355
+cap "B2" "B0" 324.877
+cap "m1_1740_1061#" "en1" 85.1355
+cap "m1_1734_1446#" "m2_1783_1530#" 85.1355
+cap "B3" "B0" 324.877
+cap "m1_4126_n1367#" "m1_4040_n472#" 85.1355
+cap "m1_1838_n3222#" "m1_377_n240#" 194.927
+cap "f2" "f4" 85.1355
+cap "en2" "m1_4995_n237#" 119.871
+cap "outout2" "m1_2372_n3256#" 143.028
+cap "m1_4976_n663#" "m1_4040_n472#" 85.1355
+cap "outout3" "m1_3736_2426#" 107.094
+cap "m1_2163_742#" "m1_1738_1191#" 96.714
+cap "f5" "f3" 85.1355
+cap "A1" "B0" 324.877
+cap "m1_1732_1328#" "m2_1783_1530#" 85.1355
+cap "en1" "m1_1738_933#" 85.1355
+cap "m1_1844_n3477#" "m1_377_n240#" 194.927
+cap "m1_1740_1061#" "m2_1783_1530#" 170.271
+cap "m1_1844_n3477#" "m1_1838_n3607#" 384.888
+cap "B0" "m1_377_n240#" 390.262
+cap "gnd" "B2" 251.32
+cap "gnd" "vdd" 433.17
+cap "A3" "B0" 324.877
+cap "A0" "B0" 324.877
+cap "gnd" "B3" 251.32
+cap "gnd" "m1_2376_n3992#" 85.1355
+cap "en1" "m1_1738_1191#" 85.1355
+cap "m1_1732_1328#" "m1_2161_945#" 85.1355
+cap "m1_1740_1061#" "m1_2161_945#" 85.1355
+cap "B1" "A2" 324.877
+cap "B1" "en2" 108.293
+cap "eequal" "en2" 213.063
+cap "m1_2372_n3256#" "m1_3736_2426#" 167.983
+cap "m1_1738_933#" "m2_1783_1530#" 85.1355
+cap "en2" "A2" 108.293
+cap "en3" "B1" 108.293
+cap "en1" "m1_1751_682#" 170.271
+cap "gnd" "A1" 251.32
+cap "outout2" "m1_3736_2426#" 131.45
+cap "en3" "A2" 108.293
+cap "m1_3742_1196#" "gnd" 119.871
+cap "en1" "m1_1747_813#" 170.271
+cap "m1_3742_1196#" "m1_4126_n1367#" 96.714
+cap "gnd" "m1_2160_503#" 130.55
+cap "en1" "m2_1783_1530#" 355.717
+cap "gnd" "m1_377_n240#" 332.37
+cap "m1_3742_1196#" "m1_4040_n472#" 131.749
+cap "gnd" "A3" 251.32
+cap "gnd" "A0" 251.32
+cap "m1_2373_n3726#" "m2_1730_n4160#" 85.1355
+cap "m1_2373_n3726#" "m1_3742_1196#" 96.1146
+cap "m1_2163_213#" "gnd" 130.55
+cap "B3" "B2" 324.877
+cap "enable_2/B3" "enable_2/enable" 206.19
+cap "enable_2/B3" "enable_2/m2_n32_n13#" 85.1355
+subcap "m2_1730_n4160#" -22059.1
+subcap "m1_1863_n4106#" -1477.2
+cap "enable_2/B3" "enable_2/enable" 206.19
+subcap "m1_1863_n4106#" -1525.04
+cap "enable_2/enable" "enable_2/B2" 274.83
+cap "enable_2/B2" "enable_2/m2_n32_n13#" 85.1355
+subcap "m1_1855_n3986#" -1062.61
+cap "enable_2/vdd" "enable_2/F6" 85.1355
+cap "AND_3/A" "AND_3/B" 156.245
+cap "AND_3/gnd" "AND_3/B" 32.9904
+subcap "m1_2376_n3992#" -32356.5
+cap "enable_2/enable" "enable_2/B1" 318.13
+cap "enable_2/m2_n32_n13#" "enable_2/B1" 85.1355
+subcap "m1_1851_n3855#" -1475.85
+cap "enable_2/vdd" "enable_2/F5" 85.1355
+cap "enable_2/enable" "enable_2/B0" 552.5
+cap "enable_2/B0" "enable_2/m2_n32_n13#" 85.1355
+subcap "m1_1842_n3735#" -1089.18
+cap "enable_2/F4" "enable_2/vdd" 85.1355
+cap "AND_2/B" "AND_2/gnd" 32.9904
+cap "AND_2/B" "AND_2/A" 156.245
+subcap "m1_2373_n3726#" -31225.9
+cap "enable_2/A3" "enable_2/m2_n32_n13#" 85.1355
+cap "enable_2/enable" "enable_2/A3" 237.716
+subcap "m1_1838_n3607#" -1522.56
+cap "enable_2/vdd" "enable_2/F3" 73.557
+cap "enable_2/A3" "enable_2/enable" 152.581
+subcap "m1_1838_n3607#" -1547.31
+cap "enable_2/vdd" "enable_2/F3" 61.9785
+cap "AND_1/B" "AND_1/gnd" 27.492
+cap "AND_1/A" "AND_1/B" 118.443
+subcap "outout3" -27856.5
+cap "enable_2/A2" "enable_2/m2_n32_n13#" 85.1355
+cap "enable_2/enable" "enable_2/A2" 126.374
+subcap "m1_1844_n3477#" -1136.4
+cap "enable_2/F2" "enable_2/vdd" 85.1355
+cap "AND_1/A" "AND_1/B" 54.984
+subcap "outout3" -27863.9
+cap "enable_2/m2_n32_n13#" "enable_2/A1" 85.1355
+cap "enable_2/enable" "enable_2/A1" 404.73
+subcap "m1_1836_n3340#" -1360.73
+cap "enable_2/vdd" "enable_2/F1" 85.1355
+cap "enable_2/A0" "enable_2/enable" 268.645
+subcap "m1_1838_n3222#" -1136.4
+cap "enable_2/vdd" "enable_2/F0" 85.1355
+cap "AND_0/B" "AND_0/A" 129.44
+cap "AND_0/B" "AND_0/gnd" 41.238
+subcap "m1_2372_n3256#" -47989.7
+cap "OR_1/NOR_0/out" "OR_1/B" 56.9477
+cap "OR_1/B" "OR_1/A" 145.935
+subcap "Out3" -171.144
+cap "OR_1/B" "OR_1/A" 29.4557
+subcap "Out3" -335.279
+cap "comparator_0/A3" "comparator_0/gnd" 62.8776
+cap "comparator_0/gnd" "f7" 74.1564
+cap "comparator_0/A3" "comparator_0/B3" 193.428
+cap "comparator_0/A3" "comparator_0/gnd" 31.4388
+cap "B3" "enable_1/enable" 113.404
+cap "enable_1/enable" "enable_1/B3" 298.976
+cap "enable_1/m2_n32_n13#" "enable_1/B3" 85.1355
+subcap "f7" -3284.47
+subcap "f7" -3204.77
+subcap "m1_4126_n1367#" -92919.3
+cap "comparator_0/gnd" "m1_4126_n1367#" 63.1773
+cap "m1_4126_n1367#" "comparator_0/m1_345_n1481#" 85.1355
+cap "B2" "enable_1/enable" 85.1355
+cap "enable_1/B2" "m2_1630_n1200#" 85.1355
+cap "enable_1/B2" "enable_1/enable" 222.685
+subcap "f6" -3735.37
+cap "enable_1/F6" "enable_1/vdd" 85.1355
+cap "enable_1/enable" "B1" 119.501
+cap "enable_1/B1" "enable_1/m2_n32_n13#" 85.1355
+cap "enable_1/B1" "enable_1/enable" 255.676
+subcap "f5" -6563.35
+cap "enable_1/vdd" "f5" 85.1355
+cap "comparator_0/gnd" "f6" 96.714
+cap "f6" "comparator_0/A2" 96.714
+cap "enable_1/enable" "B0" 188.231
+cap "enable_1/B0" "enable_1/m2_n32_n13#" 85.1355
+cap "enable_1/B0" "enable_1/enable" 481.11
+subcap "f4" -12596.6
+cap "f4" "enable_1/vdd" 85.1355
+cap "enable_1/enable" "A3" 219.159
+cap "enable_1/A3" "enable_1/m2_n32_n13#" 85.1355
+cap "enable_1/AND_3/A" "enable_1/A3" 346.399
+subcap "f3" -3282.34
+cap "enable_1/vdd" "f3" 85.1355
+subcap "eequal" -16001.8
+cap "comparator_0/equal" "comparator_0/m1_855_n194#" 85.1355
+cap "comparator_0/m1_710_n947#" "eequal" 85.1355
+cap "comparator_0/vdd" "eequal" 11.5785
+cap "comparator_0/gnd" "eequal" 26.6985
+cap "eequal" "comparator_0/vdd" 32.6925
+cap "eequal" "comparator_0/gnd" -2.043
+cap "eequal" "comparator_0/m1_345_n1481#" 85.1355
+cap "enable_1/enable" "A2" 188.231
+cap "enable_1/m2_n32_n13#" "enable_1/A2" 85.1355
+cap "enable_1/enable" "enable_1/A2" 381.452
+subcap "f2" -2441.11
+cap "f2" "enable_1/vdd" 85.1355
+cap "comparator_0/gnd" "f2" 74.1564
+cap "OR3_2/A" "m1_2373_n3726#" 76.572
+cap "OR3_2/A" "OR3_2/B" 76.572
+cap "OR3_2/B" "OR3_2/C" 76.572
+subcap "Out2" -475.278
+subcap "Out2" -490.036
+cap "A1" "enable_1/enable" 140.12
+cap "enable_1/A1" "enable_1/enable" 371.142
+cap "enable_1/A1" "enable_1/m2_n32_n13#" 85.1355
+subcap "f1" -1723.85
+cap "enable_1/vdd" "f1" 85.1355
+cap "comparator_0/gnd" "f5" 96.714
+cap "comparator_0/gnd" "f1" 74.1564
+cap "comparator_0/A1" "f5" 96.714
+cap "m1_4976_n663#" "comparator_0/m1_345_n1481#" 63.1773
+cap "A0" "enable_1/enable" 85.1355
+cap "enable_1/A0" "enable_1/enable" 53.1185
+subcap "f0" -2871.41
+cap "enable_1/enable" "enable_1/A0" 53.1185
+subcap "f0" -2798.27
+cap "f0" "enable_1/vdd" 85.1355
+subcap "m1_4040_n472#" -48881.5
+cap "comparator_0/greater" "comparator_0/vdd" 96.1146
+cap "AND_4/B" "AND_4/gnd" 54.984
+cap "AND_4/A" "AND_4/B" 118.443
+subcap "outout2" -41846.7
+cap "comparator_0/A0" "f4" 96.714
+subcap "en3" -16774
+subcap "en3" -16850.9
+cap "XOR_3/B" "XOR_3/gnd" 74.1564
+subcap "en2" -63940.8
+subcap "m1_2163_213#" -3617.23
+subcap "en1" -56457.9
+subcap "en1" -55968.3
+cap "XOR_2/B" "XOR_2/gnd" 74.1564
+subcap "m1_2160_503#" -6749.68
+subcap "en0" -935.689
+cap "OR_0/NOR_0/out" "en1" 12.3714
+subcap "m1_983_602#" -5615.29
+cap "enable_0/m2_n32_n13#" "enable_0/B3" 85.1355
+cap "enable_0/AND_7/A" "enable_0/B3" 260.683
+subcap "m1_1762_562#" -1410.91
+cap "XOR_2/A" "m2_1783_1530#" 22.5576
+subcap "m1_2160_503#" -6610.35
+cap "gnd" "m1_2163_213#" 130.55
+cap "OR_0/A" "OR_0/B" 179.667
+cap "OR_0/NOR_0/out" "OR_0/B" 75.603
+subcap "m1_983_602#" -5487.54
+cap "enable_0/enable" "enable_0/B2" 283.078
+cap "enable_0/m2_n32_n13#" "enable_0/B2" 85.1355
+subcap "m1_1751_682#" -1024.24
+cap "enable_0/vdd" "enable_0/F6" 85.1355
+cap "B1" "enable_0/enable" 85.1355
+cap "m2_1783_1530#" "XOR_1/A" 20.16
+cap "XOR_1/gnd" "XOR_1/B" 74.1564
+subcap "m1_2163_742#" -9972.72
+cap "m1_2163_742#" "four_bit_adder_0/gnd" 130.55
+cap "m1_2160_503#" "four_bit_adder_0/gnd" 130.55
+cap "outout3" "OR3_1/B" 50.346
+cap "OR3_1/A" "outout3" 50.346
+subcap "Out1" -511.453
+cap "enable_0/B1" "enable_0/enable" 222.685
+cap "enable_0/B1" "enable_0/m2_n32_n13#" 85.1355
+subcap "m1_1747_813#" -723.167
+cap "enable_0/F5" "enable_0/vdd" 85.1355
+subcap "Out4" -344.194
+cap "OR3_1/A" "OR3_1/C" 37.233
+cap "OR3_1/A" "OR3_1/B" 76.572
+cap "OR3_1/B" "OR3_1/C" 37.233
+subcap "Out1" -410.286
+cap "enable_0/B0" "enable_0/m2_n32_n13#" 85.1355
+cap "enable_0/enable" "enable_0/B0" 442.531
+subcap "m1_1738_933#" -481.127
+cap "enable_0/F4" "enable_0/vdd" 85.1355
+cap "XOR_0/B" "XOR_0/NAND_2/gnd" 74.1564
+subcap "m1_2161_945#" -46403.5
+subcap "Out4" -73.8468
+cap "enable_0/A3" "enable_0/m2_n32_n13#" 85.1355
+cap "enable_0/AND_3/A" "enable_0/A3" 382.049
+subcap "m1_1740_1061#" -4968.91
+cap "enable_0/F3" "enable_0/vdd" 85.1355
+cap "four_bit_adder_0/gnd" "m1_1740_1061#" 118.073
+cap "m1_1740_1061#" "four_bit_adder_0/m1_n187_n3738#" 96.1146
+cap "enable_0/m2_n32_n13#" "enable_0/A2" 85.1355
+cap "enable_0/enable" "enable_0/A2" 239.778
+subcap "m1_1738_1191#" -7234.09
+cap "enable_0/vdd" "enable_0/F2" 85.1355
+subcap "m1_3742_1196#" -88769.1
+cap "enable_0/enable" "enable_0/A2" 154.642
+subcap "m1_1738_1191#" -7462.3
+subcap "m1_3742_1196#" -88492.7
+cap "enable_0/A1" "enable_0/m2_n32_n13#" 85.1355
+cap "enable_0/A1" "enable_0/enable" 384.111
+subcap "m1_1732_1328#" -11444
+cap "enable_0/F1" "enable_0/vdd" 85.1355
+cap "enable_0/enable" "enable_0/A0" 187.838
+subcap "m1_1734_1446#" -13108.5
+cap "enable_0/vdd" "enable_0/F0" 85.1355
+subcap "m2_1783_1530#" -21397.1
+cap "m1_2163_742#" "four_bit_adder_0/gnd" 37.6776
+cap "m1_2163_742#" "four_bit_adder_0/gnd" 27.3528
+cap "m1_2160_503#" "four_bit_adder_0/gnd" 130.55
+cap "four_bit_adder_0/gnd" "m1_1738_1191#" 118.073
+cap "four_bit_adder_0/m1_n171_n2487#" "m1_1738_1191#" 85.1355
+subcap "m1_3736_2426#" -62747.9
+cap "m1_3736_2426#" "four_bit_adder_0/vdd" 96.714
+cap "four_bit_adder_0/gnd" "m1_2163_742#" 62.8776
+cap "m1_2163_742#" "four_bit_adder_0/gnd" 107.993
+cap "four_bit_adder_0/gnd" "m1_1732_1328#" 118.073
+cap "m1_1732_1328#" "four_bit_adder_0/m1_n226_n1189#" 96.714
+subcap "outout1" -31737.8
+cap "outout1" "four_bit_adder_0/vdd" 96.714
+cap "four_bit_adder_0/fulladder_0/B" "en1" 142.657
+cap "four_bit_adder_0/fulladder_0/vdd" "en1" 108.293
+cap "four_bit_adder_0/fulladder_0/A" "four_bit_adder_0/Cin" 137.952
+cap "m1_2372_n3256#" "OR3_0/A" 129.024
+cap "m1_2372_n3256#" "OR3_0/B" 129.024
+subcap "Out0" -368.962
+subcap "m1_3816_5101#" -9264.28
+subcap "m1_3816_5101#" -9450.03
+cap "OR3_0/A" "OR3_0/B" 76.572
+subcap "vdd" -303126
+subcap "Out0" -421.767
+subcap "m1_3816_5101#" -9249.94
+subcap "m1_3816_5101#" -8933.73
+cap "four_bit_adder_0/vdd" "m1_3816_5101#" 96.714
+merge "four_bit_adder_0/vdd" "OR3_0/vdd" -8375.93 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9 -15 -3596 -1532 0 0 0 0 0 0 0 0
+merge "OR3_0/vdd" "enable_0/vdd"
+merge "enable_0/vdd" "OR3_1/vdd"
+merge "OR3_1/vdd" "OR_0/vdd"
+merge "OR_0/vdd" "decoder_0/vdd"
+merge "decoder_0/vdd" "AND_4/vdd"
+merge "AND_4/vdd" "comparator_0/vdd"
+merge "comparator_0/vdd" "m1_4995_n237#"
+merge "m1_4995_n237#" "enable_1/vdd"
+merge "enable_1/vdd" "enable_2/vdd"
+merge "enable_2/vdd" "AND_0/vdd"
+merge "AND_0/vdd" "AND_1/not_0/VDD"
+merge "AND_1/not_0/VDD" "AND_1/vdd"
+merge "AND_1/vdd" "AND_2/vdd"
+merge "AND_2/vdd" "AND_3/vdd"
+merge "AND_3/vdd" "m1_377_n240#"
+merge "m1_377_n240#" "OR3_2/vdd"
+merge "OR3_2/vdd" "OR_1/not_0/VDD"
+merge "OR_1/not_0/VDD" "OR_1/vdd"
+merge "OR_1/vdd" "vdd"
+merge "vdd" "XOR_0/vdd"
+merge "XOR_0/vdd" "XOR_1/vdd"
+merge "XOR_1/vdd" "XOR_2/vdd"
+merge "XOR_2/vdd" "XOR_3/vdd"
+merge "XOR_3/vdd" "m2_1783_1530#"
+merge "decoder_0/en3" "enable_2/enable" -42.1728 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -32 -32 0 0 0 0 0 0 0 0 0 0
+merge "enable_2/enable" "en3"
+merge "OR3_0/B" "comparator_0/lesser" -1102.61 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -260 -185 -355 -152 0 0 0 0 0 0 0 0
+merge "comparator_0/lesser" "m1_4126_n1367#"
+merge "four_bit_adder_0/A0" "enable_0/F0" -65.1546 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -54 -48 0 0 0 0 0 0 0 0 0 0
+merge "enable_0/F0" "m1_1734_1446#"
+merge "four_bit_adder_0/Cout" "Out4" -19.0923 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 -20 0 0 0 0 0 0 0 0 0 0
+merge "enable_0/A3" "enable_1/A3" -675.654 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -43 -74 -147 -99 0 0 0 0 0 0 0 0
+merge "enable_1/A3" "enable_2/B2"
+merge "enable_2/B2" "A3"
+merge "AND_3/A" "enable_2/F6" -19.2009 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9 -22 0 0 0 0 0 0 0 0 0 0
+merge "enable_2/F6" "m1_1855_n3986#"
+merge "enable_0/B0" "enable_1/B0" -694.737 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -55 -69 -235 -99 0 0 0 0 0 0 0 0
+merge "enable_1/B0" "enable_2/A1"
+merge "enable_2/A1" "B0"
+merge "enable_1/m2_n32_n13#" "m2_1630_n1200#" -1517.55 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -601 -273 0 0 0 0 0 0 0 0
+merge "four_bit_adder_0/B0" "XOR_0/out" -73.7925 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -75 -50 0 0 0 0 0 0 0 0 0 0
+merge "XOR_0/out" "m1_2161_945#"
+merge "enable_0/F3" "four_bit_adder_0/A3" -1249.14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -166 -147 -552 -200 0 0 0 0 0 0 0 0
+merge "four_bit_adder_0/A3" "m1_1740_1061#"
+merge "comparator_0/greater" "OR3_2/B" -333.868 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -313 -228 0 0 0 0 0 0 0 0 0 0
+merge "OR3_2/B" "m1_4040_n472#"
+merge "OR3_2/C" "AND_2/out" -167.082 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -172 -106 0 0 0 0 0 0 0 0 0 0
+merge "AND_2/out" "m1_2373_n3726#"
+merge "decoder_0/s0" "S0" -43.9596 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -44 -30 0 0 0 0 0 0 0 0 0 0
+merge "enable_0/B3" "enable_1/B3" -497.588 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -130 -141 -115 -57 0 0 0 0 0 0 0 0
+merge "enable_1/B3" "enable_2/B3"
+merge "enable_2/B3" "B3"
+merge "OR3_0/gnd" "XOR_0/gnd" -6401.67 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -163 -98 -2349 -1122 0 0 0 0 0 0 0 0
+merge "XOR_0/gnd" "OR3_1/gnd"
+merge "OR3_1/gnd" "XOR_1/gnd"
+merge "XOR_1/gnd" "enable_0/m2_n32_n13#"
+merge "enable_0/m2_n32_n13#" "OR_0/not_0/gnd"
+merge "OR_0/not_0/gnd" "OR_0/gnd"
+merge "OR_0/gnd" "four_bit_adder_0/gnd"
+merge "four_bit_adder_0/gnd" "m2_2247_495#"
+merge "m2_2247_495#" "XOR_2/gnd"
+merge "XOR_2/gnd" "XOR_3/gnd"
+merge "XOR_3/gnd" "decoder_0/gnd"
+merge "decoder_0/gnd" "AND_4/gnd"
+merge "AND_4/gnd" "OR3_2/gnd"
+merge "OR3_2/gnd" "enable_1/AND_7/NAND_0/gnd"
+merge "enable_1/AND_7/NAND_0/gnd" "OR_1/not_0/gnd"
+merge "OR_1/not_0/gnd" "comparator_0/gnd"
+merge "comparator_0/gnd" "enable_2/m2_n32_n13#"
+merge "enable_2/m2_n32_n13#" "gnd"
+merge "gnd" "m2_1674_n1713#"
+merge "m2_1674_n1713#" "m1_4976_n663#"
+merge "AND_3/B" "enable_2/F7" -47.4444 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -30 -32 0 0 0 0 0 0 0 0 0 0
+merge "enable_2/F7" "m1_1863_n4106#"
+merge "OR3_1/C" "AND_1/out" -169.782 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -156 -111 0 0 0 0 0 0 0 0 0 0
+merge "AND_1/out" "outout3"
+merge "enable_0/A1" "enable_1/A1" -708.092 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -21 -67 -235 -99 0 0 0 0 0 0 0 0
+merge "enable_1/A1" "enable_2/A2"
+merge "enable_2/A2" "A1"
+merge "four_bit_adder_0/B1" "XOR_1/out" -2355.03 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3008 -1402 0 0 0 0 0 0 0 0 0 0
+merge "XOR_1/out" "m1_2163_742#"
+merge "AND_0/B" "enable_2/F1" -28.056 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 -24 0 0 0 0 0 0 0 0 0 0
+merge "enable_2/F1" "m1_1836_n3340#"
+merge "decoder_0/s1" "S1" -34.8972 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -28 -26 0 0 0 0 0 0 0 0 0 0
+merge "enable_0/B1" "enable_1/B1" -1368.28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -71 -89 -520 -223 0 0 0 0 0 0 0 0
+merge "enable_1/B1" "enable_2/A3"
+merge "enable_2/A3" "B1"
+merge "four_bit_adder_0/A1" "enable_0/F1" -1665.51 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -167 -141 -539 -266 0 0 0 0 0 0 0 0
+merge "enable_0/F1" "m1_1732_1328#"
+merge "four_bit_adder_0/B2" "XOR_2/out" -675.19 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -304 -578 0 0 0 0 0 0 0 0 0 0
+merge "XOR_2/out" "m1_2160_503#"
+merge "AND_0/not_0/gnd" "AND_0/gnd" -1531.79 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -490 -279 0 0 0 0 0 0 0 0
+merge "AND_0/gnd" "AND_1/not_0/gnd"
+merge "AND_1/not_0/gnd" "AND_1/gnd"
+merge "AND_1/gnd" "AND_2/not_0/gnd"
+merge "AND_2/not_0/gnd" "AND_2/gnd"
+merge "AND_2/gnd" "AND_3/not_0/gnd"
+merge "AND_3/not_0/gnd" "enable_2/AND_7/gnd"
+merge "enable_2/AND_7/gnd" "m2_1730_n4160#"
+merge "OR3_0/out" "Out0" -36.378 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -20 -30 0 0 0 0 0 0 0 0 0 0
+merge "OR_0/A" "decoder_0/en0" -35.6376 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -24 -28 0 0 0 0 0 0 0 0 0 0
+merge "decoder_0/en0" "en0"
+merge "four_bit_adder_0/A2" "enable_0/F2" -1692.78 0 0 0 0 0 0 0 0 0 0 0 0 0 0 405 -242 486 -329 0 0 0 0 0 0 0 0
+merge "enable_0/F2" "m1_1738_1191#"
+merge "four_bit_adder_0/B3" "XOR_3/out" -438.293 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -512 -276 0 0 0 0 0 0 0 0 0 0
+merge "XOR_3/out" "m1_2163_213#"
+merge "AND_0/A" "enable_2/F0" -22.1526 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 -24 0 0 0 0 0 0 0 0 0 0
+merge "enable_2/F0" "m1_1838_n3222#"
+merge "four_bit_adder_0/Cin" "XOR_0/A" -3124.67 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -503 -556 -498 -463 0 0 0 0 0 0 0 0
+merge "XOR_0/A" "XOR_1/A"
+merge "XOR_1/A" "OR_0/B"
+merge "OR_0/B" "XOR_2/A"
+merge "XOR_2/A" "decoder_0/en1"
+merge "decoder_0/en1" "XOR_3/A"
+merge "XOR_3/A" "en1"
+merge "OR3_1/B" "AND_4/out" -123.732 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25 -28 -20 -18 0 0 0 0 0 0 0 0
+merge "AND_4/out" "outout2"
+merge "four_bit_adder_0/S2" "OR3_2/A" -428.49 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -500 -270 0 0 0 0 0 0 0 0 0 0
+merge "OR3_2/A" "m1_3736_2426#"
+merge "decoder_0/en2" "AND_4/A" -60.6234 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -46 -46 0 0 0 0 0 0 0 0 0 0
+merge "AND_4/A" "enable_1/enable"
+merge "enable_1/enable" "en2"
+merge "AND_4/B" "comparator_0/equal" -1644.86 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1485 -633 -215 -98 0 0 0 0 0 0 0 0
+merge "comparator_0/equal" "eequal"
+merge "enable_0/F4" "XOR_0/B" -241.59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -197 -179 0 0 0 0 0 0 0 0 0 0
+merge "XOR_0/B" "m1_1738_933#"
+merge "OR3_1/out" "Out1" -16.7724 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 -18 0 0 0 0 0 0 0 0 0 0
+merge "comparator_0/AND4_0/A" "comparator_0/m1_453_87#" -81.0237 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -63 -61 0 0 0 0 0 0 0 0 0 0
+merge "comparator_0/m1_453_87#" "ea1"
+merge "AND_2/A" "enable_2/F4" -22.1526 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 -24 0 0 0 0 0 0 0 0 0 0
+merge "enable_2/F4" "m1_1842_n3735#"
+merge "enable_0/A0" "enable_1/A0" -885.909 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -520 -287 -102 -73 0 0 0 0 0 0 0 0
+merge "enable_1/A0" "enable_2/A0"
+merge "enable_2/A0" "A0"
+merge "enable_0/F5" "XOR_1/B" -153.345 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -127 -113 0 0 0 0 0 0 0 0 0 0
+merge "XOR_1/B" "m1_1747_813#"
+merge "enable_0/F6" "XOR_2/B" -26.7825 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15 -22 0 0 0 0 0 0 0 0 0 0
+merge "XOR_2/B" "m1_1751_682#"
+merge "OR3_2/out" "Out2" -20.5632 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8 -18 0 0 0 0 0 0 0 0 0 0
+merge "four_bit_adder_0/S1" "OR3_1/A" -425.222 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -496 -268 0 0 0 0 0 0 0 0 0 0
+merge "OR3_1/A" "outout1"
+merge "enable_0/B2" "enable_1/B2" -683.428 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -13 -59 -235 -99 0 0 0 0 0 0 0 0
+merge "enable_1/B2" "enable_2/B1"
+merge "enable_2/B1" "B2"
+merge "AND_2/B" "enable_2/F5" -33.9594 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -28 0 0 0 0 0 0 0 0 0 0
+merge "enable_2/F5" "m1_1851_n3855#"
+merge "OR3_0/C" "AND_0/out" -370.103 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -515 -207 0 0 0 0 0 0 0 0 0 0
+merge "AND_0/out" "m1_2372_n3256#"
+merge "OR_1/out" "Out3" -237.878 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -236 -163 0 0 0 0 0 0 0 0 0 0
+merge "enable_0/A2" "enable_1/A2" -695.656 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -54 -71 -235 -99 0 0 0 0 0 0 0 0
+merge "enable_1/A2" "enable_2/B0"
+merge "enable_2/B0" "A2"
+merge "enable_0/F7" "XOR_3/B" -35.0058 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -22 -28 0 0 0 0 0 0 0 0 0 0
+merge "XOR_3/B" "m1_1762_562#"
+merge "comparator_0/m1_439_n1256#" "comparator_0/AND4_0/D" -60.3315 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 -12 0 0 0 0 0 0 0 0
+merge "comparator_0/AND4_0/D" "ea4"
+merge "comparator_0/AND4_0/B" "comparator_0/m1_445_n337#" -78.9111 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -69 -57 0 0 0 0 0 0 0 0 0 0
+merge "comparator_0/m1_445_n337#" "ea2"
+merge "AND_1/B" "enable_2/F3" -48.7179 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15 -38 0 0 0 0 0 0 0 0 0 0
+merge "enable_2/F3" "m1_1838_n3607#"
+merge "OR_1/B" "AND_3/out" -40.4847 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -27 -26 0 0 0 0 0 0 0 0 0 0
+merge "AND_3/out" "m1_2376_n3992#"
+merge "comparator_0/A0" "enable_1/F0" -368.207 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -306 -271 0 0 0 0 0 0 0 0 0 0
+merge "enable_1/F0" "f0"
+merge "comparator_0/B0" "enable_1/F4" -1459.2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -180 -140 -560 -229 0 0 0 0 0 0 0 0
+merge "enable_1/F4" "f4"
+merge "comparator_0/A1" "enable_1/F1" -449.725 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -434 -312 0 0 0 0 0 0 0 0 0 0
+merge "enable_1/F1" "f1"
+merge "comparator_0/B1" "enable_1/F5" -1072.85 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -678 -335 -235 -99 0 0 0 0 0 0 0 0
+merge "enable_1/F5" "f5"
+merge "OR3_0/A" "four_bit_adder_0/S0" -202.197 0 0 0 0 0 0 0 0 0 0 0 0 0 0 210 -268 0 0 0 0 0 0 0 0 0 0
+merge "four_bit_adder_0/S0" "m1_3816_5101#"
+merge "enable_1/F2" "comparator_0/A2" -325.753 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -308 -228 0 0 0 0 0 0 0 0 0 0
+merge "comparator_0/A2" "f2"
+merge "four_bit_adder_0/S3" "OR_1/A" -43.8609 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -31 -34 0 0 0 0 0 0 0 0 0 0
+merge "OR_1/A" "m1_3742_1196#"
+merge "comparator_0/B2" "enable_1/F6" -1315.3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -259 -162 -405 -199 0 0 0 0 0 0 0 0
+merge "enable_1/F6" "f6"
+merge "enable_1/F3" "comparator_0/A3" -209.368 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -298 -115 0 0 0 0 0 0 0 0 0 0
+merge "comparator_0/A3" "f3"
+merge "enable_0/enable" "OR_0/out" -395.927 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -546 -223 0 0 0 0 0 0 0 0 0 0
+merge "OR_0/out" "m1_983_602#"
+merge "enable_1/F7" "comparator_0/B3" -122.263 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8 -30 0 0 0 0 0 0 0 0 0 0
+merge "comparator_0/B3" "f7"
+merge "comparator_0/AND4_0/C" "ea3" -85.9824 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -16 -16 0 0 0 0 0 0 0 0
+merge "enable_2/F2" "AND_1/A" -19.3095 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 -24 0 0 0 0 0 0 0 0 0 0
+merge "AND_1/A" "m1_1844_n3477#"

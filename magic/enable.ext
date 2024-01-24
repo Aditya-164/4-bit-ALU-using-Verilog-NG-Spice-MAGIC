@@ -1,0 +1,132 @@
+timestamp 1701538289
+version 8.3
+tech scmos
+style TSMC0.18um(tsmc18)from:t11b
+scale 1000 1 9
+resistclasses 6700 7500 929000 929000 1 7700 7700 80 80 80 70 70 40
+use AND AND_7 1 0 5 0 1 -880
+use AND AND_6 1 0 4 0 1 -760
+use AND AND_5 1 0 6 0 1 -629
+use AND AND_4 1 0 4 0 1 -509
+use AND AND_3 1 0 3 0 1 -381
+use AND AND_2 1 0 3 0 1 -251
+use AND AND_1 1 0 3 0 1 -114
+use AND AND_0 1 0 2 0 1 4
+node "m2_n32_n13#" 23 16134.9 -32 -13 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 7261 2922 0 0 0 0 0 0 0 0
+node "vdd" 27 18760.9 73 -175 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8345 3348 0 0 0 0 0 0 0 0
+node "F7" 1 129.983 111 -861 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 126 90 0 0 0 0 0 0 0 0 0 0
+node "B3" 1 162.452 -22 -864 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 159 112 0 0 0 0 0 0 0 0 0 0
+node "F6" 1 94.563 111 -741 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 90 66 0 0 0 0 0 0 0 0 0 0
+node "B2" 1 165.404 -23 -745 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 162 114 0 0 0 0 0 0 0 0 0 0
+node "F5" 1 82.7562 113 -610 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 78 58 0 0 0 0 0 0 0 0 0 0
+node "B1" 1 162.452 -20 -614 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 159 112 0 0 0 0 0 0 0 0 0 0
+node "F4" 1 67.9977 108 -490 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63 48 0 0 0 0 0 0 0 0 0 0
+node "B0" 1 138.839 -16 -492 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 135 96 0 0 0 0 0 0 0 0 0 0
+node "F3" 1 70.9494 109 -362 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 66 50 0 0 0 0 0 0 0 0 0 0
+node "A3" 1 121.128 -9 -366 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 117 84 0 0 0 0 0 0 0 0 0 0
+node "F2" 1 67.9977 109 -232 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 63 48 0 0 0 0 0 0 0 0 0 0
+node "A2" 1 132.935 -14 -235 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 129 92 0 0 0 0 0 0 0 0 0 0
+node "F1" 0 41.4324 110 -95 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 36 30 0 0 0 0 0 0 0 0 0 0
+node "A1" 1 135.887 -15 -98 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 132 94 0 0 0 0 0 0 0 0 0 0
+node "F0" 0 47.3358 110 23 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 42 34 0 0 0 0 0 0 0 0 0 0
+node "A0" 1 159.5 -23 19 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 156 110 0 0 0 0 0 0 0 0 0 0
+node "enable" 38 4352.89 -89 66 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4473 2934 0 0 0 0 0 0 0 0 0 0
+cap "A0" "enable" 214.438
+cap "enable" "B1" 222.685
+cap "enable" "m2_n32_n13#" 595.948
+cap "enable" "A2" 185.571
+cap "enable" "B2" 230.933
+cap "B0" "enable" 302.412
+cap "enable" "A3" 107.219
+cap "enable" "A1" 195.88
+cap "B3" "enable" 257.738
+subcap "B3" -62.04
+cap "B3" "AND_7/NAND_0/gnd" 32.9904
+cap "AND_7/A" "B3" 82.476
+subcap "F7" -70.8408
+cap "AND_7/B" "AND_7/A" 94.3875
+subcap "F7" -65.3568
+cap "AND_6/A" "B2" 49.4856
+cap "AND_6/NAND_0/gnd" "B2" 41.238
+subcap "F6" -28.4607
+cap "AND_6/A" "AND_6/B" 79.9542
+subcap "F6" -8.9094
+cap "B1" "AND_5/NAND_0/gnd" 20.619
+subcap "F5" -97.5936
+subcap "F5" -110.555
+cap "B1" "AND_5/NAND_0/gnd" 20.619
+cap "B1" "AND_5/A" 32.9904
+subcap "F5" -32.5773
+cap "AND_5/A" "AND_5/B" 96.4494
+subcap "F5" -46.077
+cap "AND_4/A" "B0" 68.73
+cap "AND_4/NAND_0/gnd" "B0" 27.492
+subcap "F4" -5.9034
+cap "AND_4/B" "AND_4/A" 90.951
+subcap "F4" -17.7645
+cap "AND_3/B" "AND_3/NAND_0/gnd" 41.238
+cap "AND_3/B" "AND_3/A" 57.7332
+subcap "F3" -5.9034
+cap "AND_3/B" "AND_3/A" 71.7066
+subcap "F3" -14.8128
+cap "AND_2/B" "AND_2/NAND_0/gnd" 32.9904
+cap "AND_2/B" "AND_2/A" 72.1665
+cap "AND_2/B" "AND_2/A" 73.7685
+subcap "F2" -14.8128
+subcap "vdd" -17162.6
+cap "AND_1/B" "AND_1/A" 72.1665
+cap "AND_1/B" "AND_1/NAND_0/gnd" 32.9904
+cap "AND_1/A" "AND_1/B" 73.7685
+subcap "F1" -5.9577
+subcap "A0" -73.827
+cap "AND_0/A" "AND_0/B" 65.9808
+cap "AND_0/B" "AND_0/NAND_0/gnd" 41.238
+cap "AND_0/B" "AND_0/A" 63.459
+subcap "F0" -8.9094
+merge "AND_1/out" "F1" -17.8188 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12 -14 0 0 0 0 0 0 0 0 0 0
+merge "AND_0/vdd" "AND_1/vdd" -2918.05 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1018 -529 0 0 0 0 0 0 0 0
+merge "AND_1/vdd" "AND_2/vdd"
+merge "AND_2/vdd" "AND_3/vdd"
+merge "AND_3/vdd" "AND_4/vdd"
+merge "AND_4/vdd" "AND_5/vdd"
+merge "AND_5/vdd" "AND_6/vdd"
+merge "AND_6/vdd" "AND_7/vdd"
+merge "AND_7/vdd" "vdd"
+merge "AND_0/A" "AND_1/A" -63.753 0 0 0 0 0 0 0 0 0 0 0 0 0 0 90 -92 0 0 0 0 0 0 0 0 0 0
+merge "AND_1/A" "AND_2/A"
+merge "AND_2/A" "AND_3/A"
+merge "AND_3/A" "AND_4/A"
+merge "AND_4/A" "AND_5/A"
+merge "AND_5/A" "AND_6/A"
+merge "AND_6/A" "AND_7/A"
+merge "AND_7/A" "enable"
+merge "AND_0/gnd" "AND_0/NAND_0/gnd" -790.029 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 90 -154 0 0 0 0 0 0 0 0
+merge "AND_0/NAND_0/gnd" "AND_1/gnd"
+merge "AND_1/gnd" "AND_1/NAND_0/gnd"
+merge "AND_1/NAND_0/gnd" "AND_2/gnd"
+merge "AND_2/gnd" "AND_2/NAND_0/gnd"
+merge "AND_2/NAND_0/gnd" "AND_3/gnd"
+merge "AND_3/gnd" "AND_3/NAND_0/gnd"
+merge "AND_3/NAND_0/gnd" "AND_4/gnd"
+merge "AND_4/gnd" "AND_4/NAND_0/gnd"
+merge "AND_4/NAND_0/gnd" "AND_5/gnd"
+merge "AND_5/gnd" "AND_6/gnd"
+merge "AND_6/gnd" "AND_6/NAND_0/gnd"
+merge "AND_6/NAND_0/gnd" "AND_7/gnd"
+merge "AND_7/gnd" "AND_7/NAND_0/gnd"
+merge "AND_7/NAND_0/gnd" "m2_n32_n13#"
+merge "AND_4/out" "F4" -26.6739 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -21 -20 0 0 0 0 0 0 0 0 0 0
+merge "AND_6/B" "B2" -20.7705 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9 -12 0 0 0 0 0 0 0 0 0 0
+merge "AND_7/out" "F7" -23.7765 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15 -19 0 0 0 0 0 0 0 0 0 0
+merge "AND_4/B" "B0" -20.7705 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9 -12 0 0 0 0 0 0 0 0 0 0
+merge "AND_2/B" "A2" -13.1889 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 -12 0 0 0 0 0 0 0 0 0 0
+merge "AND_0/out" "F0" -14.8671 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9 -12 0 0 0 0 0 0 0 0 0 0
+merge "AND_0/B" "A0" -14.1366 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12 -12 0 0 0 0 0 0 0 0 0 0
+merge "AND_3/out" "F3" -20.7705 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15 -16 0 0 0 0 0 0 0 0 0 0
+merge "AND_2/out" "F2" -20.7705 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15 -16 0 0 0 0 0 0 0 0 0 0
+merge "AND_5/B" "B1" -20.7705 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9 -12 0 0 0 0 0 0 0 0 0 0
+merge "AND_5/out" "F5" -12.1326 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 -14 0 0 0 0 0 0 0 0 0 0
+merge "AND_6/out" "F6" -20.8248 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12 -17 0 0 0 0 0 0 0 0 0 0
+merge "AND_1/B" "A1" -13.1889 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 -12 0 0 0 0 0 0 0 0 0 0
+merge "AND_7/B" "B3" -20.7705 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -9 -12 0 0 0 0 0 0 0 0 0 0
+merge "AND_3/B" "A3" -13.1889 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15 -12 0 0 0 0 0 0 0 0 0 0

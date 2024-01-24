@@ -1,0 +1,8 @@
+.include AND.sub
+
+.subckt And4bit A0 A1 A2 A3 B0 B1 B2 B3 O0 O1 O2 O3 vdd gnd
+    X1 A0 B0 O0 vdd gnd AND
+    X2 A1 B1 O1 vdd gnd AND
+    X3 A2 B2 O2 vdd gnd AND
+    X4 A3 B3 O3 vdd gnd AND
+.ends And4bit

@@ -1,0 +1,97 @@
+magic
+tech scmos
+timestamp 1701521602
+<< nwell >>
+rect -59 4 59 23
+<< ntransistor >>
+rect -44 -107 -42 -101
+rect -17 -106 -15 -100
+rect 16 -105 18 -99
+<< ptransistor >>
+rect -44 10 -42 16
+rect -17 10 -15 16
+rect 16 10 18 16
+<< ndiffusion >>
+rect -53 -107 -44 -101
+rect -42 -107 -38 -101
+rect -24 -106 -17 -100
+rect -15 -106 -11 -100
+rect 10 -105 16 -99
+rect 18 -105 29 -99
+<< pdiffusion >>
+rect -46 10 -44 16
+rect -42 10 -17 16
+rect -15 10 16 16
+rect 18 10 29 16
+<< ndcontact >>
+rect -57 -107 -53 -101
+rect -38 -107 -34 -101
+rect -28 -106 -24 -100
+rect -11 -106 -7 -100
+rect 6 -105 10 -99
+rect 29 -105 33 -99
+<< pdcontact >>
+rect -51 10 -46 16
+rect 29 10 33 16
+<< polysilicon >>
+rect -44 16 -42 19
+rect -17 16 -15 19
+rect 16 16 18 19
+rect -44 -31 -42 10
+rect -17 -28 -15 10
+rect 16 -27 18 10
+rect -51 -35 -42 -31
+rect -21 -32 -15 -28
+rect 9 -31 18 -27
+rect -44 -101 -42 -35
+rect -17 -100 -15 -32
+rect 16 -99 18 -31
+rect -44 -112 -42 -107
+rect -17 -110 -15 -106
+rect 16 -108 18 -105
+<< polycontact >>
+rect -55 -35 -51 -31
+rect -25 -32 -21 -28
+rect 5 -31 9 -27
+<< metal1 >>
+rect 51 30 139 31
+rect -59 28 139 30
+rect -59 23 59 28
+rect -51 16 -46 23
+rect -59 -35 -55 -31
+rect -29 -32 -25 -28
+rect 1 -31 5 -27
+rect 29 -58 33 10
+rect 136 -41 139 28
+rect 29 -59 127 -58
+rect 29 -62 132 -59
+rect 29 -86 33 -62
+rect 151 -63 167 -60
+rect -38 -90 33 -86
+rect -38 -101 -34 -90
+rect -10 -100 -6 -90
+rect 29 -99 33 -90
+rect -57 -109 -53 -107
+rect -58 -113 -53 -109
+rect -57 -118 -53 -113
+rect -28 -117 -24 -106
+rect 6 -116 10 -105
+rect 131 -116 135 -76
+rect 6 -117 135 -116
+rect -28 -118 135 -117
+rect -57 -120 135 -118
+rect -57 -121 10 -120
+rect -57 -122 -24 -121
+rect -28 -123 -24 -122
+use not  not_0
+timestamp 1698047077
+transform 1 0 138 0 1 -58
+box -9 -20 16 20
+<< labels >>
+rlabel metal1 77 -118 81 -117 1 gnd
+rlabel metal1 161 -62 165 -61 7 out
+rlabel metal1 68 30 72 31 5 vdd
+rlabel metal1 -58 -34 -57 -33 3 A
+rlabel metal1 -27 -31 -26 -30 1 B
+rlabel metal1 2 -30 3 -29 1 C
+<< end >>

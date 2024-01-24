@@ -1,0 +1,3468 @@
+* SPICE3 file created from ALU.ext - technology: scmos
+
+.include TSMC_180nm.txt
+
+.param SUPPLY = 1.8
+.param LAMBDA = 0.18u
+
+.param wn1 = {10*LAMBDA}
+.param wn2 = {10*LAMBDA}
+.param ln1 = {2*LAMBDA}
+.param ln2 = {2*LAMBDA}
+
+.param wp1 = wn1
+.param wp2 = wn1
+.param lp1 = {LAMBDA}
+.param lp2 = {LAMBDA}
+
+.global gnd
+
+
+.option scale=0.09u
+
+
+Vdd vdd gnd 'SUPPLY'
+
+V_in_a0 A0 gnd PULSE(0 1.8 0ns 100ps 100ps 20ns 40ns)
+V_in_a1 A1 gnd PULSE(0 1.8 0ns 100ps 100ps 40ns 60ns)
+V_in_a2 A2 gnd PULSE(0 1.8 0ns 100ps 100ps 60ns 80ns)
+V_in_a3 A3 gnd PULSE(0 1.8 0ns 100ps 100ps 80ns 100ns)
+V_in_b0 B0 gnd PULSE(0 1.8 0ns 100ps 100ps 100ns 120ns)
+V_in_b1 B1 gnd PULSE(0 1.8 0ns 100ps 100ps 120ns 140ns)
+V_in_b2 B2 gnd PULSE(0 1.8 0ns 100ps 100ps 140ns 160ns)
+V_in_b3 B3 gnd PULSE(0 1.8 0ns 100ps 100ps 160ns 180ns)
+
+V_in_s0 s0 gnd dc 0
+V_in_s1 s1 gnd dc 'SUPPLY'
+
+
+M1000 AND_0/not_0/in AND_0/B vdd AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=7829 ps=6490
+M1001 AND_0/not_0/in AND_0/B AND_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1002 AND_0/not_0/in AND_0/A vdd AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1003 AND_0/NAND_0/a_13_n30# AND_0/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=9634 ps=6002
+M1004 OR3_0/C AND_0/not_0/in vdd AND_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1005 OR3_0/C AND_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1006 AND_1/not_0/in AND_1/B vdd AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1007 AND_1/not_0/in AND_1/B AND_1/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1008 AND_1/not_0/in AND_1/A vdd AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1009 AND_1/NAND_0/a_13_n30# AND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1010 outout3 AND_1/not_0/in vdd AND_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1011 outout3 AND_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1012 AND_2/not_0/in AND_2/B vdd AND_2/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1013 AND_2/not_0/in AND_2/B AND_2/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1014 AND_2/not_0/in AND_2/A vdd AND_2/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1015 AND_2/NAND_0/a_13_n30# AND_2/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1016 OR3_2/C AND_2/not_0/in vdd AND_2/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1017 OR3_2/C AND_2/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1018 AND_3/not_0/in AND_3/B vdd AND_3/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1019 AND_3/not_0/in AND_3/B AND_3/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1020 AND_3/not_0/in AND_3/A vdd AND_3/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1021 AND_3/NAND_0/a_13_n30# AND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1022 OR_1/B AND_3/not_0/in vdd AND_3/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1023 OR_1/B AND_3/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1024 AND_4/not_0/in eequal vdd AND_4/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1025 AND_4/not_0/in eequal AND_4/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1026 AND_4/not_0/in en2 vdd AND_4/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1027 AND_4/NAND_0/a_13_n30# en2 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1028 outout2 AND_4/not_0/in vdd AND_4/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1029 outout2 AND_4/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1030 four_bit_adder_0/fulladder_0/AND_0/not_0/in four_bit_adder_0/fulladder_0/XOR_1/B vdd four_bit_adder_0/fulladder_0/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1031 four_bit_adder_0/fulladder_0/AND_0/not_0/in four_bit_adder_0/fulladder_0/XOR_1/B four_bit_adder_0/fulladder_0/AND_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1032 four_bit_adder_0/fulladder_0/AND_0/not_0/in en1 vdd four_bit_adder_0/fulladder_0/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1033 four_bit_adder_0/fulladder_0/AND_0/NAND_0/a_13_n30# en1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1034 four_bit_adder_0/fulladder_0/OR_0/A four_bit_adder_0/fulladder_0/AND_0/not_0/in vdd four_bit_adder_0/fulladder_0/AND_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1035 four_bit_adder_0/fulladder_0/OR_0/A four_bit_adder_0/fulladder_0/AND_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1036 four_bit_adder_0/fulladder_0/AND_1/not_0/in XOR_0/out vdd four_bit_adder_0/fulladder_0/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1037 four_bit_adder_0/fulladder_0/AND_1/not_0/in XOR_0/out four_bit_adder_0/fulladder_0/AND_1/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1038 four_bit_adder_0/fulladder_0/AND_1/not_0/in enable_0/F0 vdd four_bit_adder_0/fulladder_0/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1039 four_bit_adder_0/fulladder_0/AND_1/NAND_0/a_13_n30# enable_0/F0 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1040 four_bit_adder_0/fulladder_0/OR_0/B four_bit_adder_0/fulladder_0/AND_1/not_0/in vdd four_bit_adder_0/fulladder_0/AND_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1041 four_bit_adder_0/fulladder_0/OR_0/B four_bit_adder_0/fulladder_0/AND_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1042 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/A four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A vdd four_bit_adder_0/fulladder_0/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1043 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/A four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A four_bit_adder_0/fulladder_0/XOR_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1044 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/A enable_0/F0 vdd four_bit_adder_0/fulladder_0/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1045 four_bit_adder_0/fulladder_0/XOR_0/NAND_0/a_13_n30# enable_0/F0 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1046 four_bit_adder_0/fulladder_0/XOR_1/B four_bit_adder_0/fulladder_0/XOR_0/NAND_1/B vdd four_bit_adder_0/fulladder_0/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1047 four_bit_adder_0/fulladder_0/XOR_1/B four_bit_adder_0/fulladder_0/XOR_0/NAND_1/B four_bit_adder_0/fulladder_0/XOR_0/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1048 four_bit_adder_0/fulladder_0/XOR_1/B four_bit_adder_0/fulladder_0/XOR_0/NAND_1/A vdd four_bit_adder_0/fulladder_0/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1049 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/a_13_n30# four_bit_adder_0/fulladder_0/XOR_0/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1050 four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A XOR_0/out vdd four_bit_adder_0/fulladder_0/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1051 four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A XOR_0/out four_bit_adder_0/fulladder_0/XOR_0/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1052 four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A enable_0/F0 vdd four_bit_adder_0/fulladder_0/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1053 four_bit_adder_0/fulladder_0/XOR_0/NAND_2/a_13_n30# enable_0/F0 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1054 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/B XOR_0/out vdd four_bit_adder_0/fulladder_0/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1055 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/B XOR_0/out four_bit_adder_0/fulladder_0/XOR_0/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1056 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/B four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A vdd four_bit_adder_0/fulladder_0/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1057 four_bit_adder_0/fulladder_0/XOR_0/NAND_3/a_13_n30# four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1058 four_bit_adder_0/fulladder_1/C four_bit_adder_0/fulladder_0/OR_0/not_0/in vdd four_bit_adder_0/fulladder_0/OR_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1059 four_bit_adder_0/fulladder_1/C four_bit_adder_0/fulladder_0/OR_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1060 four_bit_adder_0/fulladder_0/OR_0/not_0/in four_bit_adder_0/fulladder_0/OR_0/B gnd Gnd CMOSN w=5 l=2
++  ad=80 pd=52 as=0 ps=0
+M1061 four_bit_adder_0/fulladder_0/OR_0/NOR_0/a_n4_7# four_bit_adder_0/fulladder_0/OR_0/A vdd four_bit_adder_0/fulladder_0/OR_0/NOR_0/w_n19_1# CMOSP w=6 l=2
++  ad=96 pd=44 as=0 ps=0
+M1062 four_bit_adder_0/fulladder_0/OR_0/not_0/in four_bit_adder_0/fulladder_0/OR_0/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1063 four_bit_adder_0/fulladder_0/OR_0/not_0/in four_bit_adder_0/fulladder_0/OR_0/B four_bit_adder_0/fulladder_0/OR_0/NOR_0/a_n4_7# four_bit_adder_0/fulladder_0/OR_0/NOR_0/w_n19_1# CMOSP w=6 l=2
++  ad=48 pd=28 as=0 ps=0
+M1064 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/A four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A vdd four_bit_adder_0/fulladder_0/XOR_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1065 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/A four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A four_bit_adder_0/fulladder_0/XOR_1/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1066 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/A en1 vdd four_bit_adder_0/fulladder_0/XOR_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1067 four_bit_adder_0/fulladder_0/XOR_1/NAND_0/a_13_n30# en1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1068 OR3_0/A four_bit_adder_0/fulladder_0/XOR_1/NAND_1/B vdd four_bit_adder_0/fulladder_0/XOR_1/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1069 OR3_0/A four_bit_adder_0/fulladder_0/XOR_1/NAND_1/B four_bit_adder_0/fulladder_0/XOR_1/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1070 OR3_0/A four_bit_adder_0/fulladder_0/XOR_1/NAND_1/A vdd four_bit_adder_0/fulladder_0/XOR_1/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1071 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/a_13_n30# four_bit_adder_0/fulladder_0/XOR_1/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1072 four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A four_bit_adder_0/fulladder_0/XOR_1/B vdd four_bit_adder_0/fulladder_0/XOR_1/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1073 four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A four_bit_adder_0/fulladder_0/XOR_1/B four_bit_adder_0/fulladder_0/XOR_1/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1074 four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A en1 vdd four_bit_adder_0/fulladder_0/XOR_1/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1075 four_bit_adder_0/fulladder_0/XOR_1/NAND_2/a_13_n30# en1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1076 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/B four_bit_adder_0/fulladder_0/XOR_1/B vdd four_bit_adder_0/fulladder_0/XOR_1/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1077 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/B four_bit_adder_0/fulladder_0/XOR_1/B four_bit_adder_0/fulladder_0/XOR_1/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1078 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/B four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A vdd four_bit_adder_0/fulladder_0/XOR_1/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1079 four_bit_adder_0/fulladder_0/XOR_1/NAND_3/a_13_n30# four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1080 four_bit_adder_0/fulladder_1/AND_0/not_0/in four_bit_adder_0/fulladder_1/XOR_1/B vdd four_bit_adder_0/fulladder_1/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1081 four_bit_adder_0/fulladder_1/AND_0/not_0/in four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/AND_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1082 four_bit_adder_0/fulladder_1/AND_0/not_0/in four_bit_adder_0/fulladder_1/C vdd four_bit_adder_0/fulladder_1/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1083 four_bit_adder_0/fulladder_1/AND_0/NAND_0/a_13_n30# four_bit_adder_0/fulladder_1/C gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1084 four_bit_adder_0/fulladder_1/OR_0/A four_bit_adder_0/fulladder_1/AND_0/not_0/in vdd four_bit_adder_0/fulladder_1/AND_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1085 four_bit_adder_0/fulladder_1/OR_0/A four_bit_adder_0/fulladder_1/AND_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1086 four_bit_adder_0/fulladder_1/AND_1/not_0/in XOR_1/out vdd four_bit_adder_0/fulladder_1/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1087 four_bit_adder_0/fulladder_1/AND_1/not_0/in XOR_1/out four_bit_adder_0/fulladder_1/AND_1/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1088 four_bit_adder_0/fulladder_1/AND_1/not_0/in enable_0/F1 vdd four_bit_adder_0/fulladder_1/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1089 four_bit_adder_0/fulladder_1/AND_1/NAND_0/a_13_n30# enable_0/F1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1090 four_bit_adder_0/fulladder_1/OR_0/B four_bit_adder_0/fulladder_1/AND_1/not_0/in vdd four_bit_adder_0/fulladder_1/AND_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1091 four_bit_adder_0/fulladder_1/OR_0/B four_bit_adder_0/fulladder_1/AND_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1092 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/A four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A vdd four_bit_adder_0/fulladder_1/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1093 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/A four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A four_bit_adder_0/fulladder_1/XOR_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1094 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/A enable_0/F1 vdd four_bit_adder_0/fulladder_1/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1095 four_bit_adder_0/fulladder_1/XOR_0/NAND_0/a_13_n30# enable_0/F1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1096 four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/XOR_0/NAND_1/B vdd four_bit_adder_0/fulladder_1/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1097 four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/XOR_0/NAND_1/B four_bit_adder_0/fulladder_1/XOR_0/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1098 four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/XOR_0/NAND_1/A vdd four_bit_adder_0/fulladder_1/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1099 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/a_13_n30# four_bit_adder_0/fulladder_1/XOR_0/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1100 four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A XOR_1/out vdd four_bit_adder_0/fulladder_1/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1101 four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A XOR_1/out four_bit_adder_0/fulladder_1/XOR_0/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1102 four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A enable_0/F1 vdd four_bit_adder_0/fulladder_1/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1103 four_bit_adder_0/fulladder_1/XOR_0/NAND_2/a_13_n30# enable_0/F1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1104 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/B XOR_1/out vdd four_bit_adder_0/fulladder_1/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1105 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/B XOR_1/out four_bit_adder_0/fulladder_1/XOR_0/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1106 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/B four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A vdd four_bit_adder_0/fulladder_1/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1107 four_bit_adder_0/fulladder_1/XOR_0/NAND_3/a_13_n30# four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1108 four_bit_adder_0/fulladder_2/C four_bit_adder_0/fulladder_1/OR_0/not_0/in vdd four_bit_adder_0/fulladder_1/OR_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1109 four_bit_adder_0/fulladder_2/C four_bit_adder_0/fulladder_1/OR_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1110 four_bit_adder_0/fulladder_1/OR_0/not_0/in four_bit_adder_0/fulladder_1/OR_0/B gnd Gnd CMOSN w=5 l=2
++  ad=80 pd=52 as=0 ps=0
+M1111 four_bit_adder_0/fulladder_1/OR_0/NOR_0/a_n4_7# four_bit_adder_0/fulladder_1/OR_0/A vdd four_bit_adder_0/fulladder_1/OR_0/NOR_0/w_n19_1# CMOSP w=6 l=2
++  ad=96 pd=44 as=0 ps=0
+M1112 four_bit_adder_0/fulladder_1/OR_0/not_0/in four_bit_adder_0/fulladder_1/OR_0/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1113 four_bit_adder_0/fulladder_1/OR_0/not_0/in four_bit_adder_0/fulladder_1/OR_0/B four_bit_adder_0/fulladder_1/OR_0/NOR_0/a_n4_7# four_bit_adder_0/fulladder_1/OR_0/NOR_0/w_n19_1# CMOSP w=6 l=2
++  ad=48 pd=28 as=0 ps=0
+M1114 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/A four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A vdd four_bit_adder_0/fulladder_1/XOR_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1115 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/A four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A four_bit_adder_0/fulladder_1/XOR_1/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1116 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/A four_bit_adder_0/fulladder_1/C vdd four_bit_adder_0/fulladder_1/XOR_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1117 four_bit_adder_0/fulladder_1/XOR_1/NAND_0/a_13_n30# four_bit_adder_0/fulladder_1/C gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1118 outout1 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/B vdd four_bit_adder_0/fulladder_1/XOR_1/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1119 outout1 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/B four_bit_adder_0/fulladder_1/XOR_1/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1120 outout1 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/A vdd four_bit_adder_0/fulladder_1/XOR_1/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1121 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/a_13_n30# four_bit_adder_0/fulladder_1/XOR_1/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1122 four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A four_bit_adder_0/fulladder_1/XOR_1/B vdd four_bit_adder_0/fulladder_1/XOR_1/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1123 four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/XOR_1/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1124 four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A four_bit_adder_0/fulladder_1/C vdd four_bit_adder_0/fulladder_1/XOR_1/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1125 four_bit_adder_0/fulladder_1/XOR_1/NAND_2/a_13_n30# four_bit_adder_0/fulladder_1/C gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1126 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/B four_bit_adder_0/fulladder_1/XOR_1/B vdd four_bit_adder_0/fulladder_1/XOR_1/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1127 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/B four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/XOR_1/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1128 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/B four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A vdd four_bit_adder_0/fulladder_1/XOR_1/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1129 four_bit_adder_0/fulladder_1/XOR_1/NAND_3/a_13_n30# four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1130 four_bit_adder_0/fulladder_2/AND_0/not_0/in four_bit_adder_0/fulladder_2/XOR_1/B vdd four_bit_adder_0/fulladder_2/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1131 four_bit_adder_0/fulladder_2/AND_0/not_0/in four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/AND_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1132 four_bit_adder_0/fulladder_2/AND_0/not_0/in four_bit_adder_0/fulladder_2/C vdd four_bit_adder_0/fulladder_2/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1133 four_bit_adder_0/fulladder_2/AND_0/NAND_0/a_13_n30# four_bit_adder_0/fulladder_2/C gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1134 four_bit_adder_0/fulladder_2/OR_0/A four_bit_adder_0/fulladder_2/AND_0/not_0/in vdd four_bit_adder_0/fulladder_2/AND_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1135 four_bit_adder_0/fulladder_2/OR_0/A four_bit_adder_0/fulladder_2/AND_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1136 four_bit_adder_0/fulladder_2/AND_1/not_0/in XOR_2/out vdd four_bit_adder_0/fulladder_2/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1137 four_bit_adder_0/fulladder_2/AND_1/not_0/in XOR_2/out four_bit_adder_0/fulladder_2/AND_1/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1138 four_bit_adder_0/fulladder_2/AND_1/not_0/in enable_0/F2 vdd four_bit_adder_0/fulladder_2/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1139 four_bit_adder_0/fulladder_2/AND_1/NAND_0/a_13_n30# enable_0/F2 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1140 four_bit_adder_0/fulladder_2/OR_0/B four_bit_adder_0/fulladder_2/AND_1/not_0/in vdd four_bit_adder_0/fulladder_2/AND_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1141 four_bit_adder_0/fulladder_2/OR_0/B four_bit_adder_0/fulladder_2/AND_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1142 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/A four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A vdd four_bit_adder_0/fulladder_2/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1143 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/A four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A four_bit_adder_0/fulladder_2/XOR_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1144 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/A enable_0/F2 vdd four_bit_adder_0/fulladder_2/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1145 four_bit_adder_0/fulladder_2/XOR_0/NAND_0/a_13_n30# enable_0/F2 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1146 four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/XOR_0/NAND_1/B vdd four_bit_adder_0/fulladder_2/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1147 four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/XOR_0/NAND_1/B four_bit_adder_0/fulladder_2/XOR_0/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1148 four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/XOR_0/NAND_1/A vdd four_bit_adder_0/fulladder_2/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1149 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/a_13_n30# four_bit_adder_0/fulladder_2/XOR_0/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1150 four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A XOR_2/out vdd four_bit_adder_0/fulladder_2/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1151 four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A XOR_2/out four_bit_adder_0/fulladder_2/XOR_0/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1152 four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A enable_0/F2 vdd four_bit_adder_0/fulladder_2/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1153 four_bit_adder_0/fulladder_2/XOR_0/NAND_2/a_13_n30# enable_0/F2 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1154 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/B XOR_2/out vdd four_bit_adder_0/fulladder_2/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1155 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/B XOR_2/out four_bit_adder_0/fulladder_2/XOR_0/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1156 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/B four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A vdd four_bit_adder_0/fulladder_2/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1157 four_bit_adder_0/fulladder_2/XOR_0/NAND_3/a_13_n30# four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1158 four_bit_adder_0/fulladder_3/C four_bit_adder_0/fulladder_2/OR_0/not_0/in vdd four_bit_adder_0/fulladder_2/OR_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1159 four_bit_adder_0/fulladder_3/C four_bit_adder_0/fulladder_2/OR_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1160 four_bit_adder_0/fulladder_2/OR_0/not_0/in four_bit_adder_0/fulladder_2/OR_0/B gnd Gnd CMOSN w=5 l=2
++  ad=80 pd=52 as=0 ps=0
+M1161 four_bit_adder_0/fulladder_2/OR_0/NOR_0/a_n4_7# four_bit_adder_0/fulladder_2/OR_0/A vdd four_bit_adder_0/fulladder_2/OR_0/NOR_0/w_n19_1# CMOSP w=6 l=2
++  ad=96 pd=44 as=0 ps=0
+M1162 four_bit_adder_0/fulladder_2/OR_0/not_0/in four_bit_adder_0/fulladder_2/OR_0/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1163 four_bit_adder_0/fulladder_2/OR_0/not_0/in four_bit_adder_0/fulladder_2/OR_0/B four_bit_adder_0/fulladder_2/OR_0/NOR_0/a_n4_7# four_bit_adder_0/fulladder_2/OR_0/NOR_0/w_n19_1# CMOSP w=6 l=2
++  ad=48 pd=28 as=0 ps=0
+M1164 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/A four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A vdd four_bit_adder_0/fulladder_2/XOR_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1165 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/A four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A four_bit_adder_0/fulladder_2/XOR_1/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1166 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/A four_bit_adder_0/fulladder_2/C vdd four_bit_adder_0/fulladder_2/XOR_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1167 four_bit_adder_0/fulladder_2/XOR_1/NAND_0/a_13_n30# four_bit_adder_0/fulladder_2/C gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1168 OR3_2/A four_bit_adder_0/fulladder_2/XOR_1/NAND_1/B vdd four_bit_adder_0/fulladder_2/XOR_1/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1169 OR3_2/A four_bit_adder_0/fulladder_2/XOR_1/NAND_1/B four_bit_adder_0/fulladder_2/XOR_1/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1170 OR3_2/A four_bit_adder_0/fulladder_2/XOR_1/NAND_1/A vdd four_bit_adder_0/fulladder_2/XOR_1/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1171 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/a_13_n30# four_bit_adder_0/fulladder_2/XOR_1/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1172 four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A four_bit_adder_0/fulladder_2/XOR_1/B vdd four_bit_adder_0/fulladder_2/XOR_1/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1173 four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/XOR_1/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1174 four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A four_bit_adder_0/fulladder_2/C vdd four_bit_adder_0/fulladder_2/XOR_1/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1175 four_bit_adder_0/fulladder_2/XOR_1/NAND_2/a_13_n30# four_bit_adder_0/fulladder_2/C gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1176 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/B four_bit_adder_0/fulladder_2/XOR_1/B vdd four_bit_adder_0/fulladder_2/XOR_1/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1177 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/B four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/XOR_1/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1178 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/B four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A vdd four_bit_adder_0/fulladder_2/XOR_1/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1179 four_bit_adder_0/fulladder_2/XOR_1/NAND_3/a_13_n30# four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1180 four_bit_adder_0/fulladder_3/AND_0/not_0/in four_bit_adder_0/fulladder_3/XOR_1/B vdd four_bit_adder_0/fulladder_3/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1181 four_bit_adder_0/fulladder_3/AND_0/not_0/in four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/AND_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1182 four_bit_adder_0/fulladder_3/AND_0/not_0/in four_bit_adder_0/fulladder_3/C vdd four_bit_adder_0/fulladder_3/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1183 four_bit_adder_0/fulladder_3/AND_0/NAND_0/a_13_n30# four_bit_adder_0/fulladder_3/C gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1184 four_bit_adder_0/fulladder_3/OR_0/A four_bit_adder_0/fulladder_3/AND_0/not_0/in vdd four_bit_adder_0/fulladder_3/AND_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1185 four_bit_adder_0/fulladder_3/OR_0/A four_bit_adder_0/fulladder_3/AND_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1186 four_bit_adder_0/fulladder_3/AND_1/not_0/in XOR_3/out vdd four_bit_adder_0/fulladder_3/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1187 four_bit_adder_0/fulladder_3/AND_1/not_0/in XOR_3/out four_bit_adder_0/fulladder_3/AND_1/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1188 four_bit_adder_0/fulladder_3/AND_1/not_0/in enable_0/F3 vdd four_bit_adder_0/fulladder_3/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1189 four_bit_adder_0/fulladder_3/AND_1/NAND_0/a_13_n30# enable_0/F3 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1190 four_bit_adder_0/fulladder_3/OR_0/B four_bit_adder_0/fulladder_3/AND_1/not_0/in vdd four_bit_adder_0/fulladder_3/AND_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1191 four_bit_adder_0/fulladder_3/OR_0/B four_bit_adder_0/fulladder_3/AND_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1192 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/A four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A vdd four_bit_adder_0/fulladder_3/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1193 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/A four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A four_bit_adder_0/fulladder_3/XOR_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1194 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/A enable_0/F3 vdd four_bit_adder_0/fulladder_3/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1195 four_bit_adder_0/fulladder_3/XOR_0/NAND_0/a_13_n30# enable_0/F3 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1196 four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/XOR_0/NAND_1/B vdd four_bit_adder_0/fulladder_3/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1197 four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/XOR_0/NAND_1/B four_bit_adder_0/fulladder_3/XOR_0/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1198 four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/XOR_0/NAND_1/A vdd four_bit_adder_0/fulladder_3/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1199 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/a_13_n30# four_bit_adder_0/fulladder_3/XOR_0/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1200 four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A XOR_3/out vdd four_bit_adder_0/fulladder_3/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1201 four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A XOR_3/out four_bit_adder_0/fulladder_3/XOR_0/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1202 four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A enable_0/F3 vdd four_bit_adder_0/fulladder_3/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1203 four_bit_adder_0/fulladder_3/XOR_0/NAND_2/a_13_n30# enable_0/F3 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1204 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/B XOR_3/out vdd four_bit_adder_0/fulladder_3/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1205 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/B XOR_3/out four_bit_adder_0/fulladder_3/XOR_0/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1206 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/B four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A vdd four_bit_adder_0/fulladder_3/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1207 four_bit_adder_0/fulladder_3/XOR_0/NAND_3/a_13_n30# four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1208 Out4 four_bit_adder_0/fulladder_3/OR_0/not_0/in vdd four_bit_adder_0/fulladder_3/OR_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1209 Out4 four_bit_adder_0/fulladder_3/OR_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1210 four_bit_adder_0/fulladder_3/OR_0/not_0/in four_bit_adder_0/fulladder_3/OR_0/B gnd Gnd CMOSN w=5 l=2
++  ad=80 pd=52 as=0 ps=0
+M1211 four_bit_adder_0/fulladder_3/OR_0/NOR_0/a_n4_7# four_bit_adder_0/fulladder_3/OR_0/A vdd four_bit_adder_0/fulladder_3/OR_0/NOR_0/w_n19_1# CMOSP w=6 l=2
++  ad=96 pd=44 as=0 ps=0
+M1212 four_bit_adder_0/fulladder_3/OR_0/not_0/in four_bit_adder_0/fulladder_3/OR_0/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1213 four_bit_adder_0/fulladder_3/OR_0/not_0/in four_bit_adder_0/fulladder_3/OR_0/B four_bit_adder_0/fulladder_3/OR_0/NOR_0/a_n4_7# four_bit_adder_0/fulladder_3/OR_0/NOR_0/w_n19_1# CMOSP w=6 l=2
++  ad=48 pd=28 as=0 ps=0
+M1214 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/A four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A vdd four_bit_adder_0/fulladder_3/XOR_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1215 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/A four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A four_bit_adder_0/fulladder_3/XOR_1/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1216 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/A four_bit_adder_0/fulladder_3/C vdd four_bit_adder_0/fulladder_3/XOR_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1217 four_bit_adder_0/fulladder_3/XOR_1/NAND_0/a_13_n30# four_bit_adder_0/fulladder_3/C gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1218 OR_1/A four_bit_adder_0/fulladder_3/XOR_1/NAND_1/B vdd four_bit_adder_0/fulladder_3/XOR_1/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1219 OR_1/A four_bit_adder_0/fulladder_3/XOR_1/NAND_1/B four_bit_adder_0/fulladder_3/XOR_1/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1220 OR_1/A four_bit_adder_0/fulladder_3/XOR_1/NAND_1/A vdd four_bit_adder_0/fulladder_3/XOR_1/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1221 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/a_13_n30# four_bit_adder_0/fulladder_3/XOR_1/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1222 four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A four_bit_adder_0/fulladder_3/XOR_1/B vdd four_bit_adder_0/fulladder_3/XOR_1/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1223 four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/XOR_1/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1224 four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A four_bit_adder_0/fulladder_3/C vdd four_bit_adder_0/fulladder_3/XOR_1/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1225 four_bit_adder_0/fulladder_3/XOR_1/NAND_2/a_13_n30# four_bit_adder_0/fulladder_3/C gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1226 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/B four_bit_adder_0/fulladder_3/XOR_1/B vdd four_bit_adder_0/fulladder_3/XOR_1/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1227 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/B four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/XOR_1/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1228 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/B four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A vdd four_bit_adder_0/fulladder_3/XOR_1/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1229 four_bit_adder_0/fulladder_3/XOR_1/NAND_3/a_13_n30# four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1230 enable_0/AND_0/not_0/in A0 vdd enable_0/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1231 enable_0/AND_0/not_0/in A0 enable_0/AND_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1232 enable_0/AND_0/not_0/in OR_0/out vdd enable_0/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1233 enable_0/AND_0/NAND_0/a_13_n30# OR_0/out gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1234 enable_0/F0 enable_0/AND_0/not_0/in vdd enable_0/AND_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1235 enable_0/F0 enable_0/AND_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1236 enable_0/AND_1/not_0/in A1 vdd enable_0/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1237 enable_0/AND_1/not_0/in A1 enable_0/AND_1/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1238 enable_0/AND_1/not_0/in OR_0/out vdd enable_0/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1239 enable_0/AND_1/NAND_0/a_13_n30# OR_0/out gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1240 enable_0/F1 enable_0/AND_1/not_0/in vdd enable_0/AND_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1241 enable_0/F1 enable_0/AND_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1242 enable_0/AND_2/not_0/in A2 vdd enable_0/AND_2/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1243 enable_0/AND_2/not_0/in A2 enable_0/AND_2/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1244 enable_0/AND_2/not_0/in OR_0/out vdd enable_0/AND_2/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1245 enable_0/AND_2/NAND_0/a_13_n30# OR_0/out gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1246 enable_0/F2 enable_0/AND_2/not_0/in vdd enable_0/AND_2/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1247 enable_0/F2 enable_0/AND_2/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1248 enable_0/AND_3/not_0/in A3 vdd enable_0/AND_3/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1249 enable_0/AND_3/not_0/in A3 enable_0/AND_3/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1250 enable_0/AND_3/not_0/in OR_0/out vdd enable_0/AND_3/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1251 enable_0/AND_3/NAND_0/a_13_n30# OR_0/out gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1252 enable_0/F3 enable_0/AND_3/not_0/in vdd enable_0/AND_3/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1253 enable_0/F3 enable_0/AND_3/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1254 enable_0/AND_4/not_0/in B0 vdd enable_0/AND_4/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1255 enable_0/AND_4/not_0/in B0 enable_0/AND_4/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1256 enable_0/AND_4/not_0/in OR_0/out vdd enable_0/AND_4/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1257 enable_0/AND_4/NAND_0/a_13_n30# OR_0/out gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1258 XOR_0/B enable_0/AND_4/not_0/in vdd enable_0/AND_4/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1259 XOR_0/B enable_0/AND_4/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1260 enable_0/AND_5/not_0/in B1 vdd enable_0/AND_5/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1261 enable_0/AND_5/not_0/in B1 enable_0/AND_5/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1262 enable_0/AND_5/not_0/in OR_0/out vdd enable_0/AND_5/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1263 enable_0/AND_5/NAND_0/a_13_n30# OR_0/out gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1264 XOR_1/B enable_0/AND_5/not_0/in vdd enable_0/AND_5/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1265 XOR_1/B enable_0/AND_5/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1266 enable_0/AND_6/not_0/in B2 vdd enable_0/AND_6/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1267 enable_0/AND_6/not_0/in B2 enable_0/AND_6/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1268 enable_0/AND_6/not_0/in OR_0/out vdd enable_0/AND_6/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1269 enable_0/AND_6/NAND_0/a_13_n30# OR_0/out gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1270 XOR_2/B enable_0/AND_6/not_0/in vdd enable_0/AND_6/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1271 XOR_2/B enable_0/AND_6/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1272 enable_0/AND_7/not_0/in B3 vdd enable_0/AND_7/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1273 enable_0/AND_7/not_0/in B3 enable_0/AND_7/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1274 enable_0/AND_7/not_0/in OR_0/out vdd enable_0/AND_7/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1275 enable_0/AND_7/NAND_0/a_13_n30# OR_0/out gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1276 XOR_3/B enable_0/AND_7/not_0/in vdd enable_0/AND_7/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1277 XOR_3/B enable_0/AND_7/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1278 Out0 OR3_0/not_0/in vdd OR3_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1279 Out0 OR3_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1280 OR3_0/not_0/in OR3_0/C gnd Gnd CMOSN w=6 l=2
++  ad=186 pd=98 as=0 ps=0
+M1281 OR3_0/a_n42_10# OR3_0/A vdd OR3_0/w_n59_4# CMOSP w=6 l=2
++  ad=150 pd=62 as=0 ps=0
+M1282 OR3_0/a_n15_10# OR3_0/B OR3_0/a_n42_10# OR3_0/w_n59_4# CMOSP w=6 l=2
++  ad=186 pd=74 as=0 ps=0
+M1283 OR3_0/not_0/in OR3_0/A gnd Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1284 OR3_0/not_0/in OR3_0/B gnd Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1285 OR3_0/not_0/in OR3_0/C OR3_0/a_n15_10# OR3_0/w_n59_4# CMOSP w=6 l=2
++  ad=90 pd=42 as=0 ps=0
+M1286 enable_1/AND_0/not_0/in A0 vdd enable_1/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1287 enable_1/AND_0/not_0/in A0 enable_1/AND_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1288 enable_1/AND_0/not_0/in en2 vdd enable_1/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1289 enable_1/AND_0/NAND_0/a_13_n30# en2 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1290 f0 enable_1/AND_0/not_0/in vdd enable_1/AND_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1291 f0 enable_1/AND_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1292 enable_1/AND_1/not_0/in A1 vdd enable_1/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1293 enable_1/AND_1/not_0/in A1 enable_1/AND_1/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1294 enable_1/AND_1/not_0/in en2 vdd enable_1/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1295 enable_1/AND_1/NAND_0/a_13_n30# en2 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1296 f1 enable_1/AND_1/not_0/in vdd enable_1/AND_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1297 f1 enable_1/AND_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1298 enable_1/AND_2/not_0/in A2 vdd enable_1/AND_2/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1299 enable_1/AND_2/not_0/in A2 enable_1/AND_2/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1300 enable_1/AND_2/not_0/in en2 vdd enable_1/AND_2/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1301 enable_1/AND_2/NAND_0/a_13_n30# en2 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1302 f2 enable_1/AND_2/not_0/in vdd enable_1/AND_2/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1303 f2 enable_1/AND_2/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1304 enable_1/AND_3/not_0/in A3 vdd enable_1/AND_3/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1305 enable_1/AND_3/not_0/in A3 enable_1/AND_3/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1306 enable_1/AND_3/not_0/in en2 vdd enable_1/AND_3/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1307 enable_1/AND_3/NAND_0/a_13_n30# en2 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1308 f3 enable_1/AND_3/not_0/in vdd enable_1/AND_3/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1309 f3 enable_1/AND_3/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1310 enable_1/AND_4/not_0/in B0 vdd enable_1/AND_4/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1311 enable_1/AND_4/not_0/in B0 enable_1/AND_4/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1312 enable_1/AND_4/not_0/in en2 vdd enable_1/AND_4/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1313 enable_1/AND_4/NAND_0/a_13_n30# en2 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1314 f4 enable_1/AND_4/not_0/in vdd enable_1/AND_4/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1315 f4 enable_1/AND_4/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1316 enable_1/AND_5/not_0/in B1 vdd enable_1/AND_5/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1317 enable_1/AND_5/not_0/in B1 enable_1/AND_5/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1318 enable_1/AND_5/not_0/in en2 vdd enable_1/AND_5/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1319 enable_1/AND_5/NAND_0/a_13_n30# en2 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1320 f5 enable_1/AND_5/not_0/in vdd enable_1/AND_5/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1321 f5 enable_1/AND_5/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1322 enable_1/AND_6/not_0/in B2 vdd enable_1/AND_6/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1323 enable_1/AND_6/not_0/in B2 enable_1/AND_6/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1324 enable_1/AND_6/not_0/in en2 vdd enable_1/AND_6/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1325 enable_1/AND_6/NAND_0/a_13_n30# en2 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1326 f6 enable_1/AND_6/not_0/in vdd enable_1/AND_6/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1327 f6 enable_1/AND_6/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1328 enable_1/AND_7/not_0/in B3 vdd enable_1/AND_7/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1329 enable_1/AND_7/not_0/in B3 enable_1/AND_7/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1330 enable_1/AND_7/not_0/in en2 vdd enable_1/AND_7/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1331 enable_1/AND_7/NAND_0/a_13_n30# en2 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1332 f7 enable_1/AND_7/not_0/in vdd enable_1/AND_7/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1333 f7 enable_1/AND_7/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1334 Out1 OR3_1/not_0/in vdd OR3_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1335 Out1 OR3_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1336 OR3_1/not_0/in outout3 gnd Gnd CMOSN w=6 l=2
++  ad=186 pd=98 as=0 ps=0
+M1337 OR3_1/a_n42_10# outout1 vdd OR3_1/w_n59_4# CMOSP w=6 l=2
++  ad=150 pd=62 as=0 ps=0
+M1338 OR3_1/a_n15_10# outout2 OR3_1/a_n42_10# OR3_1/w_n59_4# CMOSP w=6 l=2
++  ad=186 pd=74 as=0 ps=0
+M1339 OR3_1/not_0/in outout1 gnd Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1340 OR3_1/not_0/in outout2 gnd Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1341 OR3_1/not_0/in outout3 OR3_1/a_n15_10# OR3_1/w_n59_4# CMOSP w=6 l=2
++  ad=90 pd=42 as=0 ps=0
+M1342 enable_2/AND_0/not_0/in A0 vdd enable_2/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1343 enable_2/AND_0/not_0/in A0 enable_2/AND_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1344 enable_2/AND_0/not_0/in en3 vdd enable_2/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1345 enable_2/AND_0/NAND_0/a_13_n30# en3 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1346 AND_0/A enable_2/AND_0/not_0/in vdd enable_2/AND_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1347 AND_0/A enable_2/AND_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1348 enable_2/AND_1/not_0/in B0 vdd enable_2/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1349 enable_2/AND_1/not_0/in B0 enable_2/AND_1/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1350 enable_2/AND_1/not_0/in en3 vdd enable_2/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1351 enable_2/AND_1/NAND_0/a_13_n30# en3 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1352 AND_0/B enable_2/AND_1/not_0/in vdd enable_2/AND_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1353 AND_0/B enable_2/AND_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1354 enable_2/AND_2/not_0/in A1 vdd enable_2/AND_2/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1355 enable_2/AND_2/not_0/in A1 enable_2/AND_2/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1356 enable_2/AND_2/not_0/in en3 vdd enable_2/AND_2/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1357 enable_2/AND_2/NAND_0/a_13_n30# en3 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1358 AND_1/A enable_2/AND_2/not_0/in vdd enable_2/AND_2/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1359 AND_1/A enable_2/AND_2/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1360 enable_2/AND_3/not_0/in B1 vdd enable_2/AND_3/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1361 enable_2/AND_3/not_0/in B1 enable_2/AND_3/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1362 enable_2/AND_3/not_0/in en3 vdd enable_2/AND_3/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1363 enable_2/AND_3/NAND_0/a_13_n30# en3 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1364 AND_1/B enable_2/AND_3/not_0/in vdd enable_2/AND_3/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1365 AND_1/B enable_2/AND_3/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1366 enable_2/AND_4/not_0/in A2 vdd enable_2/AND_4/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1367 enable_2/AND_4/not_0/in A2 enable_2/AND_4/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1368 enable_2/AND_4/not_0/in en3 vdd enable_2/AND_4/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1369 enable_2/AND_4/NAND_0/a_13_n30# en3 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1370 AND_2/A enable_2/AND_4/not_0/in vdd enable_2/AND_4/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1371 AND_2/A enable_2/AND_4/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1372 enable_2/AND_5/not_0/in B2 vdd enable_2/AND_5/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1373 enable_2/AND_5/not_0/in B2 enable_2/AND_5/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1374 enable_2/AND_5/not_0/in en3 vdd enable_2/AND_5/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1375 enable_2/AND_5/NAND_0/a_13_n30# en3 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1376 AND_2/B enable_2/AND_5/not_0/in vdd enable_2/AND_5/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1377 AND_2/B enable_2/AND_5/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1378 enable_2/AND_6/not_0/in A3 vdd enable_2/AND_6/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1379 enable_2/AND_6/not_0/in A3 enable_2/AND_6/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1380 enable_2/AND_6/not_0/in en3 vdd enable_2/AND_6/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1381 enable_2/AND_6/NAND_0/a_13_n30# en3 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1382 AND_3/A enable_2/AND_6/not_0/in vdd enable_2/AND_6/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1383 AND_3/A enable_2/AND_6/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1384 enable_2/AND_7/not_0/in B3 vdd enable_2/AND_7/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1385 enable_2/AND_7/not_0/in B3 enable_2/AND_7/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1386 enable_2/AND_7/not_0/in en3 vdd enable_2/AND_7/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1387 enable_2/AND_7/NAND_0/a_13_n30# en3 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1388 AND_3/B enable_2/AND_7/not_0/in vdd enable_2/AND_7/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1389 AND_3/B enable_2/AND_7/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1390 Out2 OR3_2/not_0/in vdd OR3_2/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1391 Out2 OR3_2/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1392 OR3_2/not_0/in OR3_2/C gnd Gnd CMOSN w=6 l=2
++  ad=186 pd=98 as=0 ps=0
+M1393 OR3_2/a_n42_10# OR3_2/A vdd OR3_2/w_n59_4# CMOSP w=6 l=2
++  ad=150 pd=62 as=0 ps=0
+M1394 OR3_2/a_n15_10# OR3_2/B OR3_2/a_n42_10# OR3_2/w_n59_4# CMOSP w=6 l=2
++  ad=186 pd=74 as=0 ps=0
+M1395 OR3_2/not_0/in OR3_2/A gnd Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1396 OR3_2/not_0/in OR3_2/B gnd Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1397 OR3_2/not_0/in OR3_2/C OR3_2/a_n15_10# OR3_2/w_n59_4# CMOSP w=6 l=2
++  ad=90 pd=42 as=0 ps=0
+M1398 OR3_2/B comparator_0/OR4_0/not_0/in vdd comparator_0/OR4_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1399 OR3_2/B comparator_0/OR4_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1400 comparator_0/OR4_0/not_0/in comparator_0/OR4_0/A gnd Gnd CMOSN w=6 l=2
++  ad=150 pd=98 as=0 ps=0
+M1401 comparator_0/OR4_0/not_0/in comparator_0/OR4_0/D gnd Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1402 comparator_0/OR4_0/a_30_9# comparator_0/OR4_0/C comparator_0/OR4_0/a_10_9# comparator_0/OR4_0/w_n21_0# CMOSP w=5 l=2
++  ad=90 pd=46 as=90 ps=46
+M1403 comparator_0/OR4_0/a_n8_9# comparator_0/OR4_0/A vdd comparator_0/OR4_0/w_n21_0# CMOSP w=5 l=2
++  ad=80 pd=42 as=0 ps=0
+M1404 comparator_0/OR4_0/a_10_9# comparator_0/OR4_0/B comparator_0/OR4_0/a_n8_9# comparator_0/OR4_0/w_n21_0# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1405 comparator_0/OR4_0/not_0/in comparator_0/OR4_0/D comparator_0/OR4_0/a_30_9# comparator_0/OR4_0/w_n21_0# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1406 comparator_0/OR4_0/not_0/in comparator_0/OR4_0/B gnd Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1407 comparator_0/OR4_0/not_0/in comparator_0/OR4_0/C gnd Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1408 OR3_0/B comparator_0/OR4_1/not_0/in vdd comparator_0/OR4_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1409 OR3_0/B comparator_0/OR4_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1410 comparator_0/OR4_1/not_0/in comparator_0/OR4_1/A gnd Gnd CMOSN w=6 l=2
++  ad=150 pd=98 as=0 ps=0
+M1411 comparator_0/OR4_1/not_0/in comparator_0/OR4_1/D gnd Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1412 comparator_0/OR4_1/a_30_9# comparator_0/OR4_1/C comparator_0/OR4_1/a_10_9# comparator_0/OR4_1/w_n21_0# CMOSP w=5 l=2
++  ad=90 pd=46 as=90 ps=46
+M1413 comparator_0/OR4_1/a_n8_9# comparator_0/OR4_1/A vdd comparator_0/OR4_1/w_n21_0# CMOSP w=5 l=2
++  ad=80 pd=42 as=0 ps=0
+M1414 comparator_0/OR4_1/a_10_9# comparator_0/OR4_1/B comparator_0/OR4_1/a_n8_9# comparator_0/OR4_1/w_n21_0# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1415 comparator_0/OR4_1/not_0/in comparator_0/OR4_1/D comparator_0/OR4_1/a_30_9# comparator_0/OR4_1/w_n21_0# CMOSP w=5 l=2
++  ad=30 pd=22 as=0 ps=0
+M1416 comparator_0/OR4_1/not_0/in comparator_0/OR4_1/B gnd Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1417 comparator_0/OR4_1/not_0/in comparator_0/OR4_1/C gnd Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1418 comparator_0/OR4_0/B comparator_0/AND3_0/not_0/in vdd comparator_0/AND3_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1419 comparator_0/OR4_0/B comparator_0/AND3_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1420 comparator_0/AND3_0/not_0/in ea4 comparator_0/AND3_0/a_2_n39# Gnd CMOSN w=6 l=2
++  ad=84 pd=40 as=114 ps=50
+M1421 comparator_0/AND3_0/not_0/in ea4 vdd comparator_0/AND3_0/w_n31_n3# CMOSP w=5 l=2
++  ad=90 pd=66 as=0 ps=0
+M1422 comparator_0/AND3_0/not_0/in comparator_0/AND3_0/A vdd comparator_0/AND3_0/w_n31_n3# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1423 comparator_0/AND3_0/a_2_n39# f2 comparator_0/AND3_0/a_n18_n39# Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=108 ps=48
+M1424 comparator_0/AND3_0/not_0/in f2 vdd comparator_0/AND3_0/w_n31_n3# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1425 comparator_0/AND3_0/a_n18_n39# comparator_0/AND3_0/A gnd Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1426 comparator_0/OR4_1/A comparator_0/AND3_1/not_0/in vdd comparator_0/AND3_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1427 comparator_0/OR4_1/A comparator_0/AND3_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1428 comparator_0/AND3_1/not_0/in ea4 comparator_0/AND3_1/a_2_n39# Gnd CMOSN w=6 l=2
++  ad=84 pd=40 as=114 ps=50
+M1429 comparator_0/AND3_1/not_0/in ea4 vdd comparator_0/AND3_1/w_n31_n3# CMOSP w=5 l=2
++  ad=90 pd=66 as=0 ps=0
+M1430 comparator_0/AND3_1/not_0/in comparator_0/AND3_1/A vdd comparator_0/AND3_1/w_n31_n3# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1431 comparator_0/AND3_1/a_2_n39# f6 comparator_0/AND3_1/a_n18_n39# Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=108 ps=48
+M1432 comparator_0/AND3_1/not_0/in f6 vdd comparator_0/AND3_1/w_n31_n3# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1433 comparator_0/AND3_1/a_n18_n39# comparator_0/AND3_1/A gnd Gnd CMOSN w=6 l=2
++  ad=0 pd=0 as=0 ps=0
+M1434 comparator_0/AND_0/not_0/in f3 vdd comparator_0/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1435 comparator_0/AND_0/not_0/in f3 comparator_0/AND_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1436 comparator_0/AND_0/not_0/in comparator_0/AND_0/A vdd comparator_0/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1437 comparator_0/AND_0/NAND_0/a_13_n30# comparator_0/AND_0/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1438 comparator_0/OR4_0/A comparator_0/AND_0/not_0/in vdd comparator_0/AND_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1439 comparator_0/OR4_0/A comparator_0/AND_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1440 comparator_0/AND_1/not_0/in f7 vdd comparator_0/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1441 comparator_0/AND_1/not_0/in f7 comparator_0/AND_1/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1442 comparator_0/AND_1/not_0/in comparator_0/AND_1/A vdd comparator_0/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1443 comparator_0/AND_1/NAND_0/a_13_n30# comparator_0/AND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1444 comparator_0/OR4_1/B comparator_0/AND_1/not_0/in vdd comparator_0/AND_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1445 comparator_0/OR4_1/B comparator_0/AND_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1446 comparator_0/AND5_0/A f4 vdd comparator_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1447 comparator_0/AND5_0/A f4 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1448 comparator_0/OR4_0/C comparator_0/AND4_1/not_0/in vdd comparator_0/AND4_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1449 comparator_0/OR4_0/C comparator_0/AND4_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1450 comparator_0/AND4_1/a_25_n36# ea3 comparator_0/AND4_1/a_6_n36# Gnd CMOSN w=5 l=2
++  ad=85 pd=44 as=85 ps=44
+M1451 comparator_0/AND4_1/not_0/in f1 vdd comparator_0/AND4_1/w_n27_2# CMOSP w=5 l=2
++  ad=105 pd=82 as=0 ps=0
+M1452 comparator_0/AND4_1/not_0/in ea3 vdd comparator_0/AND4_1/w_n27_2# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1453 comparator_0/AND4_1/not_0/in comparator_0/AND4_1/A vdd comparator_0/AND4_1/w_n27_2# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1454 comparator_0/AND4_1/not_0/in ea4 vdd comparator_0/AND4_1/w_n27_2# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1455 comparator_0/AND4_1/not_0/in ea4 comparator_0/AND4_1/a_25_n36# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=0 ps=0
+M1456 comparator_0/AND4_1/a_6_n36# f1 comparator_0/AND4_1/a_n14_n36# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=90 ps=46
+M1457 comparator_0/AND4_1/a_n14_n36# comparator_0/AND4_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1458 eequal comparator_0/AND4_0/not_0/in vdd comparator_0/AND4_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1459 eequal comparator_0/AND4_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1460 comparator_0/AND4_0/a_25_n36# ea3 comparator_0/AND4_0/a_6_n36# Gnd CMOSN w=5 l=2
++  ad=85 pd=44 as=85 ps=44
+M1461 comparator_0/AND4_0/not_0/in ea2 vdd comparator_0/AND4_0/w_n27_2# CMOSP w=5 l=2
++  ad=105 pd=82 as=0 ps=0
+M1462 comparator_0/AND4_0/not_0/in ea3 vdd comparator_0/AND4_0/w_n27_2# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1463 comparator_0/AND4_0/not_0/in ea1 vdd comparator_0/AND4_0/w_n27_2# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1464 comparator_0/AND4_0/not_0/in ea4 vdd comparator_0/AND4_0/w_n27_2# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1465 comparator_0/AND4_0/not_0/in ea4 comparator_0/AND4_0/a_25_n36# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=0 ps=0
+M1466 comparator_0/AND4_0/a_6_n36# ea2 comparator_0/AND4_0/a_n14_n36# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=90 ps=46
+M1467 comparator_0/AND4_0/a_n14_n36# ea1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1468 comparator_0/AND5_1/A f0 vdd comparator_0/not_1/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1469 comparator_0/AND5_1/A f0 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1470 comparator_0/OR4_1/C comparator_0/AND4_2/not_0/in vdd comparator_0/AND4_2/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1471 comparator_0/OR4_1/C comparator_0/AND4_2/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1472 comparator_0/AND4_2/a_25_n36# ea3 comparator_0/AND4_2/a_6_n36# Gnd CMOSN w=5 l=2
++  ad=85 pd=44 as=85 ps=44
+M1473 comparator_0/AND4_2/not_0/in f5 vdd comparator_0/AND4_2/w_n27_2# CMOSP w=5 l=2
++  ad=105 pd=82 as=0 ps=0
+M1474 comparator_0/AND4_2/not_0/in ea3 vdd comparator_0/AND4_2/w_n27_2# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1475 comparator_0/AND4_2/not_0/in comparator_0/AND4_2/A vdd comparator_0/AND4_2/w_n27_2# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1476 comparator_0/AND4_2/not_0/in ea4 vdd comparator_0/AND4_2/w_n27_2# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1477 comparator_0/AND4_2/not_0/in ea4 comparator_0/AND4_2/a_25_n36# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=0 ps=0
+M1478 comparator_0/AND4_2/a_6_n36# f5 comparator_0/AND4_2/a_n14_n36# Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=90 ps=46
+M1479 comparator_0/AND4_2/a_n14_n36# comparator_0/AND4_2/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1480 comparator_0/AND4_1/A f5 vdd comparator_0/not_2/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1481 comparator_0/AND4_1/A f5 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1482 comparator_0/AND4_2/A f1 vdd comparator_0/not_3/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1483 comparator_0/AND4_2/A f1 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1484 comparator_0/AND3_0/A f6 vdd comparator_0/not_4/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1485 comparator_0/AND3_0/A f6 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1486 comparator_0/AND3_1/A f2 vdd comparator_0/not_5/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1487 comparator_0/AND3_1/A f2 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1488 comparator_0/AND_0/A f7 vdd comparator_0/not_6/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1489 comparator_0/AND_0/A f7 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1490 comparator_0/AND_1/A f3 vdd comparator_0/not_7/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1491 comparator_0/AND_1/A f3 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1492 ea1 comparator_0/XNOR_0/not_0/in vdd comparator_0/XNOR_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1493 ea1 comparator_0/XNOR_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1494 comparator_0/XNOR_0/XOR_0/NAND_1/A comparator_0/XNOR_0/XOR_0/NAND_3/A vdd comparator_0/XNOR_0/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1495 comparator_0/XNOR_0/XOR_0/NAND_1/A comparator_0/XNOR_0/XOR_0/NAND_3/A comparator_0/XNOR_0/XOR_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1496 comparator_0/XNOR_0/XOR_0/NAND_1/A f0 vdd comparator_0/XNOR_0/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1497 comparator_0/XNOR_0/XOR_0/NAND_0/a_13_n30# f0 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1498 comparator_0/XNOR_0/not_0/in comparator_0/XNOR_0/XOR_0/NAND_1/B vdd comparator_0/XNOR_0/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1499 comparator_0/XNOR_0/not_0/in comparator_0/XNOR_0/XOR_0/NAND_1/B comparator_0/XNOR_0/XOR_0/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1500 comparator_0/XNOR_0/not_0/in comparator_0/XNOR_0/XOR_0/NAND_1/A vdd comparator_0/XNOR_0/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1501 comparator_0/XNOR_0/XOR_0/NAND_1/a_13_n30# comparator_0/XNOR_0/XOR_0/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1502 comparator_0/XNOR_0/XOR_0/NAND_3/A f4 vdd comparator_0/XNOR_0/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1503 comparator_0/XNOR_0/XOR_0/NAND_3/A f4 comparator_0/XNOR_0/XOR_0/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1504 comparator_0/XNOR_0/XOR_0/NAND_3/A f0 vdd comparator_0/XNOR_0/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1505 comparator_0/XNOR_0/XOR_0/NAND_2/a_13_n30# f0 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1506 comparator_0/XNOR_0/XOR_0/NAND_1/B f4 vdd comparator_0/XNOR_0/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1507 comparator_0/XNOR_0/XOR_0/NAND_1/B f4 comparator_0/XNOR_0/XOR_0/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1508 comparator_0/XNOR_0/XOR_0/NAND_1/B comparator_0/XNOR_0/XOR_0/NAND_3/A vdd comparator_0/XNOR_0/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1509 comparator_0/XNOR_0/XOR_0/NAND_3/a_13_n30# comparator_0/XNOR_0/XOR_0/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1510 ea2 comparator_0/XNOR_1/not_0/in vdd comparator_0/XNOR_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1511 ea2 comparator_0/XNOR_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1512 comparator_0/XNOR_1/XOR_0/NAND_1/A comparator_0/XNOR_1/XOR_0/NAND_3/A vdd comparator_0/XNOR_1/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1513 comparator_0/XNOR_1/XOR_0/NAND_1/A comparator_0/XNOR_1/XOR_0/NAND_3/A comparator_0/XNOR_1/XOR_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1514 comparator_0/XNOR_1/XOR_0/NAND_1/A f1 vdd comparator_0/XNOR_1/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1515 comparator_0/XNOR_1/XOR_0/NAND_0/a_13_n30# f1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1516 comparator_0/XNOR_1/not_0/in comparator_0/XNOR_1/XOR_0/NAND_1/B vdd comparator_0/XNOR_1/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1517 comparator_0/XNOR_1/not_0/in comparator_0/XNOR_1/XOR_0/NAND_1/B comparator_0/XNOR_1/XOR_0/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1518 comparator_0/XNOR_1/not_0/in comparator_0/XNOR_1/XOR_0/NAND_1/A vdd comparator_0/XNOR_1/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1519 comparator_0/XNOR_1/XOR_0/NAND_1/a_13_n30# comparator_0/XNOR_1/XOR_0/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1520 comparator_0/XNOR_1/XOR_0/NAND_3/A f5 vdd comparator_0/XNOR_1/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1521 comparator_0/XNOR_1/XOR_0/NAND_3/A f5 comparator_0/XNOR_1/XOR_0/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1522 comparator_0/XNOR_1/XOR_0/NAND_3/A f1 vdd comparator_0/XNOR_1/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1523 comparator_0/XNOR_1/XOR_0/NAND_2/a_13_n30# f1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1524 comparator_0/XNOR_1/XOR_0/NAND_1/B f5 vdd comparator_0/XNOR_1/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1525 comparator_0/XNOR_1/XOR_0/NAND_1/B f5 comparator_0/XNOR_1/XOR_0/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1526 comparator_0/XNOR_1/XOR_0/NAND_1/B comparator_0/XNOR_1/XOR_0/NAND_3/A vdd comparator_0/XNOR_1/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1527 comparator_0/XNOR_1/XOR_0/NAND_3/a_13_n30# comparator_0/XNOR_1/XOR_0/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1528 ea3 comparator_0/XNOR_2/not_0/in vdd comparator_0/XNOR_2/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1529 ea3 comparator_0/XNOR_2/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1530 comparator_0/XNOR_2/XOR_0/NAND_1/A comparator_0/XNOR_2/XOR_0/NAND_3/A vdd comparator_0/XNOR_2/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1531 comparator_0/XNOR_2/XOR_0/NAND_1/A comparator_0/XNOR_2/XOR_0/NAND_3/A comparator_0/XNOR_2/XOR_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1532 comparator_0/XNOR_2/XOR_0/NAND_1/A f2 vdd comparator_0/XNOR_2/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1533 comparator_0/XNOR_2/XOR_0/NAND_0/a_13_n30# f2 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1534 comparator_0/XNOR_2/not_0/in comparator_0/XNOR_2/XOR_0/NAND_1/B vdd comparator_0/XNOR_2/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1535 comparator_0/XNOR_2/not_0/in comparator_0/XNOR_2/XOR_0/NAND_1/B comparator_0/XNOR_2/XOR_0/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1536 comparator_0/XNOR_2/not_0/in comparator_0/XNOR_2/XOR_0/NAND_1/A vdd comparator_0/XNOR_2/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1537 comparator_0/XNOR_2/XOR_0/NAND_1/a_13_n30# comparator_0/XNOR_2/XOR_0/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1538 comparator_0/XNOR_2/XOR_0/NAND_3/A f6 vdd comparator_0/XNOR_2/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1539 comparator_0/XNOR_2/XOR_0/NAND_3/A f6 comparator_0/XNOR_2/XOR_0/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1540 comparator_0/XNOR_2/XOR_0/NAND_3/A f2 vdd comparator_0/XNOR_2/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1541 comparator_0/XNOR_2/XOR_0/NAND_2/a_13_n30# f2 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1542 comparator_0/XNOR_2/XOR_0/NAND_1/B f6 vdd comparator_0/XNOR_2/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1543 comparator_0/XNOR_2/XOR_0/NAND_1/B f6 comparator_0/XNOR_2/XOR_0/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1544 comparator_0/XNOR_2/XOR_0/NAND_1/B comparator_0/XNOR_2/XOR_0/NAND_3/A vdd comparator_0/XNOR_2/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1545 comparator_0/XNOR_2/XOR_0/NAND_3/a_13_n30# comparator_0/XNOR_2/XOR_0/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1546 ea4 comparator_0/XNOR_3/not_0/in vdd comparator_0/XNOR_3/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1547 ea4 comparator_0/XNOR_3/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1548 comparator_0/XNOR_3/XOR_0/NAND_1/A comparator_0/XNOR_3/XOR_0/NAND_3/A vdd comparator_0/XNOR_3/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1549 comparator_0/XNOR_3/XOR_0/NAND_1/A comparator_0/XNOR_3/XOR_0/NAND_3/A comparator_0/XNOR_3/XOR_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1550 comparator_0/XNOR_3/XOR_0/NAND_1/A f3 vdd comparator_0/XNOR_3/XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1551 comparator_0/XNOR_3/XOR_0/NAND_0/a_13_n30# f3 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1552 comparator_0/XNOR_3/not_0/in comparator_0/XNOR_3/XOR_0/NAND_1/B vdd comparator_0/XNOR_3/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1553 comparator_0/XNOR_3/not_0/in comparator_0/XNOR_3/XOR_0/NAND_1/B comparator_0/XNOR_3/XOR_0/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1554 comparator_0/XNOR_3/not_0/in comparator_0/XNOR_3/XOR_0/NAND_1/A vdd comparator_0/XNOR_3/XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1555 comparator_0/XNOR_3/XOR_0/NAND_1/a_13_n30# comparator_0/XNOR_3/XOR_0/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1556 comparator_0/XNOR_3/XOR_0/NAND_3/A f7 vdd comparator_0/XNOR_3/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1557 comparator_0/XNOR_3/XOR_0/NAND_3/A f7 comparator_0/XNOR_3/XOR_0/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1558 comparator_0/XNOR_3/XOR_0/NAND_3/A f3 vdd comparator_0/XNOR_3/XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1559 comparator_0/XNOR_3/XOR_0/NAND_2/a_13_n30# f3 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1560 comparator_0/XNOR_3/XOR_0/NAND_1/B f7 vdd comparator_0/XNOR_3/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1561 comparator_0/XNOR_3/XOR_0/NAND_1/B f7 comparator_0/XNOR_3/XOR_0/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1562 comparator_0/XNOR_3/XOR_0/NAND_1/B comparator_0/XNOR_3/XOR_0/NAND_3/A vdd comparator_0/XNOR_3/XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1563 comparator_0/XNOR_3/XOR_0/NAND_3/a_13_n30# comparator_0/XNOR_3/XOR_0/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1564 comparator_0/OR4_0/D comparator_0/AND5_0/not_0/in vdd comparator_0/AND5_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1565 comparator_0/OR4_0/D comparator_0/AND5_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1566 comparator_0/AND5_0/a_10_n35# f0 comparator_0/AND5_0/a_n9_n35# Gnd CMOSN w=4 l=2
++  ad=68 pd=42 as=68 ps=42
+M1567 comparator_0/AND5_0/not_0/in ea4 vdd comparator_0/AND5_0/w_n22_7# CMOSP w=5 l=2
++  ad=140 pd=106 as=0 ps=0
+M1568 comparator_0/AND5_0/not_0/in f0 vdd comparator_0/AND5_0/w_n22_7# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1569 comparator_0/AND5_0/not_0/in ea2 vdd comparator_0/AND5_0/w_n22_7# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1570 comparator_0/AND5_0/a_29_n35# ea2 comparator_0/AND5_0/a_10_n35# Gnd CMOSN w=4 l=2
++  ad=72 pd=44 as=0 ps=0
+M1571 comparator_0/AND5_0/not_0/in ea4 comparator_0/AND5_0/a_49_n35# Gnd CMOSN w=4 l=2
++  ad=32 pd=24 as=68 ps=42
+M1572 comparator_0/AND5_0/a_n9_n35# comparator_0/AND5_0/A gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1573 comparator_0/AND5_0/a_49_n35# ea3 comparator_0/AND5_0/a_29_n35# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1574 comparator_0/AND5_0/not_0/in ea3 vdd comparator_0/AND5_0/w_n22_7# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1575 comparator_0/AND5_0/not_0/in comparator_0/AND5_0/A vdd comparator_0/AND5_0/w_n22_7# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1576 comparator_0/OR4_1/D comparator_0/AND5_1/not_0/in vdd comparator_0/AND5_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1577 comparator_0/OR4_1/D comparator_0/AND5_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1578 comparator_0/AND5_1/a_10_n35# f4 comparator_0/AND5_1/a_n9_n35# Gnd CMOSN w=4 l=2
++  ad=68 pd=42 as=68 ps=42
+M1579 comparator_0/AND5_1/not_0/in ea4 vdd comparator_0/AND5_1/w_n22_7# CMOSP w=5 l=2
++  ad=140 pd=106 as=0 ps=0
+M1580 comparator_0/AND5_1/not_0/in f4 vdd comparator_0/AND5_1/w_n22_7# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1581 comparator_0/AND5_1/not_0/in ea2 vdd comparator_0/AND5_1/w_n22_7# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1582 comparator_0/AND5_1/a_29_n35# ea2 comparator_0/AND5_1/a_10_n35# Gnd CMOSN w=4 l=2
++  ad=72 pd=44 as=0 ps=0
+M1583 comparator_0/AND5_1/not_0/in ea4 comparator_0/AND5_1/a_49_n35# Gnd CMOSN w=4 l=2
++  ad=32 pd=24 as=68 ps=42
+M1584 comparator_0/AND5_1/a_n9_n35# comparator_0/AND5_1/A gnd Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1585 comparator_0/AND5_1/a_49_n35# ea3 comparator_0/AND5_1/a_29_n35# Gnd CMOSN w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1586 comparator_0/AND5_1/not_0/in ea3 vdd comparator_0/AND5_1/w_n22_7# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1587 comparator_0/AND5_1/not_0/in comparator_0/AND5_1/A vdd comparator_0/AND5_1/w_n22_7# CMOSP w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1588 XOR_0/NAND_1/A XOR_0/NAND_3/A vdd XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1589 XOR_0/NAND_1/A XOR_0/NAND_3/A XOR_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1590 XOR_0/NAND_1/A en1 vdd XOR_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1591 XOR_0/NAND_0/a_13_n30# en1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1592 XOR_0/out XOR_0/NAND_1/B vdd XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1593 XOR_0/out XOR_0/NAND_1/B XOR_0/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1594 XOR_0/out XOR_0/NAND_1/A vdd XOR_0/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1595 XOR_0/NAND_1/a_13_n30# XOR_0/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1596 XOR_0/NAND_3/A XOR_0/B vdd XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1597 XOR_0/NAND_3/A XOR_0/B XOR_0/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1598 XOR_0/NAND_3/A en1 vdd XOR_0/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1599 XOR_0/NAND_2/a_13_n30# en1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1600 XOR_0/NAND_1/B XOR_0/B vdd XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1601 XOR_0/NAND_1/B XOR_0/B XOR_0/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1602 XOR_0/NAND_1/B XOR_0/NAND_3/A vdd XOR_0/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1603 XOR_0/NAND_3/a_13_n30# XOR_0/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1604 OR_0/out OR_0/not_0/in vdd OR_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1605 OR_0/out OR_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1606 OR_0/not_0/in en1 gnd Gnd CMOSN w=5 l=2
++  ad=80 pd=52 as=0 ps=0
+M1607 OR_0/NOR_0/a_n4_7# en0 vdd OR_0/NOR_0/w_n19_1# CMOSP w=6 l=2
++  ad=96 pd=44 as=0 ps=0
+M1608 OR_0/not_0/in en0 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1609 OR_0/not_0/in en1 OR_0/NOR_0/a_n4_7# OR_0/NOR_0/w_n19_1# CMOSP w=6 l=2
++  ad=48 pd=28 as=0 ps=0
+M1610 Out3 OR_1/not_0/in vdd OR_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1611 Out3 OR_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1612 OR_1/not_0/in OR_1/B gnd Gnd CMOSN w=5 l=2
++  ad=80 pd=52 as=0 ps=0
+M1613 OR_1/NOR_0/a_n4_7# OR_1/A vdd OR_1/NOR_0/w_n19_1# CMOSP w=6 l=2
++  ad=96 pd=44 as=0 ps=0
+M1614 OR_1/not_0/in OR_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1615 OR_1/not_0/in OR_1/B OR_1/NOR_0/a_n4_7# OR_1/NOR_0/w_n19_1# CMOSP w=6 l=2
++  ad=48 pd=28 as=0 ps=0
+M1616 XOR_1/NAND_1/A XOR_1/NAND_3/A vdd XOR_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1617 XOR_1/NAND_1/A XOR_1/NAND_3/A XOR_1/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1618 XOR_1/NAND_1/A en1 vdd XOR_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1619 XOR_1/NAND_0/a_13_n30# en1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1620 XOR_1/out XOR_1/NAND_1/B vdd XOR_1/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1621 XOR_1/out XOR_1/NAND_1/B XOR_1/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1622 XOR_1/out XOR_1/NAND_1/A vdd XOR_1/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1623 XOR_1/NAND_1/a_13_n30# XOR_1/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1624 XOR_1/NAND_3/A XOR_1/B vdd XOR_1/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1625 XOR_1/NAND_3/A XOR_1/B XOR_1/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1626 XOR_1/NAND_3/A en1 vdd XOR_1/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1627 XOR_1/NAND_2/a_13_n30# en1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1628 XOR_1/NAND_1/B XOR_1/B vdd XOR_1/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1629 XOR_1/NAND_1/B XOR_1/B XOR_1/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1630 XOR_1/NAND_1/B XOR_1/NAND_3/A vdd XOR_1/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1631 XOR_1/NAND_3/a_13_n30# XOR_1/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1632 decoder_0/AND_0/not_0/in decoder_0/AND_1/B vdd decoder_0/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1633 decoder_0/AND_0/not_0/in decoder_0/AND_1/B decoder_0/AND_0/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1634 decoder_0/AND_0/not_0/in decoder_0/AND_2/B vdd decoder_0/AND_0/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1635 decoder_0/AND_0/NAND_0/a_13_n30# decoder_0/AND_2/B gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1636 en0 decoder_0/AND_0/not_0/in vdd decoder_0/AND_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1637 en0 decoder_0/AND_0/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1638 decoder_0/AND_1/not_0/in decoder_0/AND_1/B vdd decoder_0/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1639 decoder_0/AND_1/not_0/in decoder_0/AND_1/B decoder_0/AND_1/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1640 decoder_0/AND_1/not_0/in S0 vdd decoder_0/AND_1/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1641 decoder_0/AND_1/NAND_0/a_13_n30# S0 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1642 en1 decoder_0/AND_1/not_0/in vdd decoder_0/AND_1/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1643 en1 decoder_0/AND_1/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1644 decoder_0/AND_2/not_0/in decoder_0/AND_2/B vdd decoder_0/AND_2/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1645 decoder_0/AND_2/not_0/in decoder_0/AND_2/B decoder_0/AND_2/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1646 decoder_0/AND_2/not_0/in S1 vdd decoder_0/AND_2/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1647 decoder_0/AND_2/NAND_0/a_13_n30# S1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1648 en2 decoder_0/AND_2/not_0/in vdd decoder_0/AND_2/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1649 en2 decoder_0/AND_2/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1650 decoder_0/AND_3/not_0/in S0 vdd decoder_0/AND_3/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1651 decoder_0/AND_3/not_0/in S0 decoder_0/AND_3/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1652 decoder_0/AND_3/not_0/in S1 vdd decoder_0/AND_3/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1653 decoder_0/AND_3/NAND_0/a_13_n30# S1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1654 en3 decoder_0/AND_3/not_0/in vdd decoder_0/AND_3/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1655 en3 decoder_0/AND_3/not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1656 decoder_0/AND_2/B S0 vdd decoder_0/not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1657 decoder_0/AND_2/B S0 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1658 decoder_0/AND_1/B S1 vdd decoder_0/not_1/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1659 decoder_0/AND_1/B S1 gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=0 ps=0
+M1660 XOR_2/NAND_1/A XOR_2/NAND_3/A vdd XOR_2/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1661 XOR_2/NAND_1/A XOR_2/NAND_3/A XOR_2/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1662 XOR_2/NAND_1/A en1 vdd XOR_2/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1663 XOR_2/NAND_0/a_13_n30# en1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1664 XOR_2/out XOR_2/NAND_1/B vdd XOR_2/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1665 XOR_2/out XOR_2/NAND_1/B XOR_2/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1666 XOR_2/out XOR_2/NAND_1/A vdd XOR_2/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1667 XOR_2/NAND_1/a_13_n30# XOR_2/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1668 XOR_2/NAND_3/A XOR_2/B vdd XOR_2/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1669 XOR_2/NAND_3/A XOR_2/B XOR_2/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1670 XOR_2/NAND_3/A en1 vdd XOR_2/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1671 XOR_2/NAND_2/a_13_n30# en1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1672 XOR_2/NAND_1/B XOR_2/B vdd XOR_2/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1673 XOR_2/NAND_1/B XOR_2/B XOR_2/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1674 XOR_2/NAND_1/B XOR_2/NAND_3/A vdd XOR_2/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1675 XOR_2/NAND_3/a_13_n30# XOR_2/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1676 XOR_3/NAND_1/A XOR_3/NAND_3/A vdd XOR_3/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1677 XOR_3/NAND_1/A XOR_3/NAND_3/A XOR_3/NAND_0/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1678 XOR_3/NAND_1/A en1 vdd XOR_3/NAND_0/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1679 XOR_3/NAND_0/a_13_n30# en1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1680 XOR_3/out XOR_3/NAND_1/B vdd XOR_3/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1681 XOR_3/out XOR_3/NAND_1/B XOR_3/NAND_1/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1682 XOR_3/out XOR_3/NAND_1/A vdd XOR_3/NAND_1/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1683 XOR_3/NAND_1/a_13_n30# XOR_3/NAND_1/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1684 XOR_3/NAND_3/A XOR_3/B vdd XOR_3/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1685 XOR_3/NAND_3/A XOR_3/B XOR_3/NAND_2/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1686 XOR_3/NAND_3/A en1 vdd XOR_3/NAND_2/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1687 XOR_3/NAND_2/a_13_n30# en1 gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1688 XOR_3/NAND_1/B XOR_3/B vdd XOR_3/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=40 pd=36 as=0 ps=0
+M1689 XOR_3/NAND_1/B XOR_3/B XOR_3/NAND_3/a_13_n30# Gnd CMOSN w=5 l=2
++  ad=40 pd=26 as=80 ps=42
+M1690 XOR_3/NAND_1/B XOR_3/NAND_3/A vdd XOR_3/NAND_3/w_n1_n1# CMOSP w=4 l=2
++  ad=0 pd=0 as=0 ps=0
+M1691 XOR_3/NAND_3/a_13_n30# XOR_3/NAND_3/A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+C0 enable_2/AND_6/not_0/in enable_2/AND_6/NAND_0/w_n1_n1# 0.07fF
+C1 AND_2/not_0/in AND_2/NAND_0/w_n1_n1# 0.07fF
+C2 comparator_0/XNOR_3/XOR_0/NAND_3/A comparator_0/XNOR_3/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C3 comparator_0/AND4_0/w_n27_2# vdd 0.18fF
+C4 enable_0/AND_6/not_0/in B2 0.09fF
+C5 four_bit_adder_0/fulladder_1/XOR_0/NAND_0/w_n1_n1# vdd 0.10fF
+C6 gnd comparator_0/XNOR_2/not_0/in 0.01fF
+C7 four_bit_adder_0/fulladder_0/XOR_1/NAND_0/w_n1_n1# vdd 0.10fF
+C8 B2 B3 0.32fF
+C9 comparator_0/AND4_0/w_n27_2# ea4 0.08fF
+C10 enable_1/AND_4/NAND_0/w_n1_n1# B0 0.06fF
+C11 XOR_1/NAND_0/w_n1_n1# vdd 0.10fF
+C12 enable_0/AND_1/not_0/in vdd 0.21fF
+C13 gnd decoder_0/AND_2/not_0/in 0.01fF
+C14 gnd XOR_3/NAND_1/B 0.04fF
+C15 four_bit_adder_0/fulladder_0/XOR_0/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A 0.06fF
+C16 XOR_2/NAND_1/A XOR_2/NAND_3/A 0.09fF
+C17 AND_1/B vdd 0.40fF
+C18 enable_0/AND_3/not_0/in vdd 0.21fF
+C19 XOR_1/NAND_2/w_n1_n1# en1 0.06fF
+C20 comparator_0/AND4_2/A f5 0.06fF
+C21 comparator_0/AND_1/not_0/in comparator_0/AND_1/NAND_0/w_n1_n1# 0.07fF
+C22 four_bit_adder_0/fulladder_2/OR_0/B four_bit_adder_0/fulladder_2/OR_0/A 0.55fF
+C23 outout3 outout2 0.09fF
+C24 comparator_0/not_1/w_n9_1# comparator_0/AND5_1/A 0.03fF
+C25 enable_1/AND_4/not_0/in gnd 0.01fF
+C26 four_bit_adder_0/fulladder_1/XOR_1/NAND_0/a_13_n30# four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A 0.02fF
+C27 A2 vdd 0.39fF
+C28 four_bit_adder_0/fulladder_0/AND_1/not_0/w_n9_1# vdd 0.05fF
+C29 four_bit_adder_0/fulladder_1/XOR_1/NAND_2/w_n1_n1# vdd 0.09fF
+C30 comparator_0/XNOR_1/XOR_0/NAND_1/B vdd 0.21fF
+C31 A1 en3 0.58fF
+C32 four_bit_adder_0/fulladder_3/AND_0/not_0/w_n9_1# vdd 0.05fF
+C33 four_bit_adder_0/fulladder_2/XOR_1/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A 0.06fF
+C34 en2 A0 0.66fF
+C35 gnd comparator_0/XNOR_1/XOR_0/NAND_3/A 0.10fF
+C36 f0 f4 0.25fF
+C37 comparator_0/XNOR_2/XOR_0/NAND_0/w_n1_n1# vdd 0.10fF
+C38 enable_1/AND_2/NAND_0/w_n1_n1# vdd 0.09fF
+C39 comparator_0/AND_1/not_0/in f7 0.09fF
+C40 gnd f3 0.45fF
+C41 comparator_0/AND4_1/w_n27_2# ea3 0.08fF
+C42 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/w_n1_n1# vdd 0.09fF
+C43 ea2 comparator_0/AND5_0/w_n22_7# 0.08fF
+C44 en3 B3 0.97fF
+C45 OR3_0/A OR3_0/B 0.08fF
+C46 comparator_0/AND4_2/not_0/w_n9_1# comparator_0/OR4_1/C 0.03fF
+C47 comparator_0/OR4_0/not_0/in vdd 0.02fF
+C48 comparator_0/AND4_0/not_0/in ea3 0.06fF
+C49 comparator_0/AND_0/A f3 0.37fF
+C50 enable_0/F3 four_bit_adder_0/fulladder_3/C 0.22fF
+C51 four_bit_adder_0/fulladder_1/XOR_0/NAND_2/w_n1_n1# vdd 0.09fF
+C52 comparator_0/XNOR_0/not_0/in vdd 0.21fF
+C53 enable_1/AND_7/NAND_0/w_n1_n1# vdd 0.09fF
+C54 comparator_0/XNOR_1/not_0/w_n9_1# vdd 0.05fF
+C55 four_bit_adder_0/fulladder_1/OR_0/not_0/in four_bit_adder_0/fulladder_1/OR_0/not_0/w_n9_1# 0.06fF
+C56 comparator_0/AND3_0/A f2 0.23fF
+C57 comparator_0/XNOR_2/XOR_0/NAND_2/w_n1_n1# comparator_0/XNOR_2/XOR_0/NAND_3/A 0.07fF
+C58 enable_1/AND_0/not_0/in vdd 0.21fF
+C59 four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A en1 0.03fF
+C60 OR3_0/C OR3_0/A 0.13fF
+C61 comparator_0/XNOR_2/XOR_0/NAND_1/A vdd 0.35fF
+C62 comparator_0/OR4_0/C ea1 0.06fF
+C63 OR3_0/B vdd 0.07fF
+C64 XOR_2/out four_bit_adder_0/fulladder_2/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C65 comparator_0/XNOR_3/XOR_0/NAND_2/w_n1_n1# f3 0.06fF
+C66 enable_0/AND_4/not_0/in enable_0/AND_4/not_0/w_n9_1# 0.06fF
+C67 four_bit_adder_0/fulladder_1/OR_0/B four_bit_adder_0/fulladder_1/OR_0/NOR_0/w_n19_1# 0.06fF
+C68 XOR_3/NAND_3/A XOR_3/NAND_3/w_n1_n1# 0.06fF
+C69 enable_2/AND_3/not_0/in B1 0.09fF
+C70 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/w_n1_n1# vdd 0.09fF
+C71 XOR_1/NAND_1/A vdd 0.35fF
+C72 gnd comparator_0/XNOR_0/XOR_0/NAND_1/B 0.04fF
+C73 OR3_0/C vdd 0.07fF
+C74 f7 comparator_0/XNOR_3/XOR_0/NAND_2/a_13_n30# 0.02fF
+C75 comparator_0/XNOR_3/not_0/in comparator_0/XNOR_3/XOR_0/NAND_1/B 0.09fF
+C76 four_bit_adder_0/fulladder_0/AND_0/not_0/w_n9_1# four_bit_adder_0/fulladder_0/OR_0/A 0.03fF
+C77 enable_2/AND_5/not_0/in AND_2/B 0.02fF
+C78 comparator_0/AND_1/A vdd 0.07fF
+C79 gnd en1 0.42fF
+C80 OR3_0/not_0/w_n9_1# OR3_0/not_0/in 0.06fF
+C81 enable_0/AND_2/NAND_0/w_n1_n1# OR_0/out 0.06fF
+C82 four_bit_adder_0/fulladder_3/XOR_0/NAND_2/w_n1_n1# XOR_3/out 0.06fF
+C83 enable_2/AND_0/not_0/w_n9_1# vdd 0.05fF
+C84 enable_1/AND_5/not_0/w_n9_1# f5 0.03fF
+C85 four_bit_adder_0/fulladder_1/XOR_1/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_1/C 0.06fF
+C86 comparator_0/AND_0/not_0/in gnd 0.01fF
+C87 four_bit_adder_0/fulladder_0/XOR_1/B four_bit_adder_0/fulladder_0/XOR_1/NAND_3/w_n1_n1# 0.06fF
+C88 decoder_0/AND_0/not_0/w_n9_1# vdd 0.05fF
+C89 decoder_0/AND_1/not_0/in decoder_0/AND_1/B 0.09fF
+C90 OR_0/out enable_0/AND_7/NAND_0/w_n1_n1# 0.06fF
+C91 f1 vdd 0.32fF
+C92 enable_0/AND_1/not_0/w_n9_1# vdd 0.05fF
+C93 four_bit_adder_0/fulladder_0/OR_0/B four_bit_adder_0/fulladder_0/OR_0/NOR_0/w_n19_1# 0.06fF
+C94 four_bit_adder_0/fulladder_2/XOR_1/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_2/XOR_1/NAND_1/A 0.07fF
+C95 comparator_0/XNOR_3/XOR_0/NAND_0/a_13_n30# comparator_0/XNOR_3/XOR_0/NAND_3/A 0.02fF
+C96 enable_2/AND_3/not_0/in vdd 0.21fF
+C97 en2 decoder_0/AND_2/not_0/w_n9_1# 0.03fF
+C98 ea4 comparator_0/AND5_0/a_49_n35# 0.00fF
+C99 enable_1/AND_0/not_0/in enable_1/AND_0/NAND_0/w_n1_n1# 0.07fF
+C100 four_bit_adder_0/fulladder_3/XOR_1/B gnd 0.06fF
+C101 outout1 vdd 0.31fF
+C102 four_bit_adder_0/fulladder_3/OR_0/A gnd 0.08fF
+C103 comparator_0/OR4_0/B comparator_0/OR4_0/A 0.10fF
+C104 enable_0/AND_6/not_0/w_n9_1# vdd 0.05fF
+C105 four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/XOR_1/NAND_2/a_13_n30# 0.02fF
+C106 XOR_1/NAND_3/w_n1_n1# vdd 0.09fF
+C107 enable_0/AND_3/not_0/in enable_0/AND_3/NAND_0/w_n1_n1# 0.07fF
+C108 four_bit_adder_0/fulladder_2/OR_0/not_0/in gnd 0.16fF
+C109 comparator_0/XNOR_3/XOR_0/NAND_0/w_n1_n1# comparator_0/XNOR_3/XOR_0/NAND_3/A 0.06fF
+C110 Out3 gnd 0.08fF
+C111 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/B gnd 0.04fF
+C112 AND_0/B gnd 0.12fF
+C113 XOR_1/out four_bit_adder_0/fulladder_1/XOR_0/NAND_1/B 0.09fF
+C114 decoder_0/AND_0/not_0/in decoder_0/AND_0/not_0/w_n9_1# 0.06fF
+C115 OR3_0/not_0/in gnd 0.06fF
+C116 decoder_0/AND_2/not_0/in decoder_0/AND_2/not_0/w_n9_1# 0.06fF
+C117 comparator_0/XNOR_1/XOR_0/NAND_3/w_n1_n1# comparator_0/XNOR_1/XOR_0/NAND_1/B 0.07fF
+C118 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/B vdd 0.21fF
+C119 four_bit_adder_0/fulladder_2/AND_1/not_0/in vdd 0.21fF
+C120 comparator_0/OR4_1/A comparator_0/AND3_1/not_0/w_n9_1# 0.03fF
+C121 A1 gnd 0.61fF
+C122 enable_0/AND_5/not_0/in XOR_1/B 0.02fF
+C123 comparator_0/not_5/w_n9_1# vdd 0.05fF
+C124 four_bit_adder_0/fulladder_1/XOR_0/NAND_0/a_13_n30# four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A 0.02fF
+C125 XOR_3/NAND_2/w_n1_n1# en1 0.06fF
+C126 enable_2/AND_0/not_0/in enable_2/AND_0/NAND_0/w_n1_n1# 0.07fF
+C127 decoder_0/AND_2/NAND_0/w_n1_n1# S1 0.06fF
+C128 AND_3/A gnd 0.08fF
+C129 gnd f0 0.25fF
+C130 four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A gnd 0.10fF
+C131 XOR_2/out four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A 0.37fF
+C132 comparator_0/XNOR_3/XOR_0/NAND_1/A comparator_0/XNOR_3/XOR_0/NAND_3/A 0.09fF
+C133 enable_0/AND_6/not_0/in gnd 0.01fF
+C134 gnd comparator_0/AND4_2/not_0/in 0.05fF
+C135 AND_4/NAND_0/w_n1_n1# eequal 0.06fF
+C136 XOR_3/B XOR_3/NAND_2/a_13_n30# 0.02fF
+C137 en0 vdd 0.15fF
+C138 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/B gnd 0.04fF
+C139 gnd comparator_0/OR4_1/B 0.15fF
+C140 OR3_2/B comparator_0/OR4_0/not_0/in 0.02fF
+C141 B3 gnd 0.61fF
+C142 comparator_0/AND5_1/w_n22_7# vdd 0.26fF
+C143 en2 A2 1.03fF
+C144 enable_2/AND_4/not_0/w_n9_1# AND_2/A 0.03fF
+C145 comparator_0/XNOR_3/XOR_0/NAND_1/w_n1_n1# vdd 0.09fF
+C146 enable_1/AND_4/not_0/in enable_1/AND_4/not_0/w_n9_1# 0.06fF
+C147 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/B vdd 0.21fF
+C148 enable_0/AND_4/NAND_0/w_n1_n1# vdd 0.09fF
+C149 OR3_2/B OR3_0/B 0.09fF
+C150 ea4 comparator_0/AND5_1/w_n22_7# 0.08fF
+C151 comparator_0/AND5_0/not_0/in comparator_0/OR4_0/D 0.02fF
+C152 XOR_1/NAND_3/A en1 0.03fF
+C153 XOR_1/out four_bit_adder_0/fulladder_1/C 0.15fF
+C154 four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A gnd 0.10fF
+C155 four_bit_adder_0/fulladder_0/XOR_1/B four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A 0.37fF
+C156 ea2 comparator_0/AND5_1/a_10_n35# 0.00fF
+C157 OR3_1/not_0/w_n9_1# OR3_1/not_0/in 0.06fF
+C158 enable_1/AND_2/NAND_0/w_n1_n1# en2 0.06fF
+C159 four_bit_adder_0/fulladder_3/OR_0/NOR_0/w_n19_1# vdd 0.08fF
+C160 four_bit_adder_0/fulladder_0/OR_0/A gnd 0.08fF
+C161 OR3_0/C OR3_2/B 0.16fF
+C162 XOR_0/NAND_2/w_n1_n1# en1 0.06fF
+C163 comparator_0/AND4_1/A f1 0.21fF
+C164 enable_0/AND_4/not_0/in XOR_0/B 0.02fF
+C165 enable_1/AND_1/not_0/in A1 0.09fF
+C166 four_bit_adder_0/fulladder_3/OR_0/not_0/in four_bit_adder_0/fulladder_3/OR_0/NOR_0/w_n19_1# 0.02fF
+C167 comparator_0/AND5_1/not_0/in vdd 0.34fF
+C168 AND_1/NAND_0/w_n1_n1# AND_1/A 0.06fF
+C169 comparator_0/AND4_2/A ea3 0.07fF
+C170 en2 enable_1/AND_7/NAND_0/w_n1_n1# 0.06fF
+C171 decoder_0/AND_0/not_0/in en0 0.02fF
+C172 ea1 comparator_0/OR4_0/D 0.06fF
+C173 comparator_0/XNOR_0/XOR_0/NAND_1/w_n1_n1# comparator_0/XNOR_0/not_0/in 0.07fF
+C174 comparator_0/XNOR_0/XOR_0/NAND_0/w_n1_n1# comparator_0/XNOR_0/XOR_0/NAND_3/A 0.06fF
+C175 comparator_0/not_2/w_n9_1# f5 0.06fF
+C176 enable_2/AND_1/not_0/w_n9_1# vdd 0.05fF
+C177 OR3_0/A OR3_0/w_n59_4# 0.06fF
+C178 A0 A1 0.32fF
+C179 OR_0/NOR_0/w_n19_1# en1 0.06fF
+C180 four_bit_adder_0/fulladder_0/XOR_1/B gnd 0.06fF
+C181 ea4 comparator_0/AND5_1/not_0/in 0.09fF
+C182 comparator_0/XNOR_3/XOR_0/NAND_0/w_n1_n1# comparator_0/XNOR_3/XOR_0/NAND_1/A 0.07fF
+C183 comparator_0/OR4_0/not_0/in comparator_0/OR4_0/not_0/w_n9_1# 0.06fF
+C184 comparator_0/AND3_1/not_0/in gnd 0.01fF
+C185 enable_1/AND_5/not_0/in B1 0.09fF
+C186 enable_0/F0 enable_0/AND_0/not_0/in 0.02fF
+C187 four_bit_adder_0/fulladder_1/C gnd 0.31fF
+C188 XOR_0/NAND_1/B XOR_0/NAND_1/w_n1_n1# 0.06fF
+C189 comparator_0/XNOR_0/XOR_0/NAND_3/A comparator_0/XNOR_0/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C190 enable_0/F1 XOR_1/out 1.24fF
+C191 gnd comparator_0/AND5_0/not_0/in 0.03fF
+C192 OR3_0/w_n59_4# vdd 0.15fF
+C193 AND_0/not_0/in vdd 0.21fF
+C194 enable_2/AND_1/NAND_0/w_n1_n1# B0 0.06fF
+C195 four_bit_adder_0/fulladder_3/C vdd 0.43fF
+C196 four_bit_adder_0/fulladder_0/XOR_0/NAND_2/w_n1_n1# XOR_0/out 0.06fF
+C197 enable_2/AND_6/not_0/w_n9_1# vdd 0.05fF
+C198 A0 B3 0.32fF
+C199 f0 ea2 0.02fF
+C200 four_bit_adder_0/fulladder_1/AND_1/not_0/in four_bit_adder_0/fulladder_1/AND_1/not_0/w_n9_1# 0.06fF
+C201 enable_1/AND_3/not_0/in enable_1/AND_3/NAND_0/w_n1_n1# 0.07fF
+C202 decoder_0/AND_3/not_0/in vdd 0.21fF
+C203 comparator_0/AND_1/not_0/w_n9_1# vdd 0.05fF
+C204 OR_1/NOR_0/w_n19_1# vdd 0.08fF
+C205 f4 comparator_0/AND5_1/A 0.36fF
+C206 enable_2/AND_1/not_0/in gnd 0.01fF
+C207 OR3_2/not_0/in gnd 0.06fF
+C208 f6 vdd 0.15fF
+C209 four_bit_adder_0/fulladder_1/AND_1/not_0/in four_bit_adder_0/fulladder_1/AND_1/NAND_0/w_n1_n1# 0.07fF
+C210 comparator_0/AND4_2/w_n27_2# vdd 0.18fF
+C211 enable_0/F1 gnd 0.20fF
+C212 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/B vdd 0.21fF
+C213 XOR_3/out XOR_3/NAND_1/w_n1_n1# 0.07fF
+C214 f7 comparator_0/XNOR_3/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C215 gnd ea1 0.08fF
+C216 comparator_0/AND4_1/not_0/in vdd 0.38fF
+C217 f6 ea4 0.06fF
+C218 XOR_0/NAND_1/A XOR_0/NAND_3/A 0.09fF
+C219 enable_1/AND_5/not_0/in vdd 0.21fF
+C220 enable_0/F3 vdd 0.64fF
+C221 four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A gnd 0.10fF
+C222 AND_1/NAND_0/w_n1_n1# vdd 0.09fF
+C223 comparator_0/AND4_2/w_n27_2# ea4 0.08fF
+C224 four_bit_adder_0/fulladder_2/AND_0/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_2/AND_0/not_0/in 0.07fF
+C225 four_bit_adder_0/fulladder_0/XOR_1/NAND_0/w_n1_n1# en1 0.06fF
+C226 four_bit_adder_0/fulladder_0/OR_0/NOR_0/w_n19_1# vdd 0.08fF
+C227 XOR_1/NAND_0/w_n1_n1# en1 0.06fF
+C228 enable_2/AND_6/not_0/in gnd 0.01fF
+C229 enable_2/AND_6/NAND_0/w_n1_n1# A3 0.06fF
+C230 decoder_0/AND_1/B S1 0.02fF
+C231 comparator_0/AND4_1/not_0/in ea4 0.06fF
+C232 XOR_2/NAND_1/B vdd 0.21fF
+C233 four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/AND_0/not_0/in 0.09fF
+C234 gnd decoder_0/AND_2/B 0.21fF
+C235 comparator_0/AND_1/not_0/in gnd 0.01fF
+C236 four_bit_adder_0/fulladder_0/OR_0/B vdd 0.07fF
+C237 outout3 OR3_2/A 0.11fF
+C238 four_bit_adder_0/fulladder_2/AND_0/not_0/in four_bit_adder_0/fulladder_2/OR_0/A 0.02fF
+C239 XOR_2/B XOR_2/NAND_2/w_n1_n1# 0.06fF
+C240 enable_2/AND_4/not_0/in enable_2/AND_4/not_0/w_n9_1# 0.06fF
+C241 outout3 gnd 0.17fF
+C242 XOR_3/NAND_1/A XOR_3/NAND_3/A 0.09fF
+C243 gnd XOR_2/NAND_3/A 0.10fF
+C244 enable_2/AND_4/NAND_0/w_n1_n1# vdd 0.09fF
+C245 four_bit_adder_0/fulladder_3/AND_1/NAND_0/w_n1_n1# enable_0/F3 0.06fF
+C246 comparator_0/AND5_0/not_0/w_n9_1# vdd 0.05fF
+C247 comparator_0/XNOR_0/XOR_0/NAND_0/w_n1_n1# comparator_0/XNOR_0/XOR_0/NAND_1/A 0.07fF
+C248 enable_0/AND_1/not_0/in enable_0/AND_1/NAND_0/w_n1_n1# 0.07fF
+C249 OR3_2/not_0/w_n9_1# OR3_2/not_0/in 0.06fF
+C250 enable_2/AND_2/NAND_0/w_n1_n1# en3 0.06fF
+C251 OR_0/out B0 0.92fF
+C252 gnd f5 0.55fF
+C253 ea2 comparator_0/AND5_0/not_0/in 0.06fF
+C254 comparator_0/XNOR_0/XOR_0/NAND_2/w_n1_n1# f0 0.06fF
+C255 four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/XOR_1/NAND_3/w_n1_n1# 0.06fF
+C256 comparator_0/AND_1/A f3 0.02fF
+C257 comparator_0/OR4_0/C ea3 0.08fF
+C258 enable_0/AND_0/not_0/in enable_0/AND_0/NAND_0/w_n1_n1# 0.07fF
+C259 f4 comparator_0/XNOR_0/XOR_0/NAND_2/a_13_n30# 0.02fF
+C260 comparator_0/XNOR_0/not_0/in comparator_0/XNOR_0/XOR_0/NAND_1/B 0.09fF
+C261 en3 enable_2/AND_7/NAND_0/w_n1_n1# 0.06fF
+C262 OR_0/out A3 0.64fF
+C263 comparator_0/AND4_2/not_0/w_n9_1# comparator_0/AND4_2/not_0/in 0.06fF
+C264 comparator_0/XNOR_3/XOR_0/NAND_1/w_n1_n1# comparator_0/XNOR_3/XOR_0/NAND_1/B 0.06fF
+C265 comparator_0/XNOR_1/XOR_0/NAND_1/A comparator_0/XNOR_1/XOR_0/NAND_1/B 0.32fF
+C266 f1 comparator_0/XNOR_1/XOR_0/NAND_3/A 0.03fF
+C267 enable_0/AND_0/not_0/in vdd 0.21fF
+C268 four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/XOR_1/NAND_2/w_n1_n1# 0.06fF
+C269 four_bit_adder_0/fulladder_0/XOR_1/NAND_3/w_n1_n1# four_bit_adder_0/fulladder_0/XOR_1/NAND_1/B 0.07fF
+C270 comparator_0/XNOR_0/not_0/w_n9_1# vdd 0.05fF
+C271 comparator_0/not_4/w_n9_1# f6 0.06fF
+C272 comparator_0/OR4_1/not_0/in gnd 0.45fF
+C273 four_bit_adder_0/fulladder_0/XOR_1/NAND_2/w_n1_n1# vdd 0.09fF
+C274 XOR_0/NAND_3/A vdd 0.21fF
+C275 comparator_0/XNOR_2/XOR_0/NAND_2/w_n1_n1# f6 0.06fF
+C276 four_bit_adder_0/fulladder_1/OR_0/B four_bit_adder_0/fulladder_1/OR_0/not_0/in 0.08fF
+C277 decoder_0/AND_3/not_0/in S0 0.09fF
+C278 ea1 ea2 1.08fF
+C279 comparator_0/not_0/w_n9_1# f4 0.06fF
+C280 OR3_2/w_n59_4# vdd 0.15fF
+C281 four_bit_adder_0/fulladder_3/AND_0/not_0/w_n9_1# four_bit_adder_0/fulladder_3/OR_0/A 0.03fF
+C282 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/w_n1_n1# outout1 0.07fF
+C283 four_bit_adder_0/fulladder_1/AND_1/not_0/w_n9_1# four_bit_adder_0/fulladder_1/OR_0/B 0.03fF
+C284 enable_0/F0 vdd 0.55fF
+C285 ea3 comparator_0/AND5_1/a_29_n35# 0.01fF
+C286 enable_0/AND_1/not_0/in A1 0.09fF
+C287 four_bit_adder_0/fulladder_2/AND_0/not_0/w_n9_1# vdd 0.05fF
+C288 outout3 OR3_1/not_0/in 0.08fF
+C289 outout2 OR3_1/w_n59_4# 0.06fF
+C290 decoder_0/AND_1/not_0/w_n9_1# vdd 0.05fF
+C291 comparator_0/OR4_1/D comparator_0/AND5_1/not_0/in 0.02fF
+C292 four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/AND_0/NAND_0/w_n1_n1# 0.06fF
+C293 four_bit_adder_0/fulladder_0/AND_0/not_0/in vdd 0.21fF
+C294 XOR_3/B XOR_3/NAND_3/w_n1_n1# 0.06fF
+C295 enable_2/AND_3/not_0/in enable_2/AND_3/NAND_0/w_n1_n1# 0.07fF
+C296 AND_0/A gnd 0.08fF
+C297 AND_3/not_0/in AND_3/B 0.09fF
+C298 XOR_2/NAND_1/A XOR_2/NAND_0/w_n1_n1# 0.07fF
+C299 four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A four_bit_adder_0/fulladder_1/XOR_1/NAND_3/w_n1_n1# 0.06fF
+C300 enable_0/AND_4/not_0/in B0 0.09fF
+C301 four_bit_adder_0/fulladder_0/OR_0/not_0/in four_bit_adder_0/fulladder_0/OR_0/NOR_0/w_n19_1# 0.02fF
+C302 f7 comparator_0/XNOR_3/XOR_0/NAND_3/A 0.37fF
+C303 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/w_n1_n1# vdd 0.09fF
+C304 AND_2/A AND_2/B 0.40fF
+C305 A1 A2 0.32fF
+C306 B0 B2 0.32fF
+C307 AND_2/not_0/in AND_2/B 0.09fF
+C308 enable_1/AND_3/not_0/w_n9_1# vdd 0.05fF
+C309 comparator_0/OR4_0/A comparator_0/OR4_0/C 0.00fF
+C310 four_bit_adder_0/fulladder_2/XOR_0/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A 0.06fF
+C311 four_bit_adder_0/fulladder_0/OR_0/B four_bit_adder_0/fulladder_0/OR_0/not_0/in 0.08fF
+C312 XOR_2/NAND_0/a_13_n30# XOR_2/NAND_3/A 0.02fF
+C313 four_bit_adder_0/fulladder_2/XOR_1/NAND_2/w_n1_n1# four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A 0.07fF
+C314 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_2/XOR_1/NAND_1/B 0.06fF
+C315 decoder_0/AND_1/not_0/in decoder_0/AND_1/NAND_0/w_n1_n1# 0.07fF
+C316 XOR_0/NAND_1/A vdd 0.35fF
+C317 comparator_0/AND3_0/w_n31_n3# comparator_0/AND3_0/A 0.08fF
+C318 gnd comparator_0/AND5_1/A 0.16fF
+C319 comparator_0/OR4_0/A eequal 0.09fF
+C320 B2 A3 0.32fF
+C321 A2 B3 0.32fF
+C322 OR_1/B OR_1/NOR_0/w_n19_1# 0.06fF
+C323 comparator_0/OR4_1/not_0/in comparator_0/OR4_1/not_0/w_n9_1# 0.06fF
+C324 enable_2/AND_0/not_0/in gnd 0.01fF
+C325 four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/XOR_0/NAND_1/w_n1_n1# 0.07fF
+C326 f4 ea3 0.07fF
+C327 comparator_0/XNOR_1/XOR_0/NAND_0/w_n1_n1# f1 0.06fF
+C328 AND_3/not_0/in vdd 0.21fF
+C329 four_bit_adder_0/fulladder_3/OR_0/B gnd 0.27fF
+C330 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/w_n1_n1# vdd 0.09fF
+C331 comparator_0/AND_0/NAND_0/w_n1_n1# vdd 0.09fF
+C332 AND_1/A vdd 0.35fF
+C333 gnd XOR_0/B 0.27fF
+C334 XOR_0/NAND_1/B XOR_0/B 0.09fF
+C335 enable_1/AND_2/not_0/in f2 0.02fF
+C336 enable_0/AND_2/not_0/in vdd 0.21fF
+C337 enable_1/AND_3/NAND_0/w_n1_n1# A3 0.06fF
+C338 OR3_0/not_0/in OR3_0/B 0.08fF
+C339 XOR_2/out XOR_2/NAND_1/w_n1_n1# 0.07fF
+C340 enable_1/AND_3/not_0/in gnd 0.01fF
+C341 Out4 gnd 0.16fF
+C342 four_bit_adder_0/fulladder_3/XOR_1/NAND_3/w_n1_n1# four_bit_adder_0/fulladder_3/XOR_1/NAND_1/B 0.07fF
+C343 B1 vdd 0.39fF
+C344 f4 comparator_0/AND5_0/A 0.02fF
+C345 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_0/XOR_1/NAND_1/A 0.06fF
+C346 comparator_0/XNOR_0/XOR_0/NAND_1/A comparator_0/XNOR_0/XOR_0/NAND_3/A 0.09fF
+C347 four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A 0.37fF
+C348 AND_3/B vdd 0.07fF
+C349 enable_1/AND_0/not_0/in f0 0.02fF
+C350 OR3_0/C OR3_0/not_0/in 0.08fF
+C351 B0 en3 0.87fF
+C352 enable_0/AND_7/not_0/in vdd 0.21fF
+C353 four_bit_adder_0/fulladder_3/AND_1/not_0/in four_bit_adder_0/fulladder_3/OR_0/B 0.02fF
+C354 four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A four_bit_adder_0/fulladder_1/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C355 enable_1/AND_7/NAND_0/w_n1_n1# B3 0.06fF
+C356 comparator_0/AND4_0/a_6_n36# ea3 0.01fF
+C357 Out1 vdd 0.15fF
+C358 enable_1/AND_1/NAND_0/w_n1_n1# vdd 0.09fF
+C359 decoder_0/not_0/w_n9_1# vdd 0.05fF
+C360 four_bit_adder_0/fulladder_2/XOR_1/B gnd 0.06fF
+C361 OR3_0/A vdd 0.31fF
+C362 comparator_0/AND4_0/w_n27_2# ea1 0.08fF
+C363 A3 en3 0.76fF
+C364 four_bit_adder_0/fulladder_1/XOR_0/NAND_0/w_n1_n1# enable_0/F1 0.06fF
+C365 four_bit_adder_0/fulladder_2/OR_0/A gnd 0.08fF
+C366 four_bit_adder_0/fulladder_1/XOR_1/NAND_2/w_n1_n1# four_bit_adder_0/fulladder_1/C 0.06fF
+C367 four_bit_adder_0/fulladder_1/AND_1/NAND_0/w_n1_n1# XOR_1/out 0.06fF
+C368 enable_0/AND_0/NAND_0/w_n1_n1# vdd 0.09fF
+C369 four_bit_adder_0/fulladder_2/XOR_0/NAND_2/w_n1_n1# four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A 0.07fF
+C370 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_2/XOR_0/NAND_1/B 0.06fF
+C371 OR3_2/C AND_2/not_0/w_n9_1# 0.03fF
+C372 four_bit_adder_0/fulladder_0/AND_1/NAND_0/w_n1_n1# XOR_0/out 0.06fF
+C373 enable_1/AND_6/NAND_0/w_n1_n1# vdd 0.09fF
+C374 enable_0/F1 enable_0/AND_1/not_0/in 0.02fF
+C375 XOR_3/B XOR_3/NAND_3/A 0.37fF
+C376 enable_2/AND_0/not_0/in A0 0.09fF
+C377 four_bit_adder_0/fulladder_1/OR_0/not_0/in gnd 0.16fF
+C378 en0 en1 0.61fF
+C379 enable_2/AND_2/not_0/in AND_1/A 0.02fF
+C380 outout1 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/B 0.09fF
+C381 OR_0/not_0/w_n9_1# vdd 0.05fF
+C382 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/B gnd 0.04fF
+C383 gnd comparator_0/AND3_0/A 0.08fF
+C384 four_bit_adder_0/fulladder_2/XOR_0/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_2/XOR_0/NAND_1/A 0.07fF
+C385 XOR_2/NAND_1/w_n1_n1# XOR_2/NAND_1/A 0.06fF
+C386 ea2 comparator_0/AND5_1/A 0.07fF
+C387 ea4 vdd 0.51fF
+C388 comparator_0/AND3_1/A f2 0.02fF
+C389 comparator_0/AND3_1/w_n31_n3# f6 0.08fF
+C390 four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/XOR_1/NAND_1/B 0.09fF
+C391 four_bit_adder_0/fulladder_3/OR_0/not_0/in vdd 0.03fF
+C392 OR3_2/C OR_1/A 0.10fF
+C393 OR3_2/B OR3_2/w_n59_4# 0.06fF
+C394 four_bit_adder_0/fulladder_3/AND_1/not_0/w_n9_1# vdd 0.05fF
+C395 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/B vdd 0.21fF
+C396 AND_4/not_0/w_n9_1# vdd 0.05fF
+C397 XOR_3/out gnd 0.49fF
+C398 four_bit_adder_0/fulladder_3/XOR_0/NAND_3/w_n1_n1# four_bit_adder_0/fulladder_3/XOR_0/NAND_1/B 0.07fF
+C399 four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A gnd 0.10fF
+C400 four_bit_adder_0/fulladder_3/AND_1/NAND_0/w_n1_n1# vdd 0.09fF
+C401 comparator_0/XNOR_3/not_0/w_n9_1# comparator_0/XNOR_3/not_0/in 0.06fF
+C402 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_3/XOR_1/NAND_1/A 0.06fF
+C403 AND_4/not_0/in vdd 0.21fF
+C404 enable_0/AND_6/not_0/in enable_0/AND_6/not_0/w_n9_1# 0.06fF
+C405 four_bit_adder_0/fulladder_2/AND_1/not_0/in four_bit_adder_0/fulladder_2/AND_1/not_0/w_n9_1# 0.06fF
+C406 enable_2/AND_5/not_0/in B2 0.09fF
+C407 f6 f3 0.09fF
+C408 comparator_0/XNOR_1/XOR_0/NAND_1/w_n1_n1# comparator_0/XNOR_1/not_0/in 0.07fF
+C409 eequal comparator_0/AND4_0/not_0/in 0.02fF
+C410 enable_2/AND_7/not_0/in AND_3/B 0.02fF
+C411 decoder_0/AND_0/not_0/in vdd 0.21fF
+C412 ea4 comparator_0/AND5_1/a_49_n35# 0.00fF
+C413 comparator_0/XNOR_2/XOR_0/NAND_1/w_n1_n1# comparator_0/XNOR_2/XOR_0/NAND_1/A 0.06fF
+C414 four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/XOR_0/NAND_1/B 0.09fF
+C415 enable_0/AND_6/NAND_0/w_n1_n1# OR_0/out 0.06fF
+C416 comparator_0/OR4_0/B comparator_0/OR4_0/C 0.04fF
+C417 four_bit_adder_0/fulladder_2/AND_1/not_0/in four_bit_adder_0/fulladder_2/AND_1/NAND_0/w_n1_n1# 0.07fF
+C418 AND_4/not_0/w_n9_1# AND_4/not_0/in 0.06fF
+C419 decoder_0/AND_1/NAND_0/w_n1_n1# decoder_0/AND_1/B 0.06fF
+C420 comparator_0/OR4_1/A gnd 0.08fF
+C421 four_bit_adder_0/fulladder_3/AND_1/not_0/in XOR_3/out 0.09fF
+C422 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/B vdd 0.21fF
+C423 four_bit_adder_0/fulladder_0/AND_1/not_0/in XOR_0/out 0.09fF
+C424 four_bit_adder_0/fulladder_1/XOR_0/NAND_2/w_n1_n1# enable_0/F1 0.06fF
+C425 f4 comparator_0/XNOR_0/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C426 comparator_0/AND3_0/not_0/w_n9_1# vdd 0.05fF
+C427 enable_2/AND_2/not_0/in vdd 0.21fF
+C428 ea1 comparator_0/XNOR_0/not_0/in 0.02fF
+C429 enable_1/AND_0/NAND_0/w_n1_n1# vdd 0.09fF
+C430 four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A gnd 0.10fF
+C431 comparator_0/OR4_0/B eequal 0.09fF
+C432 XOR_0/B XOR_0/NAND_2/w_n1_n1# 0.06fF
+C433 four_bit_adder_0/fulladder_3/OR_0/NOR_0/w_n19_1# four_bit_adder_0/fulladder_3/OR_0/A 0.06fF
+C434 four_bit_adder_0/fulladder_2/OR_0/NOR_0/w_n19_1# vdd 0.08fF
+C435 gnd ea3 0.63fF
+C436 enable_0/AND_5/not_0/w_n9_1# vdd 0.05fF
+C437 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/A four_bit_adder_0/fulladder_0/XOR_1/NAND_1/B 0.32fF
+C438 XOR_0/NAND_0/w_n1_n1# XOR_0/NAND_3/A 0.06fF
+C439 XOR_1/out four_bit_adder_0/fulladder_1/XOR_0/NAND_2/a_13_n30# 0.02fF
+C440 S0 decoder_0/not_0/w_n9_1# 0.06fF
+C441 AND_3/not_0/in OR_1/B 0.02fF
+C442 comparator_0/OR4_0/A comparator_0/OR4_0/D 0.00fF
+C443 f5 comparator_0/XNOR_1/XOR_0/NAND_1/B 0.09fF
+C444 enable_2/AND_7/not_0/in vdd 0.21fF
+C445 four_bit_adder_0/fulladder_3/AND_0/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_3/C 0.06fF
+C446 enable_0/F2 enable_0/AND_2/not_0/in 0.02fF
+C447 outout2 OR_1/A 0.12fF
+C448 comparator_0/XNOR_2/XOR_0/NAND_2/w_n1_n1# vdd 0.09fF
+C449 comparator_0/not_4/w_n9_1# vdd 0.05fF
+C450 enable_0/AND_2/NAND_0/w_n1_n1# A2 0.06fF
+C451 comparator_0/OR4_1/C vdd 0.16fF
+C452 gnd comparator_0/AND5_0/A 0.08fF
+C453 four_bit_adder_0/fulladder_0/OR_0/not_0/in vdd 0.03fF
+C454 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/A four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A 0.09fF
+C455 S0 vdd 0.19fF
+C456 enable_0/AND_5/not_0/in enable_0/AND_5/NAND_0/w_n1_n1# 0.07fF
+C457 B0 gnd 0.59fF
+C458 enable_0/F3 en1 0.09fF
+C459 comparator_0/OR4_1/C ea4 0.19fF
+C460 comparator_0/AND4_1/not_0/w_n9_1# comparator_0/OR4_0/C 0.03fF
+C461 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_3/XOR_0/NAND_1/A 0.06fF
+C462 four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/C 0.70fF
+C463 XOR_0/out gnd 0.23fF
+C464 XOR_0/out XOR_0/NAND_1/B 0.09fF
+C465 comparator_0/AND4_1/A vdd 0.14fF
+C466 comparator_0/OR4_0/B comparator_0/AND3_0/not_0/in 0.02fF
+C467 AND_2/B gnd 0.12fF
+C468 enable_2/AND_1/not_0/w_n9_1# AND_0/B 0.03fF
+C469 enable_0/AND_6/NAND_0/w_n1_n1# B2 0.06fF
+C470 four_bit_adder_0/fulladder_2/C vdd 0.43fF
+C471 enable_1/AND_1/not_0/in enable_1/AND_1/not_0/w_n9_1# 0.06fF
+C472 enable_0/AND_5/not_0/in gnd 0.01fF
+C473 XOR_0/NAND_1/A XOR_0/NAND_0/w_n1_n1# 0.07fF
+C474 gnd decoder_0/AND_1/not_0/in 0.01fF
+C475 enable_0/F1 enable_0/AND_1/not_0/w_n9_1# 0.03fF
+C476 four_bit_adder_0/fulladder_2/OR_0/not_0/in four_bit_adder_0/fulladder_3/C 0.02fF
+C477 XOR_3/NAND_1/A XOR_3/NAND_1/w_n1_n1# 0.06fF
+C478 XOR_0/NAND_3/w_n1_n1# XOR_0/B 0.06fF
+C479 comparator_0/not_3/w_n9_1# f1 0.06fF
+C480 enable_1/AND_7/not_0/in f7 0.02fF
+C481 A3 gnd 0.63fF
+C482 comparator_0/OR4_0/A gnd 0.34fF
+C483 en2 B1 0.85fF
+C484 AND_0/not_0/in AND_0/B 0.09fF
+C485 OR3_0/not_0/in OR3_0/w_n59_4# 0.03fF
+C486 OR3_2/B vdd 0.16fF
+C487 comparator_0/AND4_0/a_25_n36# ea4 0.01fF
+C488 enable_0/AND_3/NAND_0/w_n1_n1# vdd 0.09fF
+C489 comparator_0/XNOR_1/XOR_0/NAND_3/w_n1_n1# vdd 0.09fF
+C490 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/A four_bit_adder_0/fulladder_0/XOR_0/NAND_1/B 0.32fF
+C491 OR_1/B vdd 0.07fF
+C492 enable_0/F2 vdd 0.55fF
+C493 enable_1/AND_1/NAND_0/w_n1_n1# en2 0.06fF
+C494 comparator_0/AND3_0/not_0/in f2 0.16fF
+C495 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/A four_bit_adder_0/fulladder_3/XOR_1/NAND_1/B 0.32fF
+C496 four_bit_adder_0/fulladder_3/C four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A 0.03fF
+C497 comparator_0/OR4_1/D vdd 0.26fF
+C498 enable_2/AND_6/not_0/w_n9_1# AND_3/A 0.03fF
+C499 enable_1/AND_6/not_0/in enable_1/AND_6/not_0/w_n9_1# 0.06fF
+C500 ea2 ea3 0.20fF
+C501 OR3_0/B comparator_0/OR4_1/not_0/in 0.02fF
+C502 comparator_0/XNOR_3/XOR_0/NAND_1/B vdd 0.21fF
+C503 comparator_0/AND3_0/a_2_n39# ea4 0.01fF
+C504 enable_1/AND_3/not_0/w_n9_1# f3 0.03fF
+C505 OR3_2/C AND_2/not_0/in 0.02fF
+C506 comparator_0/OR4_1/D ea4 0.06fF
+C507 f4 comparator_0/XNOR_0/XOR_0/NAND_3/A 0.37fF
+C508 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/A four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A 0.09fF
+C509 AND_2/not_0/in AND_2/not_0/w_n9_1# 0.06fF
+C510 outout3 outout1 0.09fF
+C511 gnd comparator_0/XNOR_3/XOR_0/NAND_3/A 0.10fF
+C512 comparator_0/AND_1/NAND_0/w_n1_n1# f7 0.06fF
+C513 enable_1/AND_6/NAND_0/w_n1_n1# en2 0.06fF
+C514 f4 f2 0.09fF
+C515 A0 B0 0.32fF
+C516 en2 vdd 0.44fF
+C517 f1 f5 0.25fF
+C518 comparator_0/AND5_0/w_n22_7# vdd 0.26fF
+C519 comparator_0/XNOR_0/XOR_0/NAND_1/w_n1_n1# vdd 0.09fF
+C520 four_bit_adder_0/fulladder_0/XOR_1/NAND_2/w_n1_n1# en1 0.06fF
+C521 decoder_0/AND_3/not_0/in decoder_0/AND_3/NAND_0/w_n1_n1# 0.07fF
+C522 XOR_0/NAND_3/A en1 0.03fF
+C523 enable_0/F0 en1 0.31fF
+C524 comparator_0/AND4_2/not_0/in comparator_0/AND4_2/w_n27_2# 0.13fF
+C525 comparator_0/AND_1/not_0/w_n9_1# comparator_0/OR4_1/B 0.03fF
+C526 comparator_0/OR4_0/not_0/w_n9_1# vdd 0.05fF
+C527 ea4 comparator_0/AND5_0/w_n22_7# 0.08fF
+C528 four_bit_adder_0/fulladder_0/XOR_0/NAND_3/w_n1_n1# four_bit_adder_0/fulladder_0/XOR_0/NAND_1/B 0.07fF
+C529 comparator_0/AND_0/NAND_0/w_n1_n1# f3 0.06fF
+C530 enable_2/AND_5/not_0/w_n9_1# vdd 0.05fF
+C531 decoder_0/AND_1/not_0/w_n9_1# en1 0.03fF
+C532 XOR_0/NAND_0/w_n1_n1# vdd 0.10fF
+C533 A0 A3 0.32fF
+C534 enable_1/AND_0/not_0/in enable_1/AND_0/not_0/w_n9_1# 0.06fF
+C535 comparator_0/XNOR_2/not_0/in vdd 0.21fF
+C536 enable_2/AND_0/not_0/w_n9_1# AND_0/A 0.03fF
+C537 comparator_0/XNOR_3/XOR_0/NAND_2/w_n1_n1# comparator_0/XNOR_3/XOR_0/NAND_3/A 0.07fF
+C538 decoder_0/AND_2/not_0/in vdd 0.21fF
+C539 comparator_0/AND_0/not_0/w_n9_1# vdd 0.05fF
+C540 enable_2/AND_3/NAND_0/w_n1_n1# B1 0.06fF
+C541 four_bit_adder_0/fulladder_1/OR_0/B four_bit_adder_0/fulladder_1/OR_0/A 0.55fF
+C542 vdd XOR_3/NAND_1/B 0.21fF
+C543 comparator_0/OR4_0/B comparator_0/OR4_0/D 0.00fF
+C544 gnd comparator_0/XNOR_2/XOR_0/NAND_1/B 0.04fF
+C545 enable_1/AND_5/not_0/in enable_1/AND_5/NAND_0/w_n1_n1# 0.07fF
+C546 gnd XOR_3/NAND_3/A 0.10fF
+C547 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/A four_bit_adder_0/fulladder_3/XOR_0/NAND_1/B 0.32fF
+C548 enable_0/F3 four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A 0.03fF
+C549 comparator_0/AND3_1/w_n31_n3# vdd 0.14fF
+C550 OR3_0/not_0/w_n9_1# Out0 0.03fF
+C551 comparator_0/AND3_0/w_n31_n3# f2 0.08fF
+C552 enable_1/AND_4/not_0/in vdd 0.21fF
+C553 XOR_1/B XOR_1/NAND_2/w_n1_n1# 0.06fF
+C554 four_bit_adder_0/fulladder_0/OR_0/NOR_0/w_n19_1# four_bit_adder_0/fulladder_0/OR_0/A 0.06fF
+C555 four_bit_adder_0/fulladder_1/XOR_1/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A 0.06fF
+C556 enable_2/AND_5/not_0/in gnd 0.01fF
+C557 enable_2/AND_1/not_0/in enable_2/AND_1/not_0/w_n9_1# 0.06fF
+C558 comparator_0/AND3_1/w_n31_n3# ea4 0.08fF
+C559 enable_2/AND_0/not_0/in enable_2/AND_0/not_0/w_n9_1# 0.06fF
+C560 comparator_0/AND3_1/not_0/in f6 0.16fF
+C561 four_bit_adder_0/fulladder_3/AND_0/not_0/in gnd 0.01fF
+C562 enable_1/AND_0/NAND_0/w_n1_n1# en2 0.06fF
+C563 four_bit_adder_0/fulladder_0/XOR_1/B four_bit_adder_0/fulladder_0/XOR_0/NAND_1/B 0.09fF
+C564 gnd comparator_0/AND4_0/not_0/in 0.05fF
+C565 comparator_0/OR4_1/C comparator_0/OR4_1/D 1.58fF
+C566 comparator_0/XNOR_1/XOR_0/NAND_3/A vdd 0.21fF
+C567 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/w_n1_n1# vdd 0.09fF
+C568 XOR_2/NAND_3/w_n1_n1# XOR_2/NAND_1/B 0.07fF
+C569 gnd decoder_0/AND_1/B 0.33fF
+C570 four_bit_adder_0/fulladder_0/OR_0/B four_bit_adder_0/fulladder_0/OR_0/A 0.55fF
+C571 comparator_0/AND_0/NAND_0/w_n1_n1# comparator_0/AND_0/not_0/in 0.07fF
+C572 OR3_1/not_0/in OR3_1/w_n59_4# 0.03fF
+C573 f3 vdd 0.24fF
+C574 gnd comparator_0/XNOR_1/not_0/in 0.01fF
+C575 enable_2/AND_3/NAND_0/w_n1_n1# vdd 0.09fF
+C576 enable_0/F2 four_bit_adder_0/fulladder_2/C 0.17fF
+C577 comparator_0/AND4_0/w_n27_2# ea3 0.08fF
+C578 OR_0/out OR_0/not_0/in 0.02fF
+C579 comparator_0/OR4_0/B gnd 0.17fF
+C580 enable_2/AND_1/NAND_0/w_n1_n1# en3 0.06fF
+C581 XOR_1/out four_bit_adder_0/fulladder_1/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C582 comparator_0/OR4_0/w_n21_0# comparator_0/OR4_0/A 0.08fF
+C583 comparator_0/AND4_2/a_6_n36# ea3 0.01fF
+C584 enable_2/AND_6/not_0/in enable_2/AND_6/not_0/w_n9_1# 0.06fF
+C585 decoder_0/not_1/w_n9_1# vdd 0.05fF
+C586 four_bit_adder_0/fulladder_3/XOR_1/NAND_3/w_n1_n1# vdd 0.09fF
+C587 four_bit_adder_0/fulladder_2/OR_0/B gnd 0.27fF
+C588 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/w_n1_n1# vdd 0.09fF
+C589 Out0 gnd 0.08fF
+C590 comparator_0/AND5_1/not_0/in comparator_0/AND5_1/not_0/w_n9_1# 0.06fF
+C591 enable_2/AND_6/NAND_0/w_n1_n1# en3 0.06fF
+C592 OR_0/out B2 0.66fF
+C593 four_bit_adder_0/fulladder_2/XOR_0/NAND_2/w_n1_n1# XOR_2/out 0.06fF
+C594 comparator_0/XNOR_0/XOR_0/NAND_1/B vdd 0.21fF
+C595 four_bit_adder_0/fulladder_3/XOR_1/NAND_0/a_13_n30# four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A 0.02fF
+C596 comparator_0/AND5_0/not_0/w_n9_1# comparator_0/AND5_0/not_0/in 0.06fF
+C597 comparator_0/XNOR_2/XOR_0/NAND_3/w_n1_n1# comparator_0/XNOR_2/XOR_0/NAND_1/B 0.07fF
+C598 XOR_3/NAND_2/w_n1_n1# XOR_3/NAND_3/A 0.07fF
+C599 en1 vdd 1.50fF
+C600 gnd comparator_0/XNOR_0/XOR_0/NAND_3/A 0.10fF
+C601 gnd S1 0.45fF
+C602 comparator_0/AND_1/not_0/in comparator_0/AND_1/not_0/w_n9_1# 0.06fF
+C603 comparator_0/XNOR_1/XOR_0/NAND_0/w_n1_n1# vdd 0.10fF
+C604 four_bit_adder_0/fulladder_1/AND_0/not_0/w_n9_1# four_bit_adder_0/fulladder_1/OR_0/A 0.03fF
+C605 gnd XOR_1/B 0.27fF
+C606 gnd f2 0.55fF
+C607 OR_1/not_0/w_n9_1# vdd 0.05fF
+C608 comparator_0/AND_0/not_0/in vdd 0.21fF
+C609 four_bit_adder_0/fulladder_3/XOR_0/NAND_3/w_n1_n1# vdd 0.09fF
+C610 four_bit_adder_0/fulladder_0/AND_0/not_0/in four_bit_adder_0/fulladder_0/OR_0/A 0.02fF
+C611 AND_1/not_0/in gnd 0.01fF
+C612 OR3_2/B comparator_0/OR4_0/not_0/w_n9_1# 0.03fF
+C613 four_bit_adder_0/fulladder_3/AND_0/NAND_0/w_n1_n1# vdd 0.09fF
+C614 four_bit_adder_0/fulladder_1/XOR_1/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_1/XOR_1/NAND_1/A 0.07fF
+C615 four_bit_adder_0/fulladder_1/XOR_1/B gnd 0.06fF
+C616 four_bit_adder_0/fulladder_0/XOR_1/B four_bit_adder_0/fulladder_0/XOR_1/NAND_2/w_n1_n1# 0.06fF
+C617 comparator_0/AND5_1/w_n22_7# comparator_0/AND5_1/A 0.08fF
+C618 comparator_0/AND4_0/not_0/in ea2 0.06fF
+C619 four_bit_adder_0/fulladder_3/OR_0/not_0/w_n9_1# vdd 0.05fF
+C620 gnd OR_1/not_0/in 0.16fF
+C621 four_bit_adder_0/fulladder_1/OR_0/A gnd 0.08fF
+C622 B0 A2 0.32fF
+C623 A1 B1 0.32fF
+C624 enable_1/AND_2/not_0/w_n9_1# vdd 0.05fF
+C625 enable_0/AND_1/NAND_0/w_n1_n1# vdd 0.09fF
+C626 comparator_0/XNOR_1/XOR_0/NAND_1/A vdd 0.35fF
+C627 comparator_0/AND4_2/w_n27_2# f5 0.08fF
+C628 comparator_0/AND4_0/not_0/w_n9_1# vdd 0.05fF
+C629 enable_2/AND_5/not_0/in enable_2/AND_5/NAND_0/w_n1_n1# 0.07fF
+C630 four_bit_adder_0/fulladder_3/OR_0/not_0/in four_bit_adder_0/fulladder_3/OR_0/not_0/w_n9_1# 0.06fF
+C631 four_bit_adder_0/fulladder_3/XOR_1/B vdd 0.35fF
+C632 ea2 comparator_0/XNOR_1/not_0/in 0.02fF
+C633 enable_0/AND_3/not_0/in A3 0.09fF
+C634 four_bit_adder_0/fulladder_0/AND_0/not_0/in four_bit_adder_0/fulladder_0/XOR_1/B 0.09fF
+C635 OR3_1/not_0/w_n9_1# Out1 0.03fF
+C636 four_bit_adder_0/fulladder_3/OR_0/A vdd 0.07fF
+C637 AND_3/A AND_3/B 1.77fF
+C638 en3 decoder_0/AND_3/not_0/w_n9_1# 0.03fF
+C639 enable_1/AND_5/not_0/in f5 0.02fF
+C640 enable_1/AND_1/NAND_0/w_n1_n1# A1 0.06fF
+C641 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/A vdd 0.35fF
+C642 B1 B3 0.32fF
+C643 A2 A3 0.32fF
+C644 enable_1/AND_7/not_0/w_n9_1# vdd 0.05fF
+C645 four_bit_adder_0/fulladder_2/OR_0/not_0/in vdd 0.03fF
+C646 four_bit_adder_0/fulladder_3/OR_0/B four_bit_adder_0/fulladder_3/OR_0/NOR_0/w_n19_1# 0.06fF
+C647 enable_2/AND_0/NAND_0/w_n1_n1# en3 0.06fF
+C648 four_bit_adder_0/fulladder_2/AND_1/not_0/w_n9_1# vdd 0.05fF
+C649 OR3_2/C OR3_2/A 0.08fF
+C650 Out3 vdd 0.07fF
+C651 enable_0/AND_7/not_0/in B3 0.09fF
+C652 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/B vdd 0.21fF
+C653 AND_0/B vdd 0.35fF
+C654 XOR_2/out gnd 0.62fF
+C655 OR3_2/C gnd 0.17fF
+C656 comparator_0/XNOR_0/not_0/w_n9_1# ea1 0.03fF
+C657 OR3_1/not_0/w_n9_1# vdd 0.05fF
+C658 OR3_0/not_0/in vdd 0.02fF
+C659 OR3_2/not_0/in OR3_2/w_n59_4# 0.03fF
+C660 enable_1/AND_5/NAND_0/w_n1_n1# B1 0.06fF
+C661 four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A gnd 0.10fF
+C662 XOR_0/NAND_1/A XOR_0/NAND_1/w_n1_n1# 0.06fF
+C663 enable_1/AND_2/not_0/in gnd 0.01fF
+C664 XOR_1/out four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A 0.37fF
+C665 AND_0/not_0/in AND_0/NAND_0/w_n1_n1# 0.07fF
+C666 four_bit_adder_0/fulladder_2/AND_1/NAND_0/w_n1_n1# vdd 0.09fF
+C667 A1 vdd 0.39fF
+C668 four_bit_adder_0/fulladder_3/XOR_1/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_3/C 0.06fF
+C669 en2 decoder_0/AND_2/not_0/in 0.02fF
+C670 comparator_0/XNOR_1/XOR_0/NAND_3/A comparator_0/XNOR_1/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C671 enable_0/F0 four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A 0.03fF
+C672 AND_3/A vdd 0.15fF
+C673 enable_1/AND_1/not_0/w_n9_1# f1 0.03fF
+C674 f0 vdd 0.56fF
+C675 four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A vdd 0.21fF
+C676 gnd XOR_2/B 0.27fF
+C677 enable_0/AND_6/not_0/in vdd 0.21fF
+C678 four_bit_adder_0/fulladder_1/AND_1/not_0/in four_bit_adder_0/fulladder_1/OR_0/B 0.02fF
+C679 AND_2/NAND_0/w_n1_n1# vdd 0.09fF
+C680 OR_1/A gnd 0.12fF
+C681 comparator_0/AND4_2/not_0/in vdd 0.38fF
+C682 enable_1/AND_7/not_0/in gnd 0.01fF
+C683 four_bit_adder_0/fulladder_0/XOR_0/NAND_3/w_n1_n1# vdd 0.09fF
+C684 f1 ea3 0.03fF
+C685 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/B vdd 0.21fF
+C686 B3 vdd 0.39fF
+C687 decoder_0/AND_3/NAND_0/w_n1_n1# vdd 0.09fF
+C688 comparator_0/OR4_1/B vdd 0.07fF
+C689 OR3_0/B comparator_0/OR4_0/A 0.09fF
+C690 comparator_0/AND4_2/not_0/in ea4 0.09fF
+C691 Out2 gnd 0.08fF
+C692 four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A gnd 0.10fF
+C693 four_bit_adder_0/fulladder_0/OR_0/not_0/w_n9_1# vdd 0.05fF
+C694 comparator_0/OR4_0/w_n21_0# comparator_0/OR4_0/B 0.08fF
+C695 B2 en3 0.80fF
+C696 four_bit_adder_0/fulladder_1/OR_0/NOR_0/w_n19_1# vdd 0.08fF
+C697 gnd comparator_0/AND4_2/A 0.08fF
+C698 AND_0/not_0/w_n9_1# OR3_0/C 0.03fF
+C699 enable_1/AND_5/NAND_0/w_n1_n1# vdd 0.09fF
+C700 decoder_0/AND_0/NAND_0/w_n1_n1# vdd 0.09fF
+C701 XOR_1/B XOR_1/NAND_1/B 0.09fF
+C702 four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/XOR_1/NAND_2/a_13_n30# 0.02fF
+C703 four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A vdd 0.21fF
+C704 four_bit_adder_0/fulladder_2/OR_0/not_0/in four_bit_adder_0/fulladder_2/OR_0/NOR_0/w_n19_1# 0.02fF
+C705 four_bit_adder_0/fulladder_0/OR_0/A vdd 0.07fF
+C706 XOR_2/NAND_3/w_n1_n1# vdd 0.09fF
+C707 XOR_1/B XOR_1/NAND_3/A 0.37fF
+C708 XOR_3/out four_bit_adder_0/fulladder_3/XOR_0/NAND_1/B 0.09fF
+C709 outout2 OR3_2/A 0.13fF
+C710 comparator_0/AND4_0/not_0/in comparator_0/AND4_0/w_n27_2# 0.13fF
+C711 comparator_0/AND4_2/a_25_n36# ea4 0.01fF
+C712 four_bit_adder_0/fulladder_2/OR_0/not_0/w_n9_1# four_bit_adder_0/fulladder_3/C 0.03fF
+C713 outout2 gnd 0.08fF
+C714 XOR_3/NAND_0/w_n1_n1# vdd 0.10fF
+C715 enable_2/AND_2/not_0/in A1 0.09fF
+C716 enable_0/AND_3/not_0/in enable_0/AND_3/not_0/w_n9_1# 0.06fF
+C717 XOR_0/NAND_2/a_13_n30# XOR_0/B 0.02fF
+C718 comparator_0/not_6/w_n9_1# f7 0.06fF
+C719 comparator_0/AND3_1/A gnd 0.08fF
+C720 enable_0/AND_7/not_0/w_n9_1# XOR_3/B 0.03fF
+C721 enable_0/F2 en1 0.09fF
+C722 enable_2/AND_4/not_0/in AND_2/A 0.02fF
+C723 four_bit_adder_0/fulladder_3/XOR_0/NAND_0/a_13_n30# four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A 0.02fF
+C724 four_bit_adder_0/fulladder_0/XOR_1/B vdd 0.35fF
+C725 comparator_0/AND3_1/not_0/in vdd 0.24fF
+C726 XOR_0/NAND_1/w_n1_n1# vdd 0.09fF
+C727 four_bit_adder_0/fulladder_1/C vdd 0.44fF
+C728 comparator_0/AND5_0/not_0/in vdd 0.34fF
+C729 OR3_2/not_0/w_n9_1# Out2 0.03fF
+C730 comparator_0/AND3_1/not_0/in ea4 0.16fF
+C731 decoder_0/AND_0/not_0/in decoder_0/AND_0/NAND_0/w_n1_n1# 0.07fF
+C732 comparator_0/XNOR_2/XOR_0/NAND_1/w_n1_n1# vdd 0.09fF
+C733 comparator_0/XNOR_0/XOR_0/NAND_2/w_n1_n1# comparator_0/XNOR_0/XOR_0/NAND_3/A 0.07fF
+C734 comparator_0/XNOR_0/XOR_0/NAND_1/w_n1_n1# comparator_0/XNOR_0/XOR_0/NAND_1/B 0.06fF
+C735 ea4 comparator_0/AND5_0/not_0/in 0.09fF
+C736 gnd f7 0.52fF
+C737 ea3 comparator_0/AND5_1/w_n22_7# 0.08fF
+C738 comparator_0/XNOR_1/XOR_0/NAND_2/w_n1_n1# f1 0.06fF
+C739 enable_0/AND_5/NAND_0/w_n1_n1# OR_0/out 0.06fF
+C740 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/A vdd 0.35fF
+C741 four_bit_adder_0/fulladder_3/AND_0/not_0/w_n9_1# four_bit_adder_0/fulladder_3/AND_0/not_0/in 0.06fF
+C742 four_bit_adder_0/fulladder_1/AND_1/not_0/in XOR_1/out 0.09fF
+C743 enable_2/AND_7/not_0/in B3 0.09fF
+C744 comparator_0/OR4_0/C comparator_0/OR4_0/D 0.20fF
+C745 comparator_0/AND4_2/not_0/in comparator_0/OR4_1/C 0.02fF
+C746 OR3_2/not_0/in vdd 0.02fF
+C747 enable_2/AND_1/not_0/in vdd 0.21fF
+C748 OR_0/out gnd 0.68fF
+C749 XOR_3/out four_bit_adder_0/fulladder_3/C 0.12fF
+C750 f5 comparator_0/XNOR_1/XOR_0/NAND_2/a_13_n30# 0.02fF
+C751 comparator_0/XNOR_1/not_0/in comparator_0/XNOR_1/XOR_0/NAND_1/B 0.09fF
+C752 comparator_0/AND_0/A f7 0.02fF
+C753 enable_0/F1 vdd 0.55fF
+C754 four_bit_adder_0/fulladder_1/AND_0/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_1/AND_0/not_0/in 0.07fF
+C755 XOR_1/B XOR_1/NAND_2/a_13_n30# 0.02fF
+C756 comparator_0/OR4_1/B comparator_0/OR4_1/C 0.13fF
+C757 ea1 vdd 0.14fF
+C758 outout2 OR3_1/not_0/in 0.08fF
+C759 XOR_0/NAND_0/w_n1_n1# en1 0.06fF
+C760 comparator_0/XNOR_2/XOR_0/NAND_1/A comparator_0/XNOR_2/XOR_0/NAND_1/B 0.32fF
+C761 f2 comparator_0/XNOR_2/XOR_0/NAND_3/A 0.03fF
+C762 comparator_0/AND3_0/A f6 0.02fF
+C763 enable_0/AND_4/not_0/w_n9_1# vdd 0.05fF
+C764 decoder_0/AND_2/B decoder_0/not_0/w_n9_1# 0.03fF
+C765 decoder_0/AND_3/NAND_0/w_n1_n1# S0 0.06fF
+C766 comparator_0/not_3/w_n9_1# vdd 0.05fF
+C767 comparator_0/AND3_0/not_0/in comparator_0/AND3_0/w_n31_n3# 0.10fF
+C768 XOR_1/out XOR_1/NAND_1/w_n1_n1# 0.07fF
+C769 four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A vdd 0.21fF
+C770 comparator_0/XNOR_3/XOR_0/NAND_2/w_n1_n1# f7 0.06fF
+C771 four_bit_adder_0/fulladder_0/OR_0/not_0/in four_bit_adder_0/fulladder_0/OR_0/not_0/w_n9_1# 0.06fF
+C772 enable_0/AND_2/not_0/in enable_0/AND_2/NAND_0/w_n1_n1# 0.07fF
+C773 enable_2/AND_6/not_0/in vdd 0.21fF
+C774 ea3 comparator_0/AND5_1/not_0/in 0.06fF
+C775 four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/AND_0/not_0/in 0.09fF
+C776 AND_1/not_0/w_n9_1# vdd 0.05fF
+C777 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/A vdd 0.35fF
+C778 four_bit_adder_0/fulladder_1/AND_1/not_0/in gnd 0.01fF
+C779 four_bit_adder_0/fulladder_1/AND_0/not_0/in four_bit_adder_0/fulladder_1/OR_0/A 0.02fF
+C780 enable_0/AND_4/NAND_0/w_n1_n1# B0 0.06fF
+C781 XOR_0/B XOR_0/NAND_3/A 0.37fF
+C782 comparator_0/AND_0/not_0/in comparator_0/AND_0/not_0/w_n9_1# 0.06fF
+C783 gnd OR_0/not_0/in 0.16fF
+C784 four_bit_adder_0/fulladder_2/AND_1/NAND_0/w_n1_n1# enable_0/F2 0.06fF
+C785 decoder_0/AND_2/B vdd 0.15fF
+C786 comparator_0/AND_1/not_0/in vdd 0.21fF
+C787 gnd XOR_3/B 0.27fF
+C788 enable_0/F3 XOR_3/out 1.24fF
+C789 comparator_0/XNOR_1/XOR_0/NAND_0/a_13_n30# comparator_0/XNOR_1/XOR_0/NAND_3/A 0.02fF
+C790 comparator_0/XNOR_1/not_0/w_n9_1# comparator_0/XNOR_1/not_0/in 0.06fF
+C791 XOR_1/NAND_0/a_13_n30# XOR_1/NAND_3/A 0.02fF
+C792 gnd comparator_0/OR4_0/C 0.08fF
+C793 XOR_2/NAND_3/A vdd 0.21fF
+C794 outout3 vdd 0.07fF
+C795 AND_1/not_0/in AND_1/B 0.09fF
+C796 comparator_0/OR4_0/not_0/in comparator_0/OR4_0/B 0.06fF
+C797 AND_2/A gnd 0.08fF
+C798 outout1 OR3_1/w_n59_4# 0.06fF
+C799 enable_0/AND_4/not_0/in gnd 0.01fF
+C800 AND_2/not_0/in gnd 0.01fF
+C801 gnd eequal 0.27fF
+C802 f5 vdd 0.23fF
+C803 enable_0/AND_7/not_0/in enable_0/AND_7/NAND_0/w_n1_n1# 0.07fF
+C804 four_bit_adder_0/fulladder_0/OR_0/not_0/in four_bit_adder_0/fulladder_1/C 0.02fF
+C805 B2 gnd 0.63fF
+C806 comparator_0/AND5_1/not_0/w_n9_1# vdd 0.05fF
+C807 comparator_0/XNOR_1/XOR_0/NAND_0/w_n1_n1# comparator_0/XNOR_1/XOR_0/NAND_3/A 0.06fF
+C808 en2 A1 0.98fF
+C809 comparator_0/OR4_1/B comparator_0/OR4_1/D 0.06fF
+C810 comparator_0/AND4_1/w_n27_2# f1 0.08fF
+C811 enable_2/AND_3/not_0/w_n9_1# AND_1/B 0.03fF
+C812 OR_0/out A0 0.55fF
+C813 f0 comparator_0/AND5_0/w_n22_7# 0.08fF
+C814 comparator_0/XNOR_2/XOR_0/NAND_0/w_n1_n1# f2 0.06fF
+C815 enable_1/AND_3/not_0/in enable_1/AND_3/not_0/w_n9_1# 0.06fF
+C816 comparator_0/AND4_2/w_n27_2# ea3 0.08fF
+C817 enable_0/AND_2/NAND_0/w_n1_n1# vdd 0.09fF
+C818 four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/XOR_1/NAND_2/w_n1_n1# 0.06fF
+C819 comparator_0/AND_0/not_0/in f3 0.09fF
+C820 comparator_0/AND4_1/not_0/in ea3 0.06fF
+C821 enable_2/AND_0/NAND_0/w_n1_n1# A0 0.06fF
+C822 enable_1/AND_6/not_0/w_n9_1# f6 0.03fF
+C823 four_bit_adder_0/fulladder_2/AND_0/not_0/w_n9_1# four_bit_adder_0/fulladder_2/OR_0/A 0.03fF
+C824 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/w_n1_n1# OR3_0/A 0.07fF
+C825 en2 B3 0.97fF
+C826 comparator_0/OR4_1/not_0/in vdd 0.02fF
+C827 comparator_0/XNOR_1/XOR_0/NAND_1/A comparator_0/XNOR_1/XOR_0/NAND_3/A 0.09fF
+C828 enable_0/AND_7/NAND_0/w_n1_n1# vdd 0.09fF
+C829 comparator_0/AND3_0/not_0/in gnd 0.01fF
+C830 four_bit_adder_0/fulladder_2/AND_0/not_0/in gnd 0.01fF
+C831 four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A four_bit_adder_0/fulladder_0/XOR_1/NAND_3/w_n1_n1# 0.06fF
+C832 four_bit_adder_0/fulladder_0/AND_1/not_0/in four_bit_adder_0/fulladder_0/AND_1/NAND_0/w_n1_n1# 0.07fF
+C833 AND_0/not_0/in AND_0/not_0/w_n9_1# 0.06fF
+C834 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/w_n1_n1# vdd 0.09fF
+C835 AND_0/A vdd 0.35fF
+C836 enable_1/AND_5/NAND_0/w_n1_n1# en2 0.06fF
+C837 XOR_0/out four_bit_adder_0/fulladder_0/XOR_0/NAND_1/B 0.09fF
+C838 AND_4/NAND_0/w_n1_n1# vdd 0.09fF
+C839 comparator_0/XNOR_3/not_0/w_n9_1# vdd 0.05fF
+C840 four_bit_adder_0/fulladder_0/XOR_1/NAND_0/a_13_n30# four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A 0.02fF
+C841 enable_1/AND_2/not_0/in A2 0.09fF
+C842 four_bit_adder_0/fulladder_1/XOR_0/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A 0.06fF
+C843 XOR_0/out enable_0/F3 0.09fF
+C844 XOR_3/NAND_2/w_n1_n1# XOR_3/B 0.06fF
+C845 comparator_0/XNOR_3/not_0/w_n9_1# ea4 0.03fF
+C846 en3 gnd 0.85fF
+C847 gnd f4 0.62fF
+C848 four_bit_adder_0/fulladder_1/XOR_1/NAND_2/w_n1_n1# four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A 0.07fF
+C849 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_1/XOR_1/NAND_1/B 0.06fF
+C850 comparator_0/AND_1/A comparator_0/not_7/w_n9_1# 0.03fF
+C851 AND_0/NAND_0/w_n1_n1# vdd 0.09fF
+C852 four_bit_adder_0/fulladder_3/XOR_1/NAND_0/w_n1_n1# vdd 0.10fF
+C853 comparator_0/OR4_0/C ea2 0.10fF
+C854 enable_2/AND_4/not_0/w_n9_1# vdd 0.05fF
+C855 A0 B2 0.32fF
+C856 XOR_0/NAND_3/A XOR_0/NAND_0/a_13_n30# 0.02fF
+C857 four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/XOR_1/NAND_3/w_n1_n1# 0.06fF
+C858 four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/XOR_0/NAND_1/w_n1_n1# 0.07fF
+C859 enable_1/AND_0/not_0/w_n9_1# vdd 0.05fF
+C860 decoder_0/AND_2/B S0 0.21fF
+C861 OR3_2/B OR3_2/not_0/in 0.08fF
+C862 four_bit_adder_0/fulladder_2/XOR_1/NAND_3/w_n1_n1# vdd 0.09fF
+C863 comparator_0/AND5_1/A vdd 0.07fF
+C864 enable_1/AND_6/not_0/in B2 0.09fF
+C865 enable_1/AND_2/not_0/in enable_1/AND_2/NAND_0/w_n1_n1# 0.07fF
+C866 four_bit_adder_0/fulladder_1/OR_0/B gnd 0.27fF
+C867 enable_2/AND_0/not_0/in vdd 0.21fF
+C868 AND_4/NAND_0/w_n1_n1# AND_4/not_0/in 0.07fF
+C869 four_bit_adder_0/fulladder_3/OR_0/B vdd 0.07fF
+C870 comparator_0/AND5_0/not_0/in comparator_0/AND5_0/w_n22_7# 0.17fF
+C871 XOR_0/B vdd 0.24fF
+C872 four_bit_adder_0/fulladder_2/XOR_1/NAND_3/w_n1_n1# four_bit_adder_0/fulladder_2/XOR_1/NAND_1/B 0.07fF
+C873 four_bit_adder_0/fulladder_0/AND_0/not_0/in four_bit_adder_0/fulladder_0/AND_0/NAND_0/w_n1_n1# 0.07fF
+C874 XOR_1/NAND_1/w_n1_n1# XOR_1/NAND_1/B 0.06fF
+C875 comparator_0/XNOR_1/XOR_0/NAND_0/w_n1_n1# comparator_0/XNOR_1/XOR_0/NAND_1/A 0.07fF
+C876 ea1 comparator_0/OR4_1/D 0.06fF
+C877 four_bit_adder_0/fulladder_3/OR_0/B four_bit_adder_0/fulladder_3/OR_0/not_0/in 0.08fF
+C878 enable_1/AND_3/not_0/in vdd 0.21fF
+C879 Out4 vdd 0.07fF
+C880 comparator_0/OR4_1/w_n21_0# vdd 0.11fF
+C881 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/w_n1_n1# OR_1/A 0.07fF
+C882 four_bit_adder_0/fulladder_3/AND_1/not_0/w_n9_1# four_bit_adder_0/fulladder_3/OR_0/B 0.03fF
+C883 comparator_0/AND4_1/A f5 0.02fF
+C884 four_bit_adder_0/fulladder_2/AND_1/not_0/in four_bit_adder_0/fulladder_2/OR_0/B 0.02fF
+C885 enable_2/AND_5/NAND_0/w_n1_n1# B2 0.06fF
+C886 enable_2/AND_4/not_0/in gnd 0.01fF
+C887 four_bit_adder_0/fulladder_2/XOR_0/NAND_3/w_n1_n1# vdd 0.09fF
+C888 four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/AND_0/NAND_0/w_n1_n1# 0.06fF
+C889 Out4 four_bit_adder_0/fulladder_3/OR_0/not_0/in 0.02fF
+C890 four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A four_bit_adder_0/fulladder_3/XOR_1/NAND_3/w_n1_n1# 0.06fF
+C891 four_bit_adder_0/fulladder_2/AND_0/NAND_0/w_n1_n1# vdd 0.09fF
+C892 outout3 OR3_2/B 0.10fF
+C893 XOR_1/NAND_3/w_n1_n1# XOR_1/B 0.06fF
+C894 comparator_0/XNOR_2/XOR_0/NAND_1/w_n1_n1# comparator_0/XNOR_2/not_0/in 0.07fF
+C895 enable_1/AND_7/not_0/in enable_1/AND_7/NAND_0/w_n1_n1# 0.07fF
+C896 OR_0/NOR_0/w_n19_1# OR_0/not_0/in 0.02fF
+C897 comparator_0/OR4_1/not_0/in comparator_0/OR4_1/C 0.06fF
+C898 comparator_0/XNOR_3/XOR_0/NAND_1/w_n1_n1# comparator_0/XNOR_3/XOR_0/NAND_1/A 0.06fF
+C899 four_bit_adder_0/fulladder_2/OR_0/not_0/w_n9_1# vdd 0.05fF
+C900 comparator_0/OR4_0/w_n21_0# comparator_0/OR4_0/C 0.08fF
+C901 OR_1/A OR3_0/B 0.10fF
+C902 OR_1/not_0/w_n9_1# Out3 0.03fF
+C903 comparator_0/AND3_1/not_0/in comparator_0/AND3_1/w_n31_n3# 0.10fF
+C904 A0 en3 0.74fF
+C905 four_bit_adder_0/fulladder_1/XOR_0/NAND_2/w_n1_n1# four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A 0.07fF
+C906 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_1/XOR_0/NAND_1/B 0.06fF
+C907 enable_2/AND_3/not_0/in enable_2/AND_3/not_0/w_n9_1# 0.06fF
+C908 enable_2/AND_2/NAND_0/w_n1_n1# vdd 0.09fF
+C909 four_bit_adder_0/fulladder_2/XOR_1/B vdd 0.35fF
+C910 AND_3/NAND_0/w_n1_n1# AND_3/not_0/in 0.07fF
+C911 f5 comparator_0/XNOR_1/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C912 four_bit_adder_0/fulladder_2/OR_0/A vdd 0.07fF
+C913 enable_0/F0 XOR_0/out 1.24fF
+C914 OR3_0/C OR_1/A 0.16fF
+C915 OR3_0/A four_bit_adder_0/fulladder_0/XOR_1/NAND_1/B 0.09fF
+C916 comparator_0/not_5/w_n9_1# f2 0.06fF
+C917 f4 ea2 0.09fF
+C918 four_bit_adder_0/fulladder_1/XOR_0/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_1/XOR_0/NAND_1/A 0.07fF
+C919 four_bit_adder_0/fulladder_0/AND_1/not_0/in gnd 0.01fF
+C920 gnd comparator_0/OR4_0/D 0.08fF
+C921 four_bit_adder_0/fulladder_1/OR_0/not_0/in vdd 0.03fF
+C922 comparator_0/OR4_1/D comparator_0/AND5_1/not_0/w_n9_1# 0.03fF
+C923 enable_2/AND_7/NAND_0/w_n1_n1# vdd 0.09fF
+C924 four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/XOR_1/NAND_1/B 0.09fF
+C925 four_bit_adder_0/fulladder_1/AND_1/not_0/w_n9_1# vdd 0.05fF
+C926 f6 comparator_0/XNOR_2/XOR_0/NAND_1/B 0.09fF
+C927 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/B vdd 0.21fF
+C928 decoder_0/AND_1/not_0/in decoder_0/AND_1/not_0/w_n9_1# 0.06fF
+C929 comparator_0/AND3_0/A vdd 0.07fF
+C930 AND_3/NAND_0/w_n1_n1# AND_3/B 0.06fF
+C931 enable_0/AND_1/NAND_0/w_n1_n1# A1 0.06fF
+C932 four_bit_adder_0/fulladder_2/XOR_0/NAND_3/w_n1_n1# four_bit_adder_0/fulladder_2/XOR_0/NAND_1/B 0.07fF
+C933 XOR_1/out gnd 0.73fF
+C934 enable_2/AND_5/NAND_0/w_n1_n1# en3 0.06fF
+C935 OR_0/out A2 0.74fF
+C936 outout2 OR3_0/B 0.11fF
+C937 comparator_0/not_0/w_n9_1# vdd 0.05fF
+C938 four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A gnd 0.10fF
+C939 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_2/XOR_1/NAND_1/A 0.06fF
+C940 four_bit_adder_0/fulladder_1/AND_1/NAND_0/w_n1_n1# vdd 0.09fF
+C941 enable_0/F3 enable_0/AND_3/not_0/w_n9_1# 0.03fF
+C942 XOR_3/out vdd 0.29fF
+C943 four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A 0.37fF
+C944 comparator_0/AND4_1/not_0/in comparator_0/AND4_1/w_n27_2# 0.13fF
+C945 comparator_0/OR4_1/not_0/in comparator_0/OR4_1/D 0.09fF
+C946 four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A vdd 0.21fF
+C947 decoder_0/AND_2/not_0/in decoder_0/AND_2/B 0.09fF
+C948 OR3_0/C outout2 0.14fF
+C949 comparator_0/AND_0/A comparator_0/not_6/w_n9_1# 0.03fF
+C950 four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A four_bit_adder_0/fulladder_3/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C951 enable_0/AND_6/not_0/w_n9_1# XOR_2/B 0.03fF
+C952 four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/XOR_0/NAND_1/B 0.09fF
+C953 four_bit_adder_0/fulladder_2/AND_1/not_0/in XOR_2/out 0.09fF
+C954 XOR_3/NAND_0/w_n1_n1# en1 0.06fF
+C955 comparator_0/AND4_2/A f1 0.02fF
+C956 comparator_0/OR4_1/w_n21_0# comparator_0/OR4_1/C 0.08fF
+C957 enable_2/AND_2/not_0/in enable_2/AND_2/NAND_0/w_n1_n1# 0.07fF
+C958 comparator_0/AND_1/A comparator_0/AND_1/NAND_0/w_n1_n1# 0.06fF
+C959 XOR_0/NAND_1/B gnd 0.04fF
+C960 AND_3/NAND_0/w_n1_n1# vdd 0.09fF
+C961 four_bit_adder_0/fulladder_3/XOR_0/NAND_0/w_n1_n1# enable_0/F3 0.06fF
+C962 four_bit_adder_0/fulladder_0/XOR_1/B en1 0.70fF
+C963 four_bit_adder_0/fulladder_0/AND_0/NAND_0/w_n1_n1# vdd 0.09fF
+C964 comparator_0/OR4_1/A vdd 0.16fF
+C965 four_bit_adder_0/fulladder_3/AND_1/NAND_0/w_n1_n1# XOR_3/out 0.06fF
+C966 four_bit_adder_0/fulladder_2/OR_0/NOR_0/w_n19_1# four_bit_adder_0/fulladder_2/OR_0/A 0.06fF
+C967 four_bit_adder_0/fulladder_3/XOR_1/NAND_2/w_n1_n1# four_bit_adder_0/fulladder_3/C 0.06fF
+C968 B0 B1 0.32fF
+C969 enable_1/AND_1/not_0/w_n9_1# vdd 0.05fF
+C970 comparator_0/XNOR_1/XOR_0/NAND_1/w_n1_n1# comparator_0/XNOR_1/XOR_0/NAND_1/B 0.06fF
+C971 comparator_0/AND_0/A gnd 0.08fF
+C972 comparator_0/XNOR_3/XOR_0/NAND_3/w_n1_n1# vdd 0.09fF
+C973 four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A vdd 0.21fF
+C974 comparator_0/OR4_1/A ea4 0.06fF
+C975 enable_0/AND_5/not_0/in B1 0.09fF
+C976 OR_1/A four_bit_adder_0/fulladder_3/XOR_1/NAND_1/B 0.09fF
+C977 AND_4/NAND_0/w_n1_n1# en2 0.06fF
+C978 ea3 vdd 0.24fF
+C979 comparator_0/XNOR_0/XOR_0/NAND_2/w_n1_n1# f4 0.06fF
+C980 XOR_1/NAND_3/A XOR_1/NAND_2/w_n1_n1# 0.07fF
+C981 comparator_0/AND_1/A f7 0.58fF
+C982 four_bit_adder_0/fulladder_3/AND_1/not_0/in gnd 0.01fF
+C983 four_bit_adder_0/fulladder_2/AND_0/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_2/C 0.06fF
+C984 outout2 outout1 0.08fF
+C985 A1 B3 0.32fF
+C986 A2 B2 0.32fF
+C987 B1 A3 0.32fF
+C988 enable_1/AND_6/not_0/w_n9_1# vdd 0.05fF
+C989 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/A four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A 0.09fF
+C990 ea3 ea4 0.24fF
+C991 enable_0/AND_0/not_0/in enable_0/AND_0/not_0/w_n9_1# 0.06fF
+C992 enable_2/AND_7/not_0/in enable_2/AND_7/NAND_0/w_n1_n1# 0.07fF
+C993 enable_0/F1 en1 0.09fF
+C994 f5 comparator_0/XNOR_1/XOR_0/NAND_3/A 0.37fF
+C995 comparator_0/AND5_0/A vdd 0.07fF
+C996 enable_1/AND_4/not_0/w_n9_1# f4 0.03fF
+C997 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_2/XOR_0/NAND_1/A 0.06fF
+C998 enable_0/F0 enable_0/AND_0/not_0/w_n9_1# 0.03fF
+C999 four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/C 0.70fF
+C1000 comparator_0/XNOR_2/not_0/w_n9_1# vdd 0.05fF
+C1001 comparator_0/OR4_0/not_0/in comparator_0/OR4_0/C 0.06fF
+C1002 f5 f3 0.09fF
+C1003 f2 f6 0.25fF
+C1004 comparator_0/not_4/w_n9_1# comparator_0/AND3_0/A 0.03fF
+C1005 OR3_1/not_0/in gnd 0.06fF
+C1006 enable_1/AND_1/not_0/in gnd 0.01fF
+C1007 B0 vdd 0.39fF
+C1008 comparator_0/OR4_1/w_n21_0# comparator_0/OR4_1/D 0.09fF
+C1009 XOR_0/out vdd 0.29fF
+C1010 AND_2/B vdd 0.35fF
+C1011 four_bit_adder_0/fulladder_1/OR_0/not_0/in four_bit_adder_0/fulladder_2/C 0.02fF
+C1012 enable_0/AND_5/not_0/in vdd 0.21fF
+C1013 vdd XOR_3/NAND_3/w_n1_n1# 0.09fF
+C1014 A0 gnd 0.38fF
+C1015 decoder_0/AND_1/not_0/in vdd 0.21fF
+C1016 comparator_0/AND4_1/not_0/w_n9_1# comparator_0/AND4_1/not_0/in 0.06fF
+C1017 AND_1/NAND_0/w_n1_n1# AND_1/not_0/in 0.07fF
+C1018 OR_1/not_0/in OR_1/NOR_0/w_n19_1# 0.02fF
+C1019 XOR_1/out XOR_1/NAND_1/B 0.09fF
+C1020 enable_1/AND_6/not_0/in gnd 0.01fF
+C1021 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/A vdd 0.35fF
+C1022 AND_0/not_0/w_n9_1# vdd 0.05fF
+C1023 A3 vdd 0.39fF
+C1024 decoder_0/AND_2/NAND_0/w_n1_n1# vdd 0.09fF
+C1025 comparator_0/OR4_0/A vdd 0.25fF
+C1026 comparator_0/AND3_1/A comparator_0/not_5/w_n9_1# 0.03fF
+C1027 four_bit_adder_0/fulladder_3/XOR_0/NAND_2/w_n1_n1# enable_0/F3 0.06fF
+C1028 XOR_1/NAND_1/w_n1_n1# XOR_1/NAND_1/A 0.06fF
+C1029 gnd ea2 0.32fF
+C1030 XOR_2/NAND_3/A en1 0.03fF
+C1031 A2 en3 1.14fF
+C1032 comparator_0/OR4_0/w_n21_0# comparator_0/OR4_0/D 0.09fF
+C1033 XOR_3/out four_bit_adder_0/fulladder_3/XOR_0/NAND_2/a_13_n30# 0.02fF
+C1034 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/A four_bit_adder_0/fulladder_2/XOR_1/NAND_1/B 0.32fF
+C1035 four_bit_adder_0/fulladder_2/C four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A 0.03fF
+C1036 enable_1/AND_4/NAND_0/w_n1_n1# vdd 0.09fF
+C1037 comparator_0/OR4_1/A comparator_0/OR4_1/C 0.26fF
+C1038 XOR_2/NAND_1/w_n1_n1# XOR_2/NAND_1/B 0.06fF
+C1039 f0 comparator_0/AND5_0/not_0/in 0.06fF
+C1040 comparator_0/XNOR_1/XOR_0/NAND_2/w_n1_n1# vdd 0.09fF
+C1041 enable_2/AND_1/not_0/in AND_0/B 0.02fF
+C1042 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/A four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A 0.09fF
+C1043 gnd XOR_1/NAND_1/B 0.04fF
+C1044 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/A vdd 0.35fF
+C1045 gnd XOR_1/NAND_3/A 0.10fF
+C1046 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/A four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A 0.09fF
+C1047 four_bit_adder_0/fulladder_0/OR_0/not_0/w_n9_1# four_bit_adder_0/fulladder_1/C 0.03fF
+C1048 comparator_0/OR4_1/C ea3 0.15fF
+C1049 XOR_2/out enable_0/F3 0.11fF
+C1050 comparator_0/XNOR_3/XOR_0/NAND_3/A vdd 0.21fF
+C1051 gnd comparator_0/XNOR_3/not_0/in 0.01fF
+C1052 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_0/XOR_0/NAND_1/B 0.06fF
+C1053 XOR_2/NAND_2/w_n1_n1# vdd 0.09fF
+C1054 OR_1/A OR_1/NOR_0/w_n19_1# 0.06fF
+C1055 comparator_0/XNOR_0/XOR_0/NAND_0/w_n1_n1# vdd 0.10fF
+C1056 enable_2/AND_4/not_0/in A2 0.09fF
+C1057 enable_0/AND_5/not_0/in enable_0/AND_5/not_0/w_n9_1# 0.06fF
+C1058 XOR_2/out XOR_2/NAND_1/B 0.09fF
+C1059 enable_2/AND_6/not_0/in AND_3/A 0.02fF
+C1060 OR3_1/w_n59_4# vdd 0.15fF
+C1061 four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A four_bit_adder_0/fulladder_0/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C1062 comparator_0/XNOR_0/XOR_0/NAND_3/w_n1_n1# vdd 0.09fF
+C1063 enable_0/AND_4/NAND_0/w_n1_n1# OR_0/out 0.06fF
+C1064 comparator_0/XNOR_2/XOR_0/NAND_0/a_13_n30# comparator_0/XNOR_2/XOR_0/NAND_3/A 0.02fF
+C1065 enable_1/AND_3/not_0/in f3 0.02fF
+C1066 four_bit_adder_0/fulladder_1/AND_0/not_0/w_n9_1# four_bit_adder_0/fulladder_1/AND_0/not_0/in 0.06fF
+C1067 comparator_0/OR4_1/A comparator_0/OR4_1/D 0.06fF
+C1068 comparator_0/AND4_2/w_n27_2# comparator_0/AND4_2/A 0.08fF
+C1069 XOR_2/B XOR_2/NAND_1/B 0.09fF
+C1070 XOR_2/NAND_0/w_n1_n1# vdd 0.10fF
+C1071 enable_0/AND_0/not_0/w_n9_1# vdd 0.05fF
+C1072 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/A four_bit_adder_0/fulladder_2/XOR_0/NAND_1/B 0.32fF
+C1073 enable_0/F2 four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A 0.03fF
+C1074 comparator_0/XNOR_2/XOR_0/NAND_1/B vdd 0.21fF
+C1075 four_bit_adder_0/fulladder_0/XOR_1/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A 0.06fF
+C1076 vdd XOR_3/NAND_3/A 0.21fF
+C1077 enable_0/AND_3/not_0/w_n9_1# vdd 0.05fF
+C1078 comparator_0/XNOR_3/XOR_0/NAND_3/w_n1_n1# comparator_0/XNOR_3/XOR_0/NAND_1/B 0.07fF
+C1079 four_bit_adder_0/fulladder_0/AND_1/not_0/w_n9_1# four_bit_adder_0/fulladder_0/AND_1/not_0/in 0.06fF
+C1080 comparator_0/AND_1/not_0/in comparator_0/OR4_1/B 0.02fF
+C1081 comparator_0/AND4_1/w_n27_2# vdd 0.18fF
+C1082 four_bit_adder_0/fulladder_1/AND_0/not_0/in gnd 0.01fF
+C1083 gnd comparator_0/XNOR_2/XOR_0/NAND_3/A 0.10fF
+C1084 f4 f1 0.09fF
+C1085 XOR_0/NAND_1/B XOR_0/NAND_3/w_n1_n1# 0.07fF
+C1086 enable_2/AND_5/not_0/in vdd 0.21fF
+C1087 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/A four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A 0.09fF
+C1088 XOR_3/out XOR_3/NAND_1/B 0.09fF
+C1089 comparator_0/AND3_1/A f6 0.55fF
+C1090 comparator_0/XNOR_3/XOR_0/NAND_0/w_n1_n1# vdd 0.10fF
+C1091 XOR_0/B en1 0.09fF
+C1092 comparator_0/AND4_1/w_n27_2# ea4 0.08fF
+C1093 four_bit_adder_0/fulladder_3/AND_0/not_0/in vdd 0.21fF
+C1094 comparator_0/AND4_2/not_0/in f5 0.06fF
+C1095 comparator_0/AND4_0/not_0/in vdd 0.38fF
+C1096 decoder_0/AND_0/NAND_0/w_n1_n1# decoder_0/AND_2/B 0.06fF
+C1097 ea3 comparator_0/AND5_0/w_n22_7# 0.08fF
+C1098 enable_0/F1 four_bit_adder_0/fulladder_1/C 0.18fF
+C1099 XOR_0/out enable_0/F2 0.09fF
+C1100 XOR_2/NAND_1/A XOR_2/NAND_1/B 0.32fF
+C1101 decoder_0/AND_1/B vdd 0.07fF
+C1102 OR3_2/C OR3_2/w_n59_4# 0.06fF
+C1103 enable_0/AND_4/not_0/in enable_0/AND_4/NAND_0/w_n1_n1# 0.07fF
+C1104 enable_0/AND_1/not_0/in gnd 0.01fF
+C1105 four_bit_adder_0/fulladder_3/XOR_0/NAND_0/w_n1_n1# vdd 0.10fF
+C1106 comparator_0/XNOR_1/not_0/in vdd 0.21fF
+C1107 comparator_0/AND4_0/not_0/in ea4 0.06fF
+C1108 XOR_2/NAND_3/A XOR_2/NAND_3/w_n1_n1# 0.06fF
+C1109 four_bit_adder_0/fulladder_2/XOR_1/NAND_0/w_n1_n1# vdd 0.10fF
+C1110 AND_0/A AND_0/B 0.46fF
+C1111 AND_1/B gnd 0.11fF
+C1112 four_bit_adder_0/fulladder_0/XOR_0/NAND_0/a_13_n30# four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A 0.02fF
+C1113 enable_0/AND_3/NAND_0/w_n1_n1# A3 0.06fF
+C1114 comparator_0/XNOR_3/XOR_0/NAND_1/A vdd 0.35fF
+C1115 comparator_0/OR4_0/not_0/in comparator_0/OR4_0/D 0.09fF
+C1116 enable_0/AND_3/not_0/in gnd 0.01fF
+C1117 comparator_0/AND5_0/w_n22_7# comparator_0/AND5_0/A 0.08fF
+C1118 decoder_0/AND_3/not_0/in decoder_0/AND_3/not_0/w_n9_1# 0.06fF
+C1119 ea3 comparator_0/XNOR_2/not_0/in 0.02fF
+C1120 comparator_0/OR4_0/B vdd 0.26fF
+C1121 four_bit_adder_0/fulladder_1/XOR_1/NAND_3/w_n1_n1# vdd 0.09fF
+C1122 A2 gnd 0.60fF
+C1123 AND_0/NAND_0/w_n1_n1# AND_0/B 0.06fF
+C1124 gnd comparator_0/XNOR_1/XOR_0/NAND_1/B 0.04fF
+C1125 comparator_0/OR4_1/not_0/in comparator_0/OR4_1/B 0.10fF
+C1126 en2 B0 1.26fF
+C1127 four_bit_adder_0/fulladder_3/OR_0/B four_bit_adder_0/fulladder_3/OR_0/A 0.55fF
+C1128 Out4 four_bit_adder_0/fulladder_3/OR_0/not_0/w_n9_1# 0.03fF
+C1129 comparator_0/OR4_0/B ea4 0.06fF
+C1130 four_bit_adder_0/fulladder_2/XOR_1/NAND_0/a_13_n30# four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A 0.02fF
+C1131 four_bit_adder_0/fulladder_2/OR_0/B vdd 0.07fF
+C1132 four_bit_adder_0/fulladder_1/XOR_0/NAND_2/w_n1_n1# XOR_1/out 0.06fF
+C1133 enable_0/AND_7/NAND_0/w_n1_n1# B3 0.06fF
+C1134 comparator_0/XNOR_0/XOR_0/NAND_0/a_13_n30# comparator_0/XNOR_0/XOR_0/NAND_3/A 0.02fF
+C1135 Out0 vdd 0.15fF
+C1136 four_bit_adder_0/fulladder_0/XOR_0/NAND_2/w_n1_n1# enable_0/F0 0.06fF
+C1137 four_bit_adder_0/fulladder_3/XOR_1/NAND_2/w_n1_n1# vdd 0.09fF
+C1138 comparator_0/XNOR_2/not_0/w_n9_1# comparator_0/XNOR_2/not_0/in 0.06fF
+C1139 decoder_0/AND_0/not_0/in decoder_0/AND_1/B 0.09fF
+C1140 en2 A3 0.93fF
+C1141 four_bit_adder_0/fulladder_3/XOR_1/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A 0.06fF
+C1142 enable_2/AND_5/not_0/w_n9_1# AND_2/B 0.03fF
+C1143 four_bit_adder_0/fulladder_1/XOR_0/NAND_3/w_n1_n1# vdd 0.09fF
+C1144 XOR_0/out four_bit_adder_0/fulladder_0/XOR_0/NAND_2/a_13_n30# 0.02fF
+C1145 S1 vdd 0.10fF
+C1146 comparator_0/XNOR_0/XOR_0/NAND_3/A vdd 0.21fF
+C1147 enable_1/AND_5/not_0/in enable_1/AND_5/not_0/w_n9_1# 0.06fF
+C1148 enable_1/AND_0/not_0/w_n9_1# f0 0.03fF
+C1149 enable_0/AND_6/NAND_0/w_n1_n1# vdd 0.09fF
+C1150 f4 comparator_0/AND5_1/w_n22_7# 0.08fF
+C1151 comparator_0/XNOR_2/XOR_0/NAND_3/A comparator_0/XNOR_2/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C1152 comparator_0/not_7/w_n9_1# vdd 0.05fF
+C1153 f0 comparator_0/AND5_1/A 0.02fF
+C1154 four_bit_adder_0/fulladder_1/AND_0/NAND_0/w_n1_n1# vdd 0.09fF
+C1155 comparator_0/OR4_0/not_0/in gnd 0.45fF
+C1156 f2 vdd 0.24fF
+C1157 XOR_1/B vdd 0.24fF
+C1158 four_bit_adder_0/fulladder_0/XOR_1/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_0/XOR_1/NAND_1/A 0.07fF
+C1159 gnd comparator_0/XNOR_0/not_0/in 0.01fF
+C1160 four_bit_adder_0/fulladder_1/OR_0/not_0/w_n9_1# vdd 0.05fF
+C1161 AND_1/not_0/in vdd 0.21fF
+C1162 enable_1/AND_4/NAND_0/w_n1_n1# en2 0.06fF
+C1163 OR3_2/A OR3_0/B 0.10fF
+C1164 comparator_0/AND4_1/not_0/w_n9_1# vdd 0.05fF
+C1165 enable_1/AND_0/not_0/in gnd 0.01fF
+C1166 comparator_0/AND4_0/w_n27_2# ea2 0.08fF
+C1167 XOR_3/NAND_3/w_n1_n1# XOR_3/NAND_1/B 0.07fF
+C1168 comparator_0/AND4_1/not_0/in comparator_0/OR4_0/C 0.02fF
+C1169 OR3_0/B gnd 0.15fF
+C1170 four_bit_adder_0/fulladder_3/XOR_0/NAND_2/w_n1_n1# vdd 0.09fF
+C1171 four_bit_adder_0/fulladder_1/XOR_1/B vdd 0.35fF
+C1172 XOR_2/NAND_1/w_n1_n1# vdd 0.09fF
+C1173 comparator_0/OR4_0/B comparator_0/AND3_0/not_0/w_n9_1# 0.03fF
+C1174 enable_1/AND_4/not_0/in B0 0.09fF
+C1175 four_bit_adder_0/fulladder_2/OR_0/not_0/in four_bit_adder_0/fulladder_2/OR_0/not_0/w_n9_1# 0.06fF
+C1176 OR_1/not_0/in vdd 0.03fF
+C1177 four_bit_adder_0/fulladder_1/OR_0/A vdd 0.07fF
+C1178 decoder_0/AND_2/not_0/in decoder_0/AND_2/NAND_0/w_n1_n1# 0.07fF
+C1179 comparator_0/AND_0/not_0/w_n9_1# comparator_0/OR4_0/A 0.03fF
+C1180 OR3_0/C OR3_2/A 0.17fF
+C1181 comparator_0/AND4_1/w_n27_2# comparator_0/AND4_1/A 0.08fF
+C1182 four_bit_adder_0/fulladder_0/XOR_0/NAND_0/w_n1_n1# enable_0/F0 0.06fF
+C1183 XOR_3/out four_bit_adder_0/fulladder_3/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C1184 OR3_0/C gnd 0.08fF
+C1185 enable_2/AND_3/not_0/w_n9_1# vdd 0.05fF
+C1186 A0 A2 0.32fF
+C1187 outout3 AND_1/not_0/w_n9_1# 0.03fF
+C1188 f4 comparator_0/AND5_1/not_0/in 0.06fF
+C1189 comparator_0/not_1/w_n9_1# vdd 0.05fF
+C1190 decoder_0/AND_1/B S0 0.52fF
+C1191 comparator_0/AND_1/A gnd 0.08fF
+C1192 four_bit_adder_0/fulladder_2/OR_0/B four_bit_adder_0/fulladder_2/OR_0/NOR_0/w_n19_1# 0.06fF
+C1193 comparator_0/OR4_1/w_n21_0# comparator_0/OR4_1/B 0.08fF
+C1194 four_bit_adder_0/fulladder_0/AND_0/NAND_0/w_n1_n1# en1 0.06fF
+C1195 XOR_3/NAND_1/A vdd 0.35fF
+C1196 comparator_0/OR4_0/B comparator_0/OR4_1/C 0.06fF
+C1197 enable_2/AND_2/NAND_0/w_n1_n1# A1 0.06fF
+C1198 XOR_1/NAND_0/w_n1_n1# XOR_1/NAND_3/A 0.06fF
+C1199 XOR_2/out vdd 0.29fF
+C1200 OR3_2/C vdd 0.07fF
+C1201 four_bit_adder_0/fulladder_2/XOR_1/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_2/C 0.06fF
+C1202 AND_2/not_0/w_n9_1# vdd 0.05fF
+C1203 comparator_0/AND3_1/not_0/w_n9_1# vdd 0.05fF
+C1204 enable_1/AND_4/not_0/in enable_1/AND_4/NAND_0/w_n1_n1# 0.07fF
+C1205 gnd f1 0.46fF
+C1206 four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A vdd 0.21fF
+C1207 enable_1/AND_2/not_0/in vdd 0.21fF
+C1208 OR3_0/B comparator_0/OR4_1/not_0/w_n9_1# 0.03fF
+C1209 enable_2/AND_3/not_0/in gnd 0.01fF
+C1210 enable_0/AND_5/not_0/w_n9_1# XOR_1/B 0.03fF
+C1211 en3 decoder_0/AND_3/not_0/in 0.02fF
+C1212 enable_1/AND_0/not_0/in A0 0.09fF
+C1213 XOR_2/B vdd 0.24fF
+C1214 four_bit_adder_0/fulladder_3/XOR_1/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_3/XOR_1/NAND_1/A 0.07fF
+C1215 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/w_n1_n1# vdd 0.09fF
+C1216 comparator_0/XNOR_1/XOR_0/NAND_2/w_n1_n1# comparator_0/XNOR_1/XOR_0/NAND_3/A 0.07fF
+C1217 enable_1/AND_7/not_0/in vdd 0.21fF
+C1218 OR_1/A vdd 0.21fF
+C1219 comparator_0/XNOR_0/XOR_0/NAND_1/A vdd 0.35fF
+C1220 comparator_0/XNOR_2/XOR_0/NAND_2/w_n1_n1# f2 0.06fF
+C1221 enable_2/AND_7/NAND_0/w_n1_n1# B3 0.06fF
+C1222 S1 S0 0.85fF
+C1223 comparator_0/XNOR_1/not_0/w_n9_1# ea2 0.03fF
+C1224 XOR_0/out en1 0.14fF
+C1225 Out2 vdd 0.15fF
+C1226 enable_2/AND_1/NAND_0/w_n1_n1# vdd 0.09fF
+C1227 four_bit_adder_0/fulladder_0/XOR_0/NAND_2/w_n1_n1# vdd 0.09fF
+C1228 four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A vdd 0.21fF
+C1229 four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/XOR_1/NAND_2/a_13_n30# 0.02fF
+C1230 four_bit_adder_0/fulladder_1/OR_0/not_0/in four_bit_adder_0/fulladder_1/OR_0/NOR_0/w_n19_1# 0.02fF
+C1231 f6 comparator_0/XNOR_2/XOR_0/NAND_2/a_13_n30# 0.02fF
+C1232 comparator_0/XNOR_2/not_0/in comparator_0/XNOR_2/XOR_0/NAND_1/B 0.09fF
+C1233 comparator_0/AND4_2/A vdd 0.14fF
+C1234 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/B gnd 0.04fF
+C1235 decoder_0/AND_1/not_0/in en1 0.02fF
+C1236 comparator_0/OR4_0/B comparator_0/OR4_1/D 0.06fF
+C1237 XOR_2/out four_bit_adder_0/fulladder_2/XOR_0/NAND_1/B 0.09fF
+C1238 four_bit_adder_0/fulladder_2/AND_1/not_0/in gnd 0.01fF
+C1239 comparator_0/XNOR_3/XOR_0/NAND_1/A comparator_0/XNOR_3/XOR_0/NAND_1/B 0.32fF
+C1240 f3 comparator_0/XNOR_3/XOR_0/NAND_3/A 0.03fF
+C1241 enable_2/AND_5/not_0/in enable_2/AND_5/not_0/w_n9_1# 0.06fF
+C1242 enable_1/AND_1/not_0/in f1 0.02fF
+C1243 enable_2/AND_6/NAND_0/w_n1_n1# vdd 0.09fF
+C1244 four_bit_adder_0/fulladder_1/OR_0/not_0/w_n9_1# four_bit_adder_0/fulladder_2/C 0.03fF
+C1245 XOR_2/NAND_1/A vdd 0.35fF
+C1246 enable_0/AND_4/not_0/w_n9_1# XOR_0/B 0.03fF
+C1247 AND_3/NAND_0/w_n1_n1# AND_3/A 0.06fF
+C1248 enable_2/AND_4/NAND_0/w_n1_n1# en3 0.06fF
+C1249 outout2 vdd 0.07fF
+C1250 comparator_0/AND_0/not_0/in comparator_0/OR4_0/A 0.02fF
+C1251 four_bit_adder_0/fulladder_2/XOR_0/NAND_0/a_13_n30# four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A 0.02fF
+C1252 OR_0/out B1 0.68fF
+C1253 gnd en0 0.08fF
+C1254 comparator_0/AND_1/NAND_0/w_n1_n1# vdd 0.09fF
+C1255 XOR_3/out four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A 0.37fF
+C1256 comparator_0/AND3_1/A vdd 0.07fF
+C1257 XOR_1/NAND_1/A XOR_1/NAND_1/B 0.32fF
+C1258 four_bit_adder_0/fulladder_0/XOR_0/NAND_0/w_n1_n1# vdd 0.10fF
+C1259 XOR_1/NAND_3/A XOR_1/NAND_1/A 0.09fF
+C1260 comparator_0/OR4_0/w_n21_0# comparator_0/OR4_0/not_0/in 0.04fF
+C1261 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/B gnd 0.04fF
+C1262 comparator_0/OR4_1/A comparator_0/OR4_1/B 0.40fF
+C1263 four_bit_adder_0/fulladder_0/XOR_1/B four_bit_adder_0/fulladder_0/XOR_1/NAND_1/B 0.09fF
+C1264 AND_4/not_0/w_n9_1# outout2 0.03fF
+C1265 comparator_0/AND3_1/A ea4 0.06fF
+C1266 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/A vdd 0.35fF
+C1267 comparator_0/AND4_2/not_0/in ea3 0.06fF
+C1268 four_bit_adder_0/fulladder_2/AND_0/not_0/w_n9_1# four_bit_adder_0/fulladder_2/AND_0/not_0/in 0.06fF
+C1269 comparator_0/AND3_1/a_2_n39# ea4 0.01fF
+C1270 OR_1/B OR_1/not_0/in 0.13fF
+C1271 f7 vdd 0.07fF
+C1272 AND_4/not_0/in outout2 0.02fF
+C1273 enable_0/AND_0/NAND_0/w_n1_n1# OR_0/out 0.06fF
+C1274 XOR_2/out four_bit_adder_0/fulladder_2/C 0.13fF
+C1275 f0 comparator_0/AND5_0/A 0.45fF
+C1276 comparator_0/XNOR_2/XOR_0/NAND_0/w_n1_n1# comparator_0/XNOR_2/XOR_0/NAND_3/A 0.06fF
+C1277 B0 A1 0.32fF
+C1278 gnd comparator_0/AND5_1/not_0/in 0.03fF
+C1279 XOR_2/NAND_2/w_n1_n1# en1 0.06fF
+C1280 decoder_0/AND_3/not_0/w_n9_1# vdd 0.05fF
+C1281 comparator_0/XNOR_3/XOR_0/NAND_0/w_n1_n1# f3 0.06fF
+C1282 OR_0/out vdd 0.07fF
+C1283 enable_0/AND_7/not_0/in XOR_3/B 0.02fF
+C1284 enable_2/AND_4/not_0/in enable_2/AND_4/NAND_0/w_n1_n1# 0.07fF
+C1285 comparator_0/XNOR_0/XOR_0/NAND_3/w_n1_n1# comparator_0/XNOR_0/XOR_0/NAND_1/B 0.07fF
+C1286 OR_0/out OR_0/not_0/w_n9_1# 0.03fF
+C1287 AND_3/not_0/in AND_3/not_0/w_n9_1# 0.06fF
+C1288 enable_2/AND_0/NAND_0/w_n1_n1# vdd 0.09fF
+C1289 XOR_0/out four_bit_adder_0/fulladder_0/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C1290 OR3_2/C OR3_2/B 0.08fF
+C1291 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/A vdd 0.35fF
+C1292 AND_2/NAND_0/w_n1_n1# AND_2/B 0.06fF
+C1293 A1 A3 0.32fF
+C1294 B1 B2 0.32fF
+C1295 B0 B3 0.32fF
+C1296 four_bit_adder_0/fulladder_0/AND_0/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_0/XOR_1/B 0.06fF
+C1297 enable_1/AND_5/not_0/w_n9_1# vdd 0.05fF
+C1298 AND_0/NAND_0/w_n1_n1# AND_0/A 0.06fF
+C1299 comparator_0/XNOR_2/XOR_0/NAND_1/A comparator_0/XNOR_2/XOR_0/NAND_3/A 0.09fF
+C1300 comparator_0/OR4_1/A comparator_0/AND3_1/not_0/in 0.02fF
+C1301 four_bit_adder_0/fulladder_0/AND_0/not_0/in four_bit_adder_0/fulladder_0/AND_0/not_0/w_n9_1# 0.06fF
+C1302 AND_0/not_0/in gnd 0.01fF
+C1303 XOR_1/NAND_3/w_n1_n1# XOR_1/NAND_1/B 0.07fF
+C1304 four_bit_adder_0/fulladder_3/C gnd 0.31fF
+C1305 four_bit_adder_0/fulladder_1/AND_1/NAND_0/w_n1_n1# enable_0/F1 0.06fF
+C1306 XOR_1/out enable_0/F3 0.14fF
+C1307 enable_0/F2 XOR_2/out 1.24fF
+C1308 four_bit_adder_0/fulladder_1/AND_1/not_0/in vdd 0.21fF
+C1309 XOR_3/NAND_1/w_n1_n1# vdd 0.09fF
+C1310 XOR_2/NAND_0/w_n1_n1# en1 0.06fF
+C1311 XOR_1/NAND_3/w_n1_n1# XOR_1/NAND_3/A 0.06fF
+C1312 four_bit_adder_0/fulladder_0/AND_1/NAND_0/w_n1_n1# enable_0/F0 0.06fF
+C1313 four_bit_adder_0/fulladder_0/AND_1/not_0/in four_bit_adder_0/fulladder_0/OR_0/B 0.02fF
+C1314 OR_0/not_0/in vdd 0.03fF
+C1315 A3 B3 0.32fF
+C1316 en1 XOR_3/NAND_3/A 0.03fF
+C1317 enable_2/AND_0/not_0/in AND_0/A 0.02fF
+C1318 enable_1/AND_2/NAND_0/w_n1_n1# A2 0.06fF
+C1319 XOR_3/B vdd 0.07fF
+C1320 decoder_0/AND_1/B decoder_0/not_1/w_n9_1# 0.03fF
+C1321 gnd decoder_0/AND_3/not_0/in 0.01fF
+C1322 OR_0/not_0/w_n9_1# OR_0/not_0/in 0.06fF
+C1323 comparator_0/OR4_0/A comparator_0/OR4_1/B 0.06fF
+C1324 comparator_0/OR4_1/not_0/in comparator_0/OR4_1/w_n21_0# 0.04fF
+C1325 OR_1/A OR3_2/B 0.13fF
+C1326 comparator_0/XNOR_1/XOR_0/NAND_1/w_n1_n1# vdd 0.09fF
+C1327 comparator_0/OR4_0/C vdd 0.07fF
+C1328 gnd f6 0.63fF
+C1329 XOR_1/NAND_1/w_n1_n1# vdd 0.09fF
+C1330 ea2 comparator_0/AND5_1/w_n22_7# 0.08fF
+C1331 ea3 comparator_0/AND5_0/not_0/in 0.06fF
+C1332 comparator_0/AND5_0/not_0/w_n9_1# comparator_0/OR4_0/D 0.03fF
+C1333 AND_2/A vdd 0.35fF
+C1334 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/B gnd 0.04fF
+C1335 OR_1/B OR_1/A 0.34fF
+C1336 enable_0/AND_4/not_0/in vdd 0.21fF
+C1337 comparator_0/OR4_0/C ea4 0.06fF
+C1338 gnd comparator_0/AND4_1/not_0/in 0.05fF
+C1339 AND_2/not_0/in vdd 0.21fF
+C1340 XOR_1/NAND_0/w_n1_n1# XOR_1/NAND_1/A 0.07fF
+C1341 eequal vdd 0.11fF
+C1342 enable_1/AND_6/NAND_0/w_n1_n1# B2 0.06fF
+C1343 enable_1/AND_5/not_0/in gnd 0.01fF
+C1344 enable_0/F3 gnd 0.20fF
+C1345 B2 vdd 0.39fF
+C1346 decoder_0/AND_1/NAND_0/w_n1_n1# vdd 0.09fF
+C1347 XOR_0/out XOR_0/NAND_1/w_n1_n1# 0.07fF
+C1348 four_bit_adder_0/fulladder_3/AND_0/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_3/AND_0/not_0/in 0.07fF
+C1349 comparator_0/not_7/w_n9_1# f3 0.06fF
+C1350 B1 en3 0.75fF
+C1351 AND_3/not_0/w_n9_1# vdd 0.05fF
+C1352 XOR_3/NAND_1/A XOR_3/NAND_1/B 0.32fF
+C1353 gnd XOR_2/NAND_1/B 0.04fF
+C1354 ea2 comparator_0/AND5_1/not_0/in 0.06fF
+C1355 comparator_0/XNOR_2/XOR_0/NAND_0/w_n1_n1# comparator_0/XNOR_2/XOR_0/NAND_1/A 0.07fF
+C1356 enable_1/AND_3/NAND_0/w_n1_n1# vdd 0.09fF
+C1357 four_bit_adder_0/fulladder_0/OR_0/B gnd 0.27fF
+C1358 outout2 OR3_2/B 0.21fF
+C1359 OR_1/A en2 0.19fF
+C1360 comparator_0/XNOR_0/XOR_0/NAND_1/w_n1_n1# comparator_0/XNOR_0/XOR_0/NAND_1/A 0.06fF
+C1361 comparator_0/XNOR_0/XOR_0/NAND_0/w_n1_n1# f0 0.06fF
+C1362 enable_0/AND_1/not_0/in enable_0/AND_1/not_0/w_n9_1# 0.06fF
+C1363 four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/AND_0/not_0/in 0.09fF
+C1364 comparator_0/AND4_0/not_0/in comparator_0/AND4_0/not_0/w_n9_1# 0.06fF
+C1365 AND_4/not_0/in eequal 0.09fF
+C1366 four_bit_adder_0/fulladder_3/AND_0/not_0/in four_bit_adder_0/fulladder_3/OR_0/A 0.02fF
+C1367 S1 decoder_0/not_1/w_n9_1# 0.06fF
+C1368 comparator_0/AND3_0/not_0/in vdd 0.24fF
+C1369 four_bit_adder_0/fulladder_2/AND_0/not_0/in vdd 0.21fF
+C1370 OR_0/NOR_0/w_n19_1# en0 0.06fF
+C1371 comparator_0/XNOR_3/XOR_0/NAND_1/w_n1_n1# comparator_0/XNOR_3/not_0/in 0.07fF
+C1372 enable_2/AND_1/not_0/in B0 0.09fF
+C1373 enable_0/AND_2/not_0/in enable_0/AND_2/not_0/w_n9_1# 0.06fF
+C1374 XOR_0/out enable_0/F1 0.09fF
+C1375 four_bit_adder_0/fulladder_0/XOR_1/NAND_2/w_n1_n1# four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A 0.07fF
+C1376 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_0/XOR_1/NAND_1/B 0.06fF
+C1377 comparator_0/AND3_0/not_0/in ea4 0.17fF
+C1378 enable_2/AND_3/not_0/in AND_1/B 0.02fF
+C1379 four_bit_adder_0/fulladder_2/XOR_0/NAND_0/w_n1_n1# vdd 0.10fF
+C1380 four_bit_adder_0/fulladder_1/XOR_1/NAND_0/w_n1_n1# vdd 0.10fF
+C1381 four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/XOR_1/NAND_3/w_n1_n1# 0.06fF
+C1382 XOR_0/out four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A 0.37fF
+C1383 en3 vdd 0.40fF
+C1384 f4 vdd 0.35fF
+C1385 four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/XOR_0/NAND_1/w_n1_n1# 0.07fF
+C1386 enable_1/AND_6/not_0/in f6 0.02fF
+C1387 f6 comparator_0/XNOR_2/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C1388 four_bit_adder_0/fulladder_0/XOR_1/NAND_3/w_n1_n1# vdd 0.09fF
+C1389 XOR_1/B en1 0.17fF
+C1390 enable_0/AND_0/not_0/in gnd 0.01fF
+C1391 four_bit_adder_0/fulladder_0/AND_0/not_0/w_n9_1# vdd 0.05fF
+C1392 OR3_0/C OR3_0/B 0.13fF
+C1393 XOR_2/B XOR_2/NAND_2/a_13_n30# 0.02fF
+C1394 f5 ea3 0.11fF
+C1395 gnd XOR_0/NAND_3/A 0.10fF
+C1396 OR3_2/A OR3_2/w_n59_4# 0.06fF
+C1397 enable_0/AND_3/NAND_0/w_n1_n1# OR_0/out 0.06fF
+C1398 four_bit_adder_0/fulladder_1/OR_0/B vdd 0.07fF
+C1399 enable_0/F0 gnd 0.08fF
+C1400 four_bit_adder_0/fulladder_3/XOR_1/B four_bit_adder_0/fulladder_3/XOR_1/NAND_2/w_n1_n1# 0.06fF
+C1401 four_bit_adder_0/fulladder_1/XOR_1/NAND_3/w_n1_n1# four_bit_adder_0/fulladder_1/XOR_1/NAND_1/B 0.07fF
+C1402 f7 comparator_0/XNOR_3/XOR_0/NAND_1/B 0.09fF
+C1403 enable_2/AND_6/not_0/in A3 0.09fF
+C1404 enable_0/AND_7/not_0/in enable_0/AND_7/not_0/w_n9_1# 0.06fF
+C1405 four_bit_adder_0/fulladder_2/XOR_1/NAND_2/w_n1_n1# vdd 0.09fF
+C1406 four_bit_adder_0/fulladder_2/OR_0/B four_bit_adder_0/fulladder_2/OR_0/not_0/in 0.08fF
+C1407 four_bit_adder_0/fulladder_0/AND_1/NAND_0/w_n1_n1# vdd 0.09fF
+C1408 four_bit_adder_0/fulladder_0/AND_0/not_0/in gnd 0.01fF
+C1409 four_bit_adder_0/fulladder_2/AND_1/not_0/w_n9_1# four_bit_adder_0/fulladder_2/OR_0/B 0.03fF
+C1410 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/w_n1_n1# OR3_2/A 0.07fF
+C1411 OR_1/not_0/w_n9_1# OR_1/not_0/in 0.06fF
+C1412 comparator_0/not_2/w_n9_1# vdd 0.05fF
+C1413 comparator_0/AND3_0/not_0/in comparator_0/AND3_0/not_0/w_n9_1# 0.06fF
+C1414 enable_1/AND_2/not_0/w_n9_1# f2 0.03fF
+C1415 enable_0/AND_2/not_0/w_n9_1# vdd 0.05fF
+C1416 four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/AND_0/NAND_0/w_n1_n1# 0.06fF
+C1417 decoder_0/AND_2/NAND_0/w_n1_n1# decoder_0/AND_2/B 0.06fF
+C1418 decoder_0/AND_1/NAND_0/w_n1_n1# S0 0.06fF
+C1419 four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A four_bit_adder_0/fulladder_2/XOR_1/NAND_3/w_n1_n1# 0.06fF
+C1420 OR3_0/not_0/in Out0 0.02fF
+C1421 enable_2/AND_4/not_0/in vdd 0.21fF
+C1422 comparator_0/AND3_0/w_n31_n3# vdd 0.14fF
+C1423 XOR_3/NAND_0/w_n1_n1# XOR_3/NAND_3/A 0.06fF
+C1424 XOR_1/NAND_2/w_n1_n1# vdd 0.09fF
+C1425 outout1 OR3_0/B 0.10fF
+C1426 enable_0/AND_7/not_0/w_n9_1# vdd 0.05fF
+C1427 decoder_0/AND_0/NAND_0/w_n1_n1# decoder_0/AND_1/B 0.06fF
+C1428 XOR_0/NAND_1/B XOR_0/NAND_1/A 0.32fF
+C1429 comparator_0/AND3_1/w_n31_n3# comparator_0/AND3_1/A 0.08fF
+C1430 four_bit_adder_0/fulladder_2/XOR_0/NAND_2/w_n1_n1# vdd 0.09fF
+C1431 comparator_0/AND3_0/w_n31_n3# ea4 0.08fF
+C1432 four_bit_adder_0/fulladder_3/XOR_0/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A 0.06fF
+C1433 four_bit_adder_0/fulladder_3/XOR_1/NAND_2/w_n1_n1# four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A 0.07fF
+C1434 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_3/XOR_1/NAND_1/B 0.06fF
+C1435 XOR_3/NAND_0/a_13_n30# XOR_3/NAND_3/A 0.02fF
+C1436 OR3_0/C outout1 0.17fF
+C1437 OR3_2/B eequal 0.09fF
+C1438 AND_3/not_0/in gnd 0.01fF
+C1439 comparator_0/OR4_0/C comparator_0/OR4_1/D 0.06fF
+C1440 OR3_0/not_0/w_n9_1# vdd 0.05fF
+C1441 AND_1/A gnd 0.08fF
+C1442 enable_0/AND_5/NAND_0/w_n1_n1# B1 0.06fF
+C1443 enable_0/AND_0/not_0/in A0 0.09fF
+C1444 comparator_0/XNOR_2/XOR_0/NAND_1/w_n1_n1# comparator_0/XNOR_2/XOR_0/NAND_1/B 0.06fF
+C1445 enable_0/AND_2/not_0/in gnd 0.01fF
+C1446 four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/XOR_1/NAND_1/B 0.09fF
+C1447 comparator_0/XNOR_0/XOR_0/NAND_1/A comparator_0/XNOR_0/XOR_0/NAND_1/B 0.32fF
+C1448 f0 comparator_0/XNOR_0/XOR_0/NAND_3/A 0.03fF
+C1449 XOR_2/B en1 0.17fF
+C1450 Out3 OR_1/not_0/in 0.02fF
+C1451 enable_0/AND_6/not_0/in enable_0/AND_6/NAND_0/w_n1_n1# 0.07fF
+C1452 four_bit_adder_0/fulladder_0/AND_1/not_0/in vdd 0.21fF
+C1453 eequal comparator_0/OR4_1/D 0.09fF
+C1454 ea3 comparator_0/AND5_1/A 0.09fF
+C1455 comparator_0/OR4_0/D vdd 0.14fF
+C1456 comparator_0/XNOR_1/XOR_0/NAND_2/w_n1_n1# f5 0.06fF
+C1457 comparator_0/AND_0/A comparator_0/AND_0/NAND_0/w_n1_n1# 0.06fF
+C1458 B1 gnd 0.63fF
+C1459 four_bit_adder_0/fulladder_1/XOR_0/NAND_3/w_n1_n1# four_bit_adder_0/fulladder_1/XOR_0/NAND_1/B 0.07fF
+C1460 AND_3/not_0/w_n9_1# OR_1/B 0.03fF
+C1461 S1 decoder_0/AND_3/NAND_0/w_n1_n1# 0.06fF
+C1462 comparator_0/OR4_1/w_n21_0# comparator_0/OR4_1/A 0.08fF
+C1463 AND_3/B gnd 0.12fF
+C1464 enable_2/AND_2/not_0/w_n9_1# AND_1/A 0.03fF
+C1465 enable_1/AND_2/not_0/in enable_1/AND_2/not_0/w_n9_1# 0.06fF
+C1466 enable_0/AND_7/not_0/in gnd 0.01fF
+C1467 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_1/XOR_1/NAND_1/A 0.06fF
+C1468 comparator_0/AND4_1/a_6_n36# ea3 0.01fF
+C1469 four_bit_adder_0/fulladder_2/XOR_1/B four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A 0.37fF
+C1470 XOR_1/out vdd 0.29fF
+C1471 XOR_2/NAND_2/w_n1_n1# XOR_2/NAND_3/A 0.07fF
+C1472 f6 comparator_0/XNOR_2/XOR_0/NAND_3/A 0.37fF
+C1473 comparator_0/not_6/w_n9_1# vdd 0.05fF
+C1474 four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A vdd 0.21fF
+C1475 Out1 gnd 0.08fF
+C1476 en2 eequal 0.35fF
+C1477 four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A four_bit_adder_0/fulladder_2/XOR_0/NAND_3/w_n1_n1# 0.06fF
+C1478 four_bit_adder_0/fulladder_1/AND_0/not_0/w_n9_1# vdd 0.05fF
+C1479 XOR_3/NAND_1/w_n1_n1# XOR_3/NAND_1/B 0.06fF
+C1480 f3 f7 0.34fF
+C1481 en2 B2 0.79fF
+C1482 four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/XOR_0/NAND_1/B 0.09fF
+C1483 outout3 OR3_1/w_n59_4# 0.06fF
+C1484 comparator_0/not_1/w_n9_1# f0 0.06fF
+C1485 enable_0/AND_5/NAND_0/w_n1_n1# vdd 0.09fF
+C1486 XOR_3/B XOR_3/NAND_1/B 0.09fF
+C1487 OR3_2/A vdd 0.31fF
+C1488 four_bit_adder_0/fulladder_2/XOR_0/NAND_0/w_n1_n1# enable_0/F2 0.06fF
+C1489 XOR_2/NAND_0/w_n1_n1# XOR_2/NAND_3/A 0.06fF
+C1490 enable_1/AND_3/NAND_0/w_n1_n1# en2 0.06fF
+C1491 four_bit_adder_0/fulladder_2/XOR_1/NAND_2/w_n1_n1# four_bit_adder_0/fulladder_2/C 0.06fF
+C1492 four_bit_adder_0/fulladder_2/AND_1/NAND_0/w_n1_n1# XOR_2/out 0.06fF
+C1493 four_bit_adder_0/fulladder_1/OR_0/NOR_0/w_n19_1# four_bit_adder_0/fulladder_1/OR_0/A 0.06fF
+C1494 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_0/XOR_0/NAND_1/A 0.06fF
+C1495 gnd vdd 1.35fF
+C1496 four_bit_adder_0/fulladder_3/XOR_0/NAND_2/w_n1_n1# four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A 0.07fF
+C1497 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_3/XOR_0/NAND_1/B 0.06fF
+C1498 XOR_0/NAND_1/B vdd 0.21fF
+C1499 enable_2/AND_7/not_0/w_n9_1# AND_3/B 0.03fF
+C1500 enable_1/AND_7/not_0/in enable_1/AND_7/not_0/w_n9_1# 0.06fF
+C1501 XOR_0/NAND_2/w_n1_n1# XOR_0/NAND_3/A 0.07fF
+C1502 comparator_0/AND4_1/A comparator_0/not_2/w_n9_1# 0.03fF
+C1503 four_bit_adder_0/fulladder_3/OR_0/not_0/in gnd 0.16fF
+C1504 gnd ea4 0.72fF
+C1505 OR3_2/A four_bit_adder_0/fulladder_2/XOR_1/NAND_1/B 0.09fF
+C1506 AND_1/NAND_0/w_n1_n1# AND_1/B 0.06fF
+C1507 ea2 comparator_0/AND5_0/a_10_n35# 0.00fF
+C1508 comparator_0/AND_0/A vdd 0.07fF
+C1509 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/B gnd 0.04fF
+C1510 decoder_0/AND_0/not_0/w_n9_1# en0 0.03fF
+C1511 enable_0/F3 enable_0/AND_3/not_0/in 0.02fF
+C1512 four_bit_adder_0/fulladder_3/XOR_0/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_3/XOR_0/NAND_1/A 0.07fF
+C1513 four_bit_adder_0/fulladder_1/AND_0/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_1/C 0.06fF
+C1514 enable_2/AND_2/not_0/w_n9_1# vdd 0.05fF
+C1515 A0 B1 0.32fF
+C1516 decoder_0/AND_1/B decoder_0/AND_2/B 0.41fF
+C1517 enable_1/AND_1/not_0/in enable_1/AND_1/NAND_0/w_n1_n1# 0.07fF
+C1518 comparator_0/XNOR_3/XOR_0/NAND_2/w_n1_n1# vdd 0.09fF
+C1519 OR3_1/not_0/in Out1 0.02fF
+C1520 enable_1/AND_3/not_0/in A3 0.09fF
+C1521 four_bit_adder_0/fulladder_3/AND_1/not_0/in vdd 0.21fF
+C1522 enable_0/AND_6/not_0/in XOR_2/B 0.02fF
+C1523 AND_4/not_0/in gnd 0.01fF
+C1524 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/w_n1_n1# four_bit_adder_0/fulladder_1/XOR_0/NAND_1/A 0.06fF
+C1525 four_bit_adder_0/fulladder_1/XOR_1/B four_bit_adder_0/fulladder_1/C 0.70fF
+C1526 enable_2/AND_7/not_0/w_n9_1# vdd 0.05fF
+C1527 OR3_0/w_n59_4# OR3_0/B 0.06fF
+C1528 decoder_0/AND_0/not_0/in gnd 0.01fF
+C1529 enable_0/F2 enable_0/AND_2/not_0/w_n9_1# 0.03fF
+C1530 four_bit_adder_0/fulladder_3/AND_1/not_0/in four_bit_adder_0/fulladder_3/AND_1/not_0/w_n9_1# 0.06fF
+C1531 XOR_3/NAND_1/A XOR_3/NAND_0/w_n1_n1# 0.07fF
+C1532 enable_1/AND_7/not_0/in B3 0.09fF
+C1533 comparator_0/OR4_1/not_0/w_n9_1# vdd 0.05fF
+C1534 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/B gnd 0.04fF
+C1535 four_bit_adder_0/fulladder_0/AND_1/not_0/w_n9_1# four_bit_adder_0/fulladder_0/OR_0/B 0.03fF
+C1536 OR3_1/not_0/in vdd 0.02fF
+C1537 enable_1/AND_1/not_0/in vdd 0.21fF
+C1538 OR3_2/not_0/w_n9_1# vdd 0.05fF
+C1539 OR3_0/C OR3_0/w_n59_4# 0.06fF
+C1540 AND_0/not_0/in OR3_0/C 0.02fF
+C1541 enable_0/AND_0/NAND_0/w_n1_n1# A0 0.06fF
+C1542 four_bit_adder_0/fulladder_0/XOR_0/NAND_0/w_n1_n1# four_bit_adder_0/fulladder_0/XOR_0/NAND_1/A 0.07fF
+C1543 enable_2/AND_4/NAND_0/w_n1_n1# A2 0.06fF
+C1544 XOR_0/NAND_3/w_n1_n1# XOR_0/NAND_3/A 0.06fF
+C1545 enable_2/AND_2/not_0/in gnd 0.01fF
+C1546 four_bit_adder_0/fulladder_3/AND_1/not_0/in four_bit_adder_0/fulladder_3/AND_1/NAND_0/w_n1_n1# 0.07fF
+C1547 comparator_0/not_0/w_n9_1# comparator_0/AND5_0/A 0.03fF
+C1548 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/A vdd 0.35fF
+C1549 A0 vdd 0.39fF
+C1550 enable_1/AND_6/not_0/in enable_1/AND_6/NAND_0/w_n1_n1# 0.07fF
+C1551 four_bit_adder_0/fulladder_2/XOR_0/NAND_2/w_n1_n1# enable_0/F2 0.06fF
+C1552 XOR_2/B XOR_2/NAND_3/w_n1_n1# 0.06fF
+C1553 enable_1/AND_6/not_0/in vdd 0.21fF
+C1554 enable_0/AND_1/NAND_0/w_n1_n1# OR_0/out 0.06fF
+C1555 OR_0/not_0/in en1 0.16fF
+C1556 comparator_0/AND3_1/not_0/in comparator_0/AND3_1/not_0/w_n9_1# 0.06fF
+C1557 comparator_0/XNOR_2/XOR_0/NAND_3/w_n1_n1# vdd 0.09fF
+C1558 XOR_3/NAND_2/w_n1_n1# vdd 0.09fF
+C1559 enable_2/AND_2/not_0/in enable_2/AND_2/not_0/w_n9_1# 0.06fF
+C1560 enable_1/AND_7/not_0/w_n9_1# f7 0.03fF
+C1561 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/A four_bit_adder_0/fulladder_1/XOR_1/NAND_1/B 0.32fF
+C1562 four_bit_adder_0/fulladder_1/C four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A 0.03fF
+C1563 AND_1/not_0/w_n9_1# AND_1/not_0/in 0.06fF
+C1564 decoder_0/AND_2/B S1 1.25fF
+C1565 enable_2/AND_7/not_0/in gnd 0.01fF
+C1566 XOR_2/out four_bit_adder_0/fulladder_2/XOR_0/NAND_2/a_13_n30# 0.02fF
+C1567 ea2 vdd 0.07fF
+C1568 enable_1/AND_4/not_0/in f4 0.02fF
+C1569 gnd comparator_0/OR4_1/C 0.08fF
+C1570 four_bit_adder_0/fulladder_0/OR_0/not_0/in gnd 0.16fF
+C1571 four_bit_adder_0/fulladder_0/XOR_1/B four_bit_adder_0/fulladder_0/XOR_0/NAND_1/w_n1_n1# 0.07fF
+C1572 gnd S0 0.34fF
+C1573 ea2 ea4 0.06fF
+C1574 outout3 AND_1/not_0/in 0.02fF
+C1575 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/A four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A 0.09fF
+C1576 gnd comparator_0/AND4_1/A 0.08fF
+C1577 enable_2/AND_5/NAND_0/w_n1_n1# vdd 0.09fF
+C1578 XOR_1/NAND_1/B vdd 0.21fF
+C1579 OR3_2/C OR3_2/not_0/in 0.08fF
+C1580 four_bit_adder_0/fulladder_2/C gnd 0.31fF
+C1581 XOR_1/out enable_0/F2 0.10fF
+C1582 f5 f2 0.09fF
+C1583 f4 f3 0.09fF
+C1584 XOR_1/NAND_3/A vdd 0.21fF
+C1585 enable_2/AND_3/NAND_0/w_n1_n1# en3 0.06fF
+C1586 four_bit_adder_0/fulladder_0/XOR_1/B four_bit_adder_0/fulladder_0/XOR_1/NAND_2/a_13_n30# 0.02fF
+C1587 comparator_0/XNOR_1/XOR_0/NAND_1/w_n1_n1# comparator_0/XNOR_1/XOR_0/NAND_1/A 0.06fF
+C1588 comparator_0/AND4_1/not_0/in f1 0.06fF
+C1589 OR_0/out A1 0.74fF
+C1590 comparator_0/XNOR_2/not_0/w_n9_1# ea3 0.03fF
+C1591 enable_2/AND_7/not_0/in enable_2/AND_7/not_0/w_n9_1# 0.06fF
+C1592 OR3_2/A OR3_2/B 0.08fF
+C1593 XOR_0/NAND_2/w_n1_n1# vdd 0.09fF
+C1594 comparator_0/AND4_1/a_25_n36# ea4 0.01fF
+C1595 OR3_2/B gnd 0.17fF
+C1596 enable_1/AND_0/NAND_0/w_n1_n1# A0 0.06fF
+C1597 comparator_0/XNOR_3/not_0/in vdd 0.21fF
+C1598 eequal comparator_0/AND4_0/not_0/w_n9_1# 0.03fF
+C1599 comparator_0/AND5_1/not_0/in comparator_0/AND5_1/w_n22_7# 0.17fF
+C1600 comparator_0/OR4_0/w_n21_0# vdd 0.11fF
+C1601 OR_0/out B3 0.71fF
+C1602 OR_1/B gnd 0.25fF
+C1603 comparator_0/XNOR_0/not_0/w_n9_1# comparator_0/XNOR_0/not_0/in 0.06fF
+C1604 enable_0/F2 gnd 0.20fF
+C1605 OR_0/NOR_0/w_n19_1# vdd 0.08fF
+C1606 enable_2/AND_1/not_0/in enable_2/AND_1/NAND_0/w_n1_n1# 0.07fF
+C1607 ea4 comparator_0/XNOR_3/not_0/in 0.02fF
+C1608 OR3_2/not_0/in Out2 0.02fF
+C1609 gnd comparator_0/OR4_1/D 0.17fF
+C1610 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/A four_bit_adder_0/fulladder_1/XOR_0/NAND_1/B 0.32fF
+C1611 enable_0/F1 four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A 0.03fF
+C1612 f4 comparator_0/XNOR_0/XOR_0/NAND_1/B 0.09fF
+C1613 AND_1/A AND_1/B 0.58fF
+C1614 gnd comparator_0/XNOR_3/XOR_0/NAND_1/B 0.04fF
+C1615 four_bit_adder_0/fulladder_0/XOR_0/NAND_2/w_n1_n1# four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A 0.07fF
+C1616 comparator_0/XNOR_0/XOR_0/NAND_2/w_n1_n1# vdd 0.09fF
+C1617 decoder_0/AND_2/not_0/w_n9_1# vdd 0.05fF
+C1618 comparator_0/not_3/w_n9_1# comparator_0/AND4_2/A 0.03fF
+C1619 enable_0/AND_2/not_0/in A2 0.09fF
+C1620 comparator_0/AND4_2/not_0/w_n9_1# vdd 0.05fF
+C1621 en2 gnd 0.76fF
+C1622 XOR_2/B XOR_2/NAND_3/A 0.37fF
+C1623 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/A four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A 0.09fF
+C1624 ea3 comparator_0/AND5_0/a_29_n35# 0.01fF
+C1625 AND_2/NAND_0/w_n1_n1# AND_2/A 0.06fF
+C1626 A1 B2 0.32fF
+C1627 outout3 OR_1/A 0.10fF
+C1628 B0 A3 0.32fF
+C1629 B1 A2 0.32fF
+C1630 four_bit_adder_0/fulladder_1/AND_0/not_0/in vdd 0.21fF
+C1631 XOR_0/NAND_3/w_n1_n1# vdd 0.09fF
+C1632 comparator_0/XNOR_2/XOR_0/NAND_3/A vdd 0.21fF
+C1633 enable_1/AND_4/not_0/w_n9_1# vdd 0.05fF
+C1634 XOR_3/NAND_1/B Gnd 0.59fF
+C1635 XOR_3/NAND_3/w_n1_n1# Gnd 0.69fF
+C1636 XOR_3/NAND_3/A Gnd 0.85fF
+C1637 vdd Gnd 155.52fF
+C1638 XOR_3/B Gnd 1.32fF
+C1639 XOR_3/NAND_2/w_n1_n1# Gnd 0.69fF
+C1640 XOR_3/NAND_1/A Gnd 0.50fF
+C1641 XOR_3/NAND_1/w_n1_n1# Gnd 0.69fF
+C1642 XOR_3/NAND_0/w_n1_n1# Gnd 0.69fF
+C1643 XOR_2/NAND_1/B Gnd 0.59fF
+C1644 XOR_2/NAND_3/w_n1_n1# Gnd 0.69fF
+C1645 XOR_2/NAND_3/A Gnd 0.85fF
+C1646 XOR_2/B Gnd 1.28fF
+C1647 XOR_2/NAND_2/w_n1_n1# Gnd 0.69fF
+C1648 XOR_2/NAND_1/A Gnd 0.50fF
+C1649 XOR_2/NAND_1/w_n1_n1# Gnd 0.69fF
+C1650 XOR_2/NAND_0/w_n1_n1# Gnd 0.69fF
+C1651 decoder_0/not_1/w_n9_1# Gnd 0.40fF
+C1652 decoder_0/not_0/w_n9_1# Gnd 0.40fF
+C1653 decoder_0/AND_3/not_0/w_n9_1# Gnd 0.40fF
+C1654 decoder_0/AND_3/not_0/in Gnd 0.43fF
+C1655 S0 Gnd 8.15fF
+C1656 S1 Gnd 4.04fF
+C1657 decoder_0/AND_3/NAND_0/w_n1_n1# Gnd 0.69fF
+C1658 decoder_0/AND_2/not_0/w_n9_1# Gnd 0.40fF
+C1659 decoder_0/AND_2/not_0/in Gnd 0.43fF
+C1660 decoder_0/AND_2/B Gnd 0.69fF
+C1661 decoder_0/AND_2/NAND_0/w_n1_n1# Gnd 0.69fF
+C1662 decoder_0/AND_1/not_0/w_n9_1# Gnd 0.40fF
+C1663 decoder_0/AND_1/not_0/in Gnd 0.43fF
+C1664 decoder_0/AND_1/B Gnd 0.69fF
+C1665 decoder_0/AND_1/NAND_0/w_n1_n1# Gnd 0.69fF
+C1666 en0 Gnd 0.60fF
+C1667 decoder_0/AND_0/not_0/w_n9_1# Gnd 0.40fF
+C1668 decoder_0/AND_0/not_0/in Gnd 0.43fF
+C1669 decoder_0/AND_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1670 XOR_1/NAND_1/B Gnd 0.59fF
+C1671 XOR_1/NAND_3/w_n1_n1# Gnd 0.69fF
+C1672 XOR_1/NAND_3/A Gnd 0.85fF
+C1673 XOR_1/B Gnd 1.04fF
+C1674 XOR_1/NAND_2/w_n1_n1# Gnd 0.69fF
+C1675 XOR_1/NAND_1/A Gnd 0.50fF
+C1676 XOR_1/NAND_1/w_n1_n1# Gnd 0.69fF
+C1677 XOR_1/NAND_0/w_n1_n1# Gnd 0.69fF
+C1678 OR_1/NOR_0/w_n19_1# Gnd 0.90fF
+C1679 OR_1/not_0/in Gnd 0.57fF
+C1680 OR_1/not_0/w_n9_1# Gnd 0.40fF
+C1681 OR_0/NOR_0/w_n19_1# Gnd 0.90fF
+C1682 OR_0/not_0/in Gnd 0.57fF
+C1683 OR_0/not_0/w_n9_1# Gnd 0.40fF
+C1684 XOR_0/NAND_1/B Gnd 0.59fF
+C1685 XOR_0/NAND_3/w_n1_n1# Gnd 0.69fF
+C1686 XOR_0/NAND_3/A Gnd 0.85fF
+C1687 XOR_0/B Gnd 1.31fF
+C1688 XOR_0/NAND_2/w_n1_n1# Gnd 0.69fF
+C1689 XOR_0/NAND_1/A Gnd 0.50fF
+C1690 XOR_0/NAND_1/w_n1_n1# Gnd 0.69fF
+C1691 XOR_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1692 comparator_0/AND5_1/A Gnd 0.47fF
+C1693 comparator_0/AND5_1/w_n22_7# Gnd 2.15fF
+C1694 comparator_0/AND5_1/not_0/in Gnd 0.36fF
+C1695 comparator_0/AND5_1/not_0/w_n9_1# Gnd 0.40fF
+C1696 comparator_0/AND5_0/w_n22_7# Gnd 2.15fF
+C1697 comparator_0/AND5_0/not_0/in Gnd 0.36fF
+C1698 comparator_0/AND5_0/not_0/w_n9_1# Gnd 0.40fF
+C1699 comparator_0/XNOR_3/XOR_0/NAND_1/B Gnd 0.59fF
+C1700 comparator_0/XNOR_3/XOR_0/NAND_3/w_n1_n1# Gnd 0.69fF
+C1701 comparator_0/XNOR_3/XOR_0/NAND_3/A Gnd 0.85fF
+C1702 f7 Gnd 3.81fF
+C1703 f3 Gnd 6.78fF
+C1704 comparator_0/XNOR_3/XOR_0/NAND_2/w_n1_n1# Gnd 0.69fF
+C1705 comparator_0/XNOR_3/not_0/in Gnd 0.06fF
+C1706 comparator_0/XNOR_3/XOR_0/NAND_1/A Gnd 0.50fF
+C1707 comparator_0/XNOR_3/XOR_0/NAND_1/w_n1_n1# Gnd 0.69fF
+C1708 comparator_0/XNOR_3/XOR_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1709 ea4 Gnd 2.48fF
+C1710 comparator_0/XNOR_3/not_0/w_n9_1# Gnd 0.40fF
+C1711 comparator_0/XNOR_2/XOR_0/NAND_1/B Gnd 0.59fF
+C1712 comparator_0/XNOR_2/XOR_0/NAND_3/w_n1_n1# Gnd 0.69fF
+C1713 comparator_0/XNOR_2/XOR_0/NAND_3/A Gnd 0.85fF
+C1714 f6 Gnd 10.48fF
+C1715 f2 Gnd 6.27fF
+C1716 comparator_0/XNOR_2/XOR_0/NAND_2/w_n1_n1# Gnd 0.69fF
+C1717 comparator_0/XNOR_2/not_0/in Gnd 0.06fF
+C1718 comparator_0/XNOR_2/XOR_0/NAND_1/A Gnd 0.50fF
+C1719 comparator_0/XNOR_2/XOR_0/NAND_1/w_n1_n1# Gnd 0.69fF
+C1720 comparator_0/XNOR_2/XOR_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1721 ea3 Gnd 1.92fF
+C1722 comparator_0/XNOR_2/not_0/w_n9_1# Gnd 0.40fF
+C1723 comparator_0/XNOR_1/XOR_0/NAND_1/B Gnd 0.59fF
+C1724 comparator_0/XNOR_1/XOR_0/NAND_3/w_n1_n1# Gnd 0.69fF
+C1725 comparator_0/XNOR_1/XOR_0/NAND_3/A Gnd 0.85fF
+C1726 f5 Gnd 9.72fF
+C1727 f1 Gnd 6.46fF
+C1728 comparator_0/XNOR_1/XOR_0/NAND_2/w_n1_n1# Gnd 0.69fF
+C1729 comparator_0/XNOR_1/not_0/in Gnd 0.06fF
+C1730 comparator_0/XNOR_1/XOR_0/NAND_1/A Gnd 0.50fF
+C1731 comparator_0/XNOR_1/XOR_0/NAND_1/w_n1_n1# Gnd 0.69fF
+C1732 comparator_0/XNOR_1/XOR_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1733 ea2 Gnd 1.14fF
+C1734 comparator_0/XNOR_1/not_0/w_n9_1# Gnd 0.40fF
+C1735 comparator_0/XNOR_0/XOR_0/NAND_1/B Gnd 0.59fF
+C1736 comparator_0/XNOR_0/XOR_0/NAND_3/w_n1_n1# Gnd 0.69fF
+C1737 comparator_0/XNOR_0/XOR_0/NAND_3/A Gnd 0.85fF
+C1738 f4 Gnd 8.41fF
+C1739 f0 Gnd 3.90fF
+C1740 comparator_0/XNOR_0/XOR_0/NAND_2/w_n1_n1# Gnd 0.69fF
+C1741 comparator_0/XNOR_0/not_0/in Gnd 0.06fF
+C1742 comparator_0/XNOR_0/XOR_0/NAND_1/A Gnd 0.50fF
+C1743 comparator_0/XNOR_0/XOR_0/NAND_1/w_n1_n1# Gnd 0.69fF
+C1744 comparator_0/XNOR_0/XOR_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1745 comparator_0/XNOR_0/not_0/w_n9_1# Gnd 0.40fF
+C1746 comparator_0/not_7/w_n9_1# Gnd 0.40fF
+C1747 comparator_0/not_6/w_n9_1# Gnd 0.40fF
+C1748 comparator_0/not_5/w_n9_1# Gnd 0.40fF
+C1749 comparator_0/not_4/w_n9_1# Gnd 0.40fF
+C1750 comparator_0/AND4_2/A Gnd 0.43fF
+C1751 comparator_0/not_3/w_n9_1# Gnd 0.40fF
+C1752 comparator_0/AND4_1/A Gnd 0.43fF
+C1753 comparator_0/not_2/w_n9_1# Gnd 0.40fF
+C1754 comparator_0/AND4_2/w_n27_2# Gnd 1.58fF
+C1755 comparator_0/OR4_1/C Gnd 0.53fF
+C1756 comparator_0/AND4_2/not_0/in Gnd 0.31fF
+C1757 comparator_0/AND4_2/not_0/w_n9_1# Gnd 0.40fF
+C1758 comparator_0/not_1/w_n9_1# Gnd 0.40fF
+C1759 comparator_0/AND4_0/w_n27_2# Gnd 1.58fF
+C1760 eequal Gnd 0.86fF
+C1761 comparator_0/AND4_0/not_0/in Gnd 0.31fF
+C1762 comparator_0/AND4_0/not_0/w_n9_1# Gnd 0.40fF
+C1763 comparator_0/AND4_1/w_n27_2# Gnd 1.58fF
+C1764 comparator_0/OR4_0/C Gnd 0.57fF
+C1765 comparator_0/AND4_1/not_0/in Gnd 0.31fF
+C1766 comparator_0/AND4_1/not_0/w_n9_1# Gnd 0.40fF
+C1767 comparator_0/not_0/w_n9_1# Gnd 0.40fF
+C1768 comparator_0/AND_1/not_0/w_n9_1# Gnd 0.40fF
+C1769 gnd Gnd 749.87fF
+C1770 comparator_0/AND_1/not_0/in Gnd 0.43fF
+C1771 comparator_0/AND_1/A Gnd 0.42fF
+C1772 comparator_0/AND_1/NAND_0/w_n1_n1# Gnd 0.69fF
+C1773 comparator_0/AND_0/not_0/w_n9_1# Gnd 0.40fF
+C1774 comparator_0/AND_0/not_0/in Gnd 0.43fF
+C1775 comparator_0/AND_0/A Gnd 0.42fF
+C1776 comparator_0/AND_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1777 comparator_0/AND3_1/w_n31_n3# Gnd 0.80fF
+C1778 comparator_0/AND3_1/not_0/in Gnd 0.26fF
+C1779 comparator_0/AND3_1/not_0/w_n9_1# Gnd 0.40fF
+C1780 comparator_0/AND3_0/w_n31_n3# Gnd 0.80fF
+C1781 comparator_0/OR4_0/B Gnd 0.44fF
+C1782 comparator_0/AND3_0/not_0/in Gnd 0.26fF
+C1783 comparator_0/AND3_0/not_0/w_n9_1# Gnd 0.40fF
+C1784 comparator_0/OR4_1/w_n21_0# Gnd 1.84fF
+C1785 OR3_0/B Gnd 0.47fF
+C1786 comparator_0/OR4_1/not_0/in Gnd 0.69fF
+C1787 comparator_0/OR4_1/not_0/w_n9_1# Gnd 0.40fF
+C1788 comparator_0/OR4_0/w_n21_0# Gnd 1.84fF
+C1789 OR3_2/B Gnd 0.09fF
+C1790 comparator_0/OR4_0/not_0/in Gnd 0.69fF
+C1791 comparator_0/OR4_0/not_0/w_n9_1# Gnd 0.40fF
+C1792 OR3_2/w_n59_4# Gnd 2.25fF
+C1793 OR3_2/not_0/in Gnd 1.13fF
+C1794 OR3_2/not_0/w_n9_1# Gnd 0.40fF
+C1795 enable_2/AND_7/not_0/w_n9_1# Gnd 0.40fF
+C1796 enable_2/AND_7/not_0/in Gnd 0.43fF
+C1797 B3 Gnd 37.16fF
+C1798 enable_2/AND_7/NAND_0/w_n1_n1# Gnd 0.69fF
+C1799 AND_3/A Gnd 0.58fF
+C1800 enable_2/AND_6/not_0/w_n9_1# Gnd 0.40fF
+C1801 enable_2/AND_6/not_0/in Gnd 0.43fF
+C1802 A3 Gnd 32.83fF
+C1803 enable_2/AND_6/NAND_0/w_n1_n1# Gnd 0.69fF
+C1804 AND_2/B Gnd 0.35fF
+C1805 enable_2/AND_5/not_0/w_n9_1# Gnd 0.40fF
+C1806 enable_2/AND_5/not_0/in Gnd 0.43fF
+C1807 B2 Gnd 36.85fF
+C1808 enable_2/AND_5/NAND_0/w_n1_n1# Gnd 0.69fF
+C1809 AND_2/A Gnd 0.60fF
+C1810 enable_2/AND_4/not_0/w_n9_1# Gnd 0.40fF
+C1811 enable_2/AND_4/not_0/in Gnd 0.43fF
+C1812 A2 Gnd 31.29fF
+C1813 enable_2/AND_4/NAND_0/w_n1_n1# Gnd 0.69fF
+C1814 enable_2/AND_3/not_0/w_n9_1# Gnd 0.40fF
+C1815 enable_2/AND_3/not_0/in Gnd 0.43fF
+C1816 B1 Gnd 35.65fF
+C1817 enable_2/AND_3/NAND_0/w_n1_n1# Gnd 0.69fF
+C1818 AND_1/A Gnd 0.60fF
+C1819 enable_2/AND_2/not_0/w_n9_1# Gnd 0.40fF
+C1820 enable_2/AND_2/not_0/in Gnd 0.43fF
+C1821 A1 Gnd 29.75fF
+C1822 enable_2/AND_2/NAND_0/w_n1_n1# Gnd 0.69fF
+C1823 AND_0/B Gnd 0.61fF
+C1824 enable_2/AND_1/not_0/w_n9_1# Gnd 0.40fF
+C1825 enable_2/AND_1/not_0/in Gnd 0.43fF
+C1826 B0 Gnd 34.16fF
+C1827 enable_2/AND_1/NAND_0/w_n1_n1# Gnd 0.69fF
+C1828 AND_0/A Gnd 0.61fF
+C1829 enable_2/AND_0/not_0/w_n9_1# Gnd 0.40fF
+C1830 enable_2/AND_0/not_0/in Gnd 0.43fF
+C1831 A0 Gnd 26.24fF
+C1832 enable_2/AND_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1833 OR3_1/w_n59_4# Gnd 2.25fF
+C1834 OR3_1/not_0/in Gnd 1.13fF
+C1835 OR3_1/not_0/w_n9_1# Gnd 0.40fF
+C1836 enable_1/AND_7/not_0/w_n9_1# Gnd 0.40fF
+C1837 enable_1/AND_7/not_0/in Gnd 0.43fF
+C1838 en2 Gnd 7.14fF
+C1839 enable_1/AND_7/NAND_0/w_n1_n1# Gnd 0.69fF
+C1840 enable_1/AND_6/not_0/w_n9_1# Gnd 0.40fF
+C1841 enable_1/AND_6/not_0/in Gnd 0.43fF
+C1842 enable_1/AND_6/NAND_0/w_n1_n1# Gnd 0.69fF
+C1843 enable_1/AND_5/not_0/w_n9_1# Gnd 0.40fF
+C1844 enable_1/AND_5/not_0/in Gnd 0.43fF
+C1845 enable_1/AND_5/NAND_0/w_n1_n1# Gnd 0.69fF
+C1846 enable_1/AND_4/not_0/w_n9_1# Gnd 0.40fF
+C1847 enable_1/AND_4/not_0/in Gnd 0.43fF
+C1848 enable_1/AND_4/NAND_0/w_n1_n1# Gnd 0.69fF
+C1849 enable_1/AND_3/not_0/w_n9_1# Gnd 0.40fF
+C1850 enable_1/AND_3/not_0/in Gnd 0.43fF
+C1851 enable_1/AND_3/NAND_0/w_n1_n1# Gnd 0.69fF
+C1852 enable_1/AND_2/not_0/w_n9_1# Gnd 0.40fF
+C1853 enable_1/AND_2/not_0/in Gnd 0.43fF
+C1854 enable_1/AND_2/NAND_0/w_n1_n1# Gnd 0.69fF
+C1855 enable_1/AND_1/not_0/w_n9_1# Gnd 0.40fF
+C1856 enable_1/AND_1/not_0/in Gnd 0.43fF
+C1857 enable_1/AND_1/NAND_0/w_n1_n1# Gnd 0.69fF
+C1858 enable_1/AND_0/not_0/w_n9_1# Gnd 0.40fF
+C1859 enable_1/AND_0/not_0/in Gnd 0.43fF
+C1860 enable_1/AND_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1861 OR3_0/w_n59_4# Gnd 2.25fF
+C1862 OR3_0/not_0/in Gnd 1.13fF
+C1863 OR3_0/not_0/w_n9_1# Gnd 0.40fF
+C1864 enable_0/AND_7/not_0/w_n9_1# Gnd 0.40fF
+C1865 enable_0/AND_7/not_0/in Gnd 0.43fF
+C1866 OR_0/out Gnd 1.06fF
+C1867 enable_0/AND_7/NAND_0/w_n1_n1# Gnd 0.69fF
+C1868 enable_0/AND_6/not_0/w_n9_1# Gnd 0.40fF
+C1869 enable_0/AND_6/not_0/in Gnd 0.43fF
+C1870 enable_0/AND_6/NAND_0/w_n1_n1# Gnd 0.69fF
+C1871 enable_0/AND_5/not_0/w_n9_1# Gnd 0.40fF
+C1872 enable_0/AND_5/not_0/in Gnd 0.43fF
+C1873 enable_0/AND_5/NAND_0/w_n1_n1# Gnd 0.69fF
+C1874 enable_0/AND_4/not_0/w_n9_1# Gnd 0.40fF
+C1875 enable_0/AND_4/not_0/in Gnd 0.43fF
+C1876 enable_0/AND_4/NAND_0/w_n1_n1# Gnd 0.69fF
+C1877 enable_0/AND_3/not_0/w_n9_1# Gnd 0.40fF
+C1878 enable_0/AND_3/not_0/in Gnd 0.43fF
+C1879 enable_0/AND_3/NAND_0/w_n1_n1# Gnd 0.69fF
+C1880 enable_0/AND_2/not_0/w_n9_1# Gnd 0.40fF
+C1881 enable_0/AND_2/not_0/in Gnd 0.43fF
+C1882 enable_0/AND_2/NAND_0/w_n1_n1# Gnd 0.69fF
+C1883 enable_0/AND_1/not_0/w_n9_1# Gnd 0.40fF
+C1884 enable_0/AND_1/not_0/in Gnd 0.43fF
+C1885 enable_0/AND_1/NAND_0/w_n1_n1# Gnd 0.69fF
+C1886 enable_0/AND_0/not_0/w_n9_1# Gnd 0.40fF
+C1887 enable_0/AND_0/not_0/in Gnd 0.43fF
+C1888 enable_0/AND_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1889 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/B Gnd 0.59fF
+C1890 four_bit_adder_0/fulladder_3/XOR_1/NAND_3/w_n1_n1# Gnd 0.69fF
+C1891 four_bit_adder_0/fulladder_3/XOR_1/NAND_3/A Gnd 0.85fF
+C1892 four_bit_adder_0/fulladder_3/C Gnd 16.55fF
+C1893 four_bit_adder_0/fulladder_3/XOR_1/NAND_2/w_n1_n1# Gnd 0.69fF
+C1894 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/A Gnd 0.50fF
+C1895 four_bit_adder_0/fulladder_3/XOR_1/NAND_1/w_n1_n1# Gnd 0.69fF
+C1896 four_bit_adder_0/fulladder_3/XOR_1/NAND_0/w_n1_n1# Gnd 0.69fF
+C1897 four_bit_adder_0/fulladder_3/OR_0/A Gnd 0.50fF
+C1898 four_bit_adder_0/fulladder_3/OR_0/NOR_0/w_n19_1# Gnd 0.90fF
+C1899 four_bit_adder_0/fulladder_3/OR_0/not_0/in Gnd 0.57fF
+C1900 four_bit_adder_0/fulladder_3/OR_0/not_0/w_n9_1# Gnd 0.40fF
+C1901 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/B Gnd 0.59fF
+C1902 four_bit_adder_0/fulladder_3/XOR_0/NAND_3/w_n1_n1# Gnd 0.69fF
+C1903 four_bit_adder_0/fulladder_3/XOR_0/NAND_3/A Gnd 0.85fF
+C1904 XOR_3/out Gnd 5.56fF
+C1905 enable_0/F3 Gnd 3.82fF
+C1906 four_bit_adder_0/fulladder_3/XOR_0/NAND_2/w_n1_n1# Gnd 0.69fF
+C1907 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/A Gnd 0.50fF
+C1908 four_bit_adder_0/fulladder_3/XOR_0/NAND_1/w_n1_n1# Gnd 0.69fF
+C1909 four_bit_adder_0/fulladder_3/XOR_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1910 four_bit_adder_0/fulladder_3/OR_0/B Gnd 0.49fF
+C1911 four_bit_adder_0/fulladder_3/AND_1/not_0/w_n9_1# Gnd 0.40fF
+C1912 four_bit_adder_0/fulladder_3/AND_1/not_0/in Gnd 0.43fF
+C1913 four_bit_adder_0/fulladder_3/AND_1/NAND_0/w_n1_n1# Gnd 0.69fF
+C1914 four_bit_adder_0/fulladder_3/AND_0/not_0/w_n9_1# Gnd 0.40fF
+C1915 four_bit_adder_0/fulladder_3/AND_0/not_0/in Gnd 0.43fF
+C1916 four_bit_adder_0/fulladder_3/XOR_1/B Gnd 1.57fF
+C1917 four_bit_adder_0/fulladder_3/AND_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1918 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/B Gnd 0.59fF
+C1919 four_bit_adder_0/fulladder_2/XOR_1/NAND_3/w_n1_n1# Gnd 0.69fF
+C1920 four_bit_adder_0/fulladder_2/XOR_1/NAND_3/A Gnd 0.85fF
+C1921 four_bit_adder_0/fulladder_2/C Gnd 16.52fF
+C1922 four_bit_adder_0/fulladder_2/XOR_1/NAND_2/w_n1_n1# Gnd 0.69fF
+C1923 OR3_2/A Gnd 1.38fF
+C1924 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/A Gnd 0.50fF
+C1925 four_bit_adder_0/fulladder_2/XOR_1/NAND_1/w_n1_n1# Gnd 0.69fF
+C1926 four_bit_adder_0/fulladder_2/XOR_1/NAND_0/w_n1_n1# Gnd 0.69fF
+C1927 four_bit_adder_0/fulladder_2/OR_0/A Gnd 0.50fF
+C1928 four_bit_adder_0/fulladder_2/OR_0/NOR_0/w_n19_1# Gnd 0.90fF
+C1929 four_bit_adder_0/fulladder_2/OR_0/not_0/in Gnd 0.57fF
+C1930 four_bit_adder_0/fulladder_2/OR_0/not_0/w_n9_1# Gnd 0.40fF
+C1931 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/B Gnd 0.59fF
+C1932 four_bit_adder_0/fulladder_2/XOR_0/NAND_3/w_n1_n1# Gnd 0.69fF
+C1933 four_bit_adder_0/fulladder_2/XOR_0/NAND_3/A Gnd 0.85fF
+C1934 four_bit_adder_0/fulladder_2/XOR_0/NAND_2/w_n1_n1# Gnd 0.69fF
+C1935 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/A Gnd 0.50fF
+C1936 four_bit_adder_0/fulladder_2/XOR_0/NAND_1/w_n1_n1# Gnd 0.69fF
+C1937 four_bit_adder_0/fulladder_2/XOR_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1938 four_bit_adder_0/fulladder_2/OR_0/B Gnd 0.49fF
+C1939 four_bit_adder_0/fulladder_2/AND_1/not_0/w_n9_1# Gnd 0.40fF
+C1940 four_bit_adder_0/fulladder_2/AND_1/not_0/in Gnd 0.43fF
+C1941 four_bit_adder_0/fulladder_2/AND_1/NAND_0/w_n1_n1# Gnd 0.69fF
+C1942 four_bit_adder_0/fulladder_2/AND_0/not_0/w_n9_1# Gnd 0.40fF
+C1943 four_bit_adder_0/fulladder_2/AND_0/not_0/in Gnd 0.43fF
+C1944 four_bit_adder_0/fulladder_2/XOR_1/B Gnd 1.57fF
+C1945 four_bit_adder_0/fulladder_2/AND_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1946 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/B Gnd 0.59fF
+C1947 four_bit_adder_0/fulladder_1/XOR_1/NAND_3/w_n1_n1# Gnd 0.69fF
+C1948 four_bit_adder_0/fulladder_1/XOR_1/NAND_3/A Gnd 0.85fF
+C1949 four_bit_adder_0/fulladder_1/C Gnd 17.59fF
+C1950 four_bit_adder_0/fulladder_1/XOR_1/NAND_2/w_n1_n1# Gnd 0.69fF
+C1951 outout1 Gnd 1.32fF
+C1952 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/A Gnd 0.50fF
+C1953 four_bit_adder_0/fulladder_1/XOR_1/NAND_1/w_n1_n1# Gnd 0.69fF
+C1954 four_bit_adder_0/fulladder_1/XOR_1/NAND_0/w_n1_n1# Gnd 0.69fF
+C1955 four_bit_adder_0/fulladder_1/OR_0/A Gnd 0.50fF
+C1956 four_bit_adder_0/fulladder_1/OR_0/NOR_0/w_n19_1# Gnd 0.90fF
+C1957 four_bit_adder_0/fulladder_1/OR_0/not_0/in Gnd 0.57fF
+C1958 four_bit_adder_0/fulladder_1/OR_0/not_0/w_n9_1# Gnd 0.40fF
+C1959 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/B Gnd 0.59fF
+C1960 four_bit_adder_0/fulladder_1/XOR_0/NAND_3/w_n1_n1# Gnd 0.69fF
+C1961 four_bit_adder_0/fulladder_1/XOR_0/NAND_3/A Gnd 0.85fF
+C1962 XOR_1/out Gnd 5.90fF
+C1963 enable_0/F1 Gnd 3.67fF
+C1964 four_bit_adder_0/fulladder_1/XOR_0/NAND_2/w_n1_n1# Gnd 0.69fF
+C1965 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/A Gnd 0.50fF
+C1966 four_bit_adder_0/fulladder_1/XOR_0/NAND_1/w_n1_n1# Gnd 0.69fF
+C1967 four_bit_adder_0/fulladder_1/XOR_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1968 four_bit_adder_0/fulladder_1/OR_0/B Gnd 0.49fF
+C1969 four_bit_adder_0/fulladder_1/AND_1/not_0/w_n9_1# Gnd 0.40fF
+C1970 four_bit_adder_0/fulladder_1/AND_1/not_0/in Gnd 0.43fF
+C1971 four_bit_adder_0/fulladder_1/AND_1/NAND_0/w_n1_n1# Gnd 0.69fF
+C1972 four_bit_adder_0/fulladder_1/AND_0/not_0/w_n9_1# Gnd 0.40fF
+C1973 four_bit_adder_0/fulladder_1/AND_0/not_0/in Gnd 0.43fF
+C1974 four_bit_adder_0/fulladder_1/XOR_1/B Gnd 1.57fF
+C1975 four_bit_adder_0/fulladder_1/AND_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1976 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/B Gnd 0.59fF
+C1977 four_bit_adder_0/fulladder_0/XOR_1/NAND_3/w_n1_n1# Gnd 0.69fF
+C1978 four_bit_adder_0/fulladder_0/XOR_1/NAND_3/A Gnd 0.85fF
+C1979 four_bit_adder_0/fulladder_0/XOR_1/NAND_2/w_n1_n1# Gnd 0.69fF
+C1980 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/A Gnd 0.50fF
+C1981 four_bit_adder_0/fulladder_0/XOR_1/NAND_1/w_n1_n1# Gnd 0.69fF
+C1982 four_bit_adder_0/fulladder_0/XOR_1/NAND_0/w_n1_n1# Gnd 0.69fF
+C1983 four_bit_adder_0/fulladder_0/OR_0/A Gnd 0.50fF
+C1984 four_bit_adder_0/fulladder_0/OR_0/NOR_0/w_n19_1# Gnd 0.90fF
+C1985 four_bit_adder_0/fulladder_0/OR_0/not_0/in Gnd 0.57fF
+C1986 four_bit_adder_0/fulladder_0/OR_0/not_0/w_n9_1# Gnd 0.40fF
+C1987 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/B Gnd 0.59fF
+C1988 four_bit_adder_0/fulladder_0/XOR_0/NAND_3/w_n1_n1# Gnd 0.69fF
+C1989 four_bit_adder_0/fulladder_0/XOR_0/NAND_3/A Gnd 0.85fF
+C1990 XOR_0/out Gnd 5.62fF
+C1991 enable_0/F0 Gnd 3.85fF
+C1992 four_bit_adder_0/fulladder_0/XOR_0/NAND_2/w_n1_n1# Gnd 0.69fF
+C1993 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/A Gnd 0.50fF
+C1994 four_bit_adder_0/fulladder_0/XOR_0/NAND_1/w_n1_n1# Gnd 0.69fF
+C1995 four_bit_adder_0/fulladder_0/XOR_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C1996 four_bit_adder_0/fulladder_0/OR_0/B Gnd 0.49fF
+C1997 four_bit_adder_0/fulladder_0/AND_1/not_0/w_n9_1# Gnd 0.40fF
+C1998 four_bit_adder_0/fulladder_0/AND_1/not_0/in Gnd 0.43fF
+C1999 four_bit_adder_0/fulladder_0/AND_1/NAND_0/w_n1_n1# Gnd 0.69fF
+C2000 four_bit_adder_0/fulladder_0/AND_0/not_0/w_n9_1# Gnd 0.40fF
+C2001 four_bit_adder_0/fulladder_0/AND_0/not_0/in Gnd 0.43fF
+C2002 four_bit_adder_0/fulladder_0/XOR_1/B Gnd 1.57fF
+C2003 four_bit_adder_0/fulladder_0/AND_0/NAND_0/w_n1_n1# Gnd 0.69fF
+C2004 outout2 Gnd 0.30fF
+C2005 AND_4/not_0/w_n9_1# Gnd 0.40fF
+C2006 AND_4/not_0/in Gnd 0.43fF
+C2007 AND_4/NAND_0/w_n1_n1# Gnd 0.69fF
+C2008 OR_1/B Gnd 0.48fF
+C2009 AND_3/not_0/w_n9_1# Gnd 0.40fF
+C2010 AND_3/not_0/in Gnd 0.43fF
+C2011 AND_3/NAND_0/w_n1_n1# Gnd 0.69fF
+C2012 OR3_2/C Gnd 0.92fF
+C2013 AND_2/not_0/w_n9_1# Gnd 0.40fF
+C2014 AND_2/not_0/in Gnd 0.43fF
+C2015 AND_2/NAND_0/w_n1_n1# Gnd 0.69fF
+C2016 AND_1/not_0/w_n9_1# Gnd 0.40fF
+C2017 AND_1/not_0/in Gnd 0.43fF
+C2018 AND_1/NAND_0/w_n1_n1# Gnd 0.69fF
+C2019 OR3_0/C Gnd 0.92fF
+C2020 AND_0/not_0/w_n9_1# Gnd 0.40fF
+C2021 AND_0/not_0/in Gnd 0.43fF
+C2022 AND_0/NAND_0/w_n1_n1# Gnd 0.69fF
+
+.tran 1n 800n
+
+
+.control
+run
+set color0 = rgb:f/f/e
+set color1 = black
+
+plot v(A0) v(A1)+2 v(A2)+4 v(A3)+6 v(B0)+8 v(B1)+10 v(B2)+12 v(B3)+14 v(Out0)+16 v(Out1)+18 v(Out2)+20 v(Out3)+22 v(Out4)+24 
+
+//plot v(s0) v(s1)+2 v(en0)+4 v(en1)+6 v(en2)+8 v(en3)+10
+
+//plot v(A0) v(A1)+2 v(A2)+4 v(A3)+6 v(B0)+8 v(B1)+10 v(B2)+12 v(B3)+14 v(en0)+16 v(en1)+18 v(en2)+20 v(en3)+22 
+//plot v(A0) v(ad1)+2 v(ad2)+4 v(ad3)+6 v(ad4)+8 v(ad5)+10 v(ad6)+12 v(ad7)+14  
+//plot v(comp0) v(comp1)+2 v(comp2)+4 v(comp3)+6 v(comp4)+8 v(comp5)+10 v(comp6)+12 v(comp7)+14  
+//plot v(foa0) v(foa1)+2 v(foa2)+4 v(foa3)+6 v(foa4)+8 v(foa5)+10 v(foa6)+12 v(foa7)+14 
+
+//plot v(ea1) v(ea2)+2 v(ea3)+4 v(ea4)+6
+
+//hardcopy image.ps v(A) v(B)+2 v(C)+4 v(S)+6 v(Car)+8
+.end
+.endc  

@@ -1,0 +1,74 @@
+* SPICE3 file created from OR.ext - technology: scmos
+
+.include TSMC_180nm.txt
+
+
+.param SUPPLY = 1.8
+.param LAMBDA = 0.18u
+
+.param wn1 = {10*LAMBDA}
+.param wn2 = {10*LAMBDA}
+.param ln1 = {2*LAMBDA}
+.param ln2 = {2*LAMBDA}
+
+.param wp1 = wn1
+.param wp2 = wn1
+.param lp1 = {LAMBDA}
+.param lp2 = {LAMBDA}
+
+.global gnd
+
+.option scale=0.09u
+
+Vdd vdd gnd 'SUPPLY'
+
+V_in_a A gnd PULSE(0 1.8 0ns 100ps 100ps 20ns 40ns)
+V_in_b B gnd PULSE(0 1.8 0ns 100ps 100ps 50ns 70ns)
+
+M1000 out not_0/in vdd not_0/w_n9_1# CMOSP w=4 l=2
++  ad=20 pd=18 as=62 ps=44
+M1001 out not_0/in gnd Gnd CMOSN w=4 l=2
++  ad=20 pd=18 as=95 ps=68
+M1002 not_0/in B gnd Gnd CMOSN w=5 l=2
++  ad=80 pd=52 as=0 ps=0
+M1003 NOR_0/a_n4_7# A vdd NOR_0/w_n19_1# CMOSP w=6 l=2
++  ad=96 pd=44 as=0 ps=0
+M1004 not_0/in A gnd Gnd CMOSN w=5 l=2
++  ad=0 pd=0 as=0 ps=0
+M1005 not_0/in B NOR_0/a_n4_7# NOR_0/w_n19_1# CMOSP w=6 l=2
++  ad=48 pd=28 as=0 ps=0
+C0 not_0/in B 0.08fF
+C1 NOR_0/w_n19_1# A 0.06fF
+C2 vdd out 0.07fF
+C3 vdd NOR_0/w_n19_1# 0.08fF
+C4 not_0/in out 0.02fF
+C5 vdd not_0/in 0.03fF
+C6 NOR_0/w_n19_1# not_0/in 0.02fF
+C7 gnd out 0.08fF
+C8 not_0/w_n9_1# out 0.03fF
+C9 not_0/w_n9_1# vdd 0.05fF
+C10 not_0/in gnd 0.16fF
+C11 A B 0.01fF
+C12 not_0/w_n9_1# not_0/in 0.06fF
+C13 NOR_0/w_n19_1# B 0.06fF
+C14 gnd Gnd 1.68fF
+C15 not_0/in Gnd 0.57fF
+C16 vdd Gnd 0.52fF
+C17 B Gnd 0.30fF
+C18 A Gnd 0.31fF
+C19 NOR_0/w_n19_1# Gnd 0.90fF
+C20 out Gnd 0.10fF
+C21 not_0/w_n9_1# Gnd 0.40fF
+
+.tran 1n 800n
+
+
+.control
+run
+set color0 = rgb:f/f/e
+set color1 = black
+plot v(A) v(B)+2 v(Out)+4
+
+.end
+.endc
+
